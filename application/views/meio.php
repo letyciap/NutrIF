@@ -1,5 +1,5 @@
 <?php
 
-    echo "<img src='https://thumbs.dreamstime.com/b/texto-vermelho-do-selo-do-exemplo-43363006.jpg'/>";
+    echo "<img src='https://pbs.twimg.com/media/EDj042lWsAAcvC4.jpg:large'/>";
 
 ?>

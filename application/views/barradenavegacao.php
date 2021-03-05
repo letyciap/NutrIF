@@ -46,7 +46,7 @@
     <link href="navbar-top.css" rel="stylesheet">
     <style>
       .menu {
-          background-color:blue;
+          background-color:#fff;
       }
     </style>
   </head>
@@ -55,7 +55,7 @@
 <header>  
 <nav class="menu">
   <div class="container-fluid">
-    <a class="logo" href="#">Nutrif</a>
+    <a class="navbar-brand" href="#">Nutrif</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
