@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.80.0">
-    <title>Top navbar example · Bootstrap v5.0</title>
+    <title>Nutrif</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-static/">
 
@@ -44,19 +44,26 @@
     
     <!-- Custom styles for this template -->
     <link href="navbar-top.css" rel="stylesheet">
+    <style>
+      .menu {
+          background-color:blue;
+      }
+    </style>
   </head>
+  
   <body>
-    
+<header>  
 <nav class="menu">
   <div class="container-fluid">
     <a class="logo" href="#">Nutrif</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
         <li class="nav-item">
-          <a class="Login" aria-current="page" href="#">Página inicial</a>
+          <a class="nav-link" aria-current="page" href="#">Página inicial</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Avaliações</a>
@@ -72,6 +79,6 @@
     </div>
   </div>
 </nav>
-
-  </body>
-</html>
+    </header>
+<main class="container">
+  <div class="bg-light p-5 rounded">

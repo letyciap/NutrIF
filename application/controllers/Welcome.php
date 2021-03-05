@@ -21,5 +21,7 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('barradenavegacao');
+		$this->load->view('meio');
+		$this->load->view('rodape');
 	}
 }
