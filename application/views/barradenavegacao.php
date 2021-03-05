@@ -48,6 +48,9 @@
       .menu {
           background-color:grey;
       }
+      .navbar-brand {
+        background-color:white;
+      }
     </style>
   </head>
   
