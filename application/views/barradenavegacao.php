@@ -46,7 +46,7 @@
     <link href="navbar-top.css" rel="stylesheet">
     <style>
       .menu {
-          background-color:#fff;
+          background-color:grey;
       }
     </style>
   </head>
