@@ -20,20 +20,14 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#">Cardápio</a>
+          <a class="nav-link" href="#">Cadastro</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Avaliações
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Avaliação semanal</a></li>
-            <li><a class="dropdown-item" href="#">Avaliação semestral</a></li>
-            <li><hr class="dropdown-divider"></li>
-           
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Avaliação</a>
         </li>
-
+        <li class="nav-item">
+          <a class="nav-link" href="#">Estatísticas</a>
+        </li>
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="pesquisar" aria-label="Search">
