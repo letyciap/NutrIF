@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Avaliacao extends CI_Controller {
 
-  public function avaliacao()
+  public function index()
   {
     $this->load->view('aluno/header-aluno');
     $this->load->view('avaliacoes/avaliacao');
@@ -17,7 +17,7 @@ class Avaliacao extends CI_Controller {
     $this->load->view('footer');
   }
 
-  public function edstatisticas()
+  public function estatisticas()
   {
     $this->load->view('aluno/header-aluno');
     $this->load->view('avaliacoes/estatisticas');
