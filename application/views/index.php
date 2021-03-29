@@ -1,11 +1,12 @@
 <div class='container text-center'>
-  <h2 class="text-danger"><b>NutrIF</b></h2>
-  <p>Participe das atividades do refeitório com praticidade e agilidade. <br> Role para baixo e mãos a obra.</p>
+  <h2 class="text-danger mb-3"><b>NutrIF</b></h2>
+  <p class= "mb-5" >Participe das atividades do refeitório com praticidade e agilidade. <br> Role para baixo e mãos a obra.</p>
+  <img class= "mb-5" style="height:19rem;" src="<?= base_url()?>/assets/ilustracao-index.png" alt="">
 </div>
 
 <div class='container'>
 
-  <h2 class="text-danger text-center"><b>Atividades</b></h2>
+  <h2 class="text-danger text-center mt-3 mb-5"><b>Atividades</b></h2>
   
   <div class="row d-flex justify-content-center">
 
