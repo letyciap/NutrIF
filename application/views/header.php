@@ -7,31 +7,64 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+ 
+    <!-- Fonte Lato -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+<style>
+* {
+  font-family: 'Lato', sans-serif;
+}
+.botaoseta {
+  border-radius: 0px 10px 10px 10px;
+}
+.btn-danger {
+  background-color: #DE4545;
+}
+.text-danger {
+  color: #DE4545!important;
+  font-weight: bold;
+}
+.btn-success {
+        background-color: #77C043;
+        border-color: #77C043;
+        border-radius: 5px;
+      }
+
+  .btn-outline-success {
+        border-color: #77C043;
+        color: #77C043!important;
+        border-radius: 5px;
+      }
+  .bg-success {
+        background-color: #81B155!important;
+      }
+  .mt-footer {
+      margin-top: 6rem;
+  }
+  p, h5 {
+    color: #6A6A6A;
+  }
+</style>
 
     <title>NutrIF</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">NutrIF</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+     <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+      <img src="./assets/logo.png" alt="">    
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button>
+      </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Cadastro</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Avaliação</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Estatísticas</a>
-        </li>
-      </ul>
+
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="pesquisar" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Buscar</button>
+        <a  href="" class="btn btn-outline-success me-3"><b>Cadastro</b></a> 
+        <a  href="" class="btn btn-success px-4"><b>Login</b></a>
       </form>
     </div>
   </div>
