@@ -9,7 +9,7 @@ class Aluno extends CI_Controller {
 		$this->load->view('aluno/index-aluno');
 		$this->load->view('footer');
 	}
-}
+
 	public function cadastro()
   	{
     $this->load->view('aluno/header-aluno');
@@ -30,3 +30,4 @@ class Aluno extends CI_Controller {
     $this->load->view('aluno/cadastro-realizado');
     $this->load->view('footer');
   	}
+}
