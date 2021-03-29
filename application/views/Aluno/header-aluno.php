@@ -50,6 +50,15 @@
   .border-2 {
     border-color: #6A6A6A;
   }
+  .sair-hover:hover {
+    color: #B02A37!important;
+  }
+  .item-menu {
+    color: #6A6A6A!important;
+  }
+  .item-menu:hover {
+    color: #121212!important;
+  }
 </style>
 
     <title>NutrIF</title>
@@ -60,18 +69,27 @@
       <a class="navbar-brand" href="#">
       <img style="height:2rem;" src="<?= base_url()?>/assets/logo.png" alt="">    
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-      </button>
-    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
-
-      <form class="d-flex">
-        <a  href="" class="btn btn-outline-success me-3"><b>Cadastro</b></a> 
-        <a  href="" class="btn btn-success px-4"><b>Login</b></a>
-      </form>
-    </div>
-  </div>
-</nav>
+        </button>
+        <div class="collapse d-flex justify-content-end navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav" style="font-size: 1.1rem">
+            <li class="nav-item mx-2"> 
+          <a class="nav-link item-menu" href="#"><b>Avaliação</b></a>
+            </li>
+            <li class="nav-item mx-2">
+          <a class="nav-link item-menu" href="#"><b>Cadastro</b></a>
+            </li>
+            <li class="nav-item mx-2">
+          <a class="nav-link item-menu" href="#"><b>Estatísticas</b></a>
+            </li>
+            <li class="nav-item mx-2">
+          <a class="nav-link text-danger sair-hover" href="#"><b>Sair</b></a>
+            </li>
+        </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
