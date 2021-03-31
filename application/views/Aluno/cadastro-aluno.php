@@ -401,7 +401,7 @@ a{
             <div class="col-sm-6">
                   <div class="doenca" style="margin-left:6em;">
                   <input type="checkbox" class="form-check-input" id="ale-doenca">
-                  <label class="form-check-label" for="ale-doenca">Doenças celíaca</label>
+                  <label class="form-check-label" for="ale-doenca">Doenças celíaca (sensível ao glúten)</label>
                   <div class="invalid-feedback">Inválido.</div>
               </div>
             
@@ -421,7 +421,7 @@ a{
             <div class="col-sm-6">
                   <div class="diabete" style="margin-left:6em;">
                   <input type="checkbox" class="form-check-input" id="ale-diabet">
-                  <label class="form-check-label" for="ale-diabet">Diabetes melittus</label>
+                  <label class="form-check-label" for="ale-diabet">Diabetes melittus (níveis elevados de glicose no sangue)</label>
                   <div class="invalid-feedback">Inválido.</div>
               </div>
             
