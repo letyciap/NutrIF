@@ -9,10 +9,12 @@ main,.cadastro{
     width:27em; 
   }
   
-.peso,.genero,{
+.peso,.genero{
   width: 14.5em;
 }
-
+i{
+color: #DE4545; 
+}
 .outra-linha{
   height:20px;
   width: 18em;
@@ -102,7 +104,7 @@ margin-left: 1em;
               <div class="col-sm-6">
               
                 <div class="nomecomp">
-                <label for="nomecom" class="form-label">Nome completo</label>
+                <label for="nomecom" class="form-label">Nome completo <i>*</i></label>
                 <input type="text" class="form-control" id="nome" placeholder="" value="" required>
                 <div class="invalid-feedback">Inválido.</div>
                 </div>
@@ -111,7 +113,7 @@ margin-left: 1em;
   
               <div class="col-sm-6">
                     <div class="matricu" style="margin-left:6em;">
-                    <label for="matri" class="form-label">Matrícula</label>
+                    <label for="matri" class="form-label">Matrícula  <i>*</i></label>
                     <input type="text" class="form-control" id="matricula" placeholder="" value="" required>
                     <div class="invalid-feedback">Inválido.</div>
                     </div> 
@@ -120,7 +122,7 @@ margin-left: 1em;
               <div class="col-sm-6">
               
                 <div class="senha">
-                <label for="sen" class="form-label">Senha</label>
+                <label for="sen" class="form-label">Senha  <i>*</i></label>
                 <input type="text" class="form-control" id="nome" placeholder="" value="" required>
                 <div class="invalid-feedback">Inválido.</div>
                 </div>
@@ -129,10 +131,8 @@ margin-left: 1em;
 
               <div class="col-md-5">
               <div class="selecionecamp" style="margin-left:6em;">
-              <label for="camp" class="form-label">Campus</label>
-             
+              <label for="camp" class="form-label">Campus  <i>*</i></label>
                 <select class="form-select" id="country"  required style=" width:27em; ">
-               
                 <option value=""></option>
                 <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Apodi </option>
                 <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Caicó </option>
@@ -161,7 +161,7 @@ margin-left: 1em;
             </div>
 
             <div class="col-md-4">
-              <label for="state" class="form-label">Data de nascimento</label>
+              <label for="state" class="form-label">Data de nascimento  <i>*</i></label>
                 <div class="data">
                         <select class="dia" id="state" required>
                         <option value=""></option>
@@ -257,7 +257,7 @@ margin-left: 1em;
 
               <div class="col-sm-5">
                     <div class="genero" style="margin-left:17.7em;">
-                    <label for="gen" class="form-label">Gênero</label>
+                    <label for="gen" class="form-label">Gênero <i>*</i></label>
                     <select class="form-select" id="generoo" required>
                   <option value=""></option>
                   <option>Homem cisgênero </option>
@@ -274,7 +274,7 @@ margin-left: 1em;
 
               <div class="col-sm-5">
                     <div class="etnia">
-                    <label for="etn" class="form-label">Etnia</label>
+                    <label for="etn" class="form-label">Etnia  <i>*</i></label>
                     <select class="form-select" id="nia" required style="width:14.5em;">
                   <option value=""></option>
                   <option>Amarelo</option>
@@ -289,7 +289,7 @@ margin-left: 1em;
 
               <div class="col-sm-5" style="margin-left:11.7em;">
                     <div class="altura">
-                    <label for="alt" class="form-label">Altura (m)</label>
+                    <label for="alt" class="form-label">Altura (m)  <i>*</i></label>
                     <input type="text" class="form-control" id="alturaa" placeholder="" value="" required style="width:14.5em;">
                     <div class="invalid-feedback">Inválido.</div>
                     </div> 
@@ -297,7 +297,7 @@ margin-left: 1em;
 
               <div class="col-sm-5">
                     <div class="peso">
-                    <label for="pe" class="form-label">Peso (Kg)</label>
+                    <label for="pe" class="form-label">Peso (Kg)  <i>*</i></label>
                     <input type="text" class="form-control" id="pesoo" placeholder="" value="" required>
                     <div class="invalid-feedback">Inválido.</div>
                     </div> 
@@ -305,7 +305,7 @@ margin-left: 1em;
 
               <div class="col-sm-5">
                     <div class="vezes" style="margin-left:11.7em;">
-                    <label for="ve" class="form-label"> Quantas vezes na semana costuma consumir os lanches oferecidos no campus?</label>
+                    <label for="ve" class="form-label"> Quantas vezes na semana costuma consumir os lanches oferecidos no campus? <i>*</i></label>
                     <select class="form-select" id="zes" required>
                   <option value=""></option>
                   <option>Não consumo </option>
@@ -320,7 +320,7 @@ margin-left: 1em;
 
               <div class="col-sm-5">
                     <div class="ultimomes">
-                    <label for="ultimo" class="form-label"style="width:25em;">No último mês, com que frequência você ficou com fome por não ter comida suficiente em casa?</label>
+                    <label for="ultimo" class="form-label"style="width:25em;">No último mês, com que frequência você ficou com fome por não ter comida suficiente em casa? <i>*</i></label>
                     <select class="form-select" required style="width:14.7em;">
                   <option value=""></option>
                   <option>Nunca</option>
@@ -334,7 +334,7 @@ margin-left: 1em;
              
               <div class="col-sm-5">
                     <div class="refeicao-campus" style="margin-left:11.5em;">
-                    <label for="refeicao" class="form-label">Quais refeições você costuma realizar no campus?</label>
+                    <label for="refeicao" class="form-label">Quais refeições você costuma realizar no campus? <i>*</i></label>
                     <select class="form-select" id="campuss" required>
                   <option value=""></option>
                   <option>Café-da-manhã </option>
@@ -348,10 +348,10 @@ margin-left: 1em;
                     </div> 
               </div>
             
-              <label>Alergias, intolerâncias e outras condições de saúde</label>
+             
               
               <div class="col-sm-6">
-                  
+              <label>Alergias, intolerâncias e outras condições de saúde <i>*</i></label>  
                   <div class="naoalergico">
                   <input type="checkbox" class="form-check-input" id="não-ale">
                   <label class="form-check-label" for="não-ale">Não tenho alergias</label>
@@ -490,7 +490,7 @@ margin-left: 1em;
           
             <div class="col-sm-5">
                     <div class="dieta" style="">
-                    <label for="diet" class="form-label">Dietas</label>
+                    <label for="diet" class="form-label">Dietas  <i>*</i></label>
                     <select class="form-select" id="d-i-e-t-a" required style="width:27em;">
                   <option value=""></option>
                   <option>Tradicional (inclui carnes e outros produtos de origem animal, além de outros tipos de alimentos)</option>
@@ -503,7 +503,7 @@ margin-left: 1em;
  
             <div class="col-sm-5">
                     <div class="corpo" style="margin-left:12em;">
-                    <label for="sentircorpo" class="form-label">Como você se sente em relação ao seu corpo?</label>
+                    <label for="sentircorpo" class="form-label">Como você se sente em relação ao seu corpo? <i>*</i></label>
                     <select class="form-select" required>
                   <option value=""></option>
                   <option>Muito satisfeito(a) </option>
@@ -517,7 +517,7 @@ margin-left: 1em;
               </div> 
 
               <div class="col-sm-6" style="margin-bottom:3em;">
-                <label for="datre" class="form-label" >Data da resposta do cadastro</label>
+                <label for="datre" class="form-label" >Data da resposta do cadastro  <i>*</i></label>
                 <div class="dataresp">                  
                 <input class="dia" data-val="true" data-val-length="Dia do Nascimento não pode exceder 2 caracteres" data-val-length-max="2" data-val-range="O dia deve estar entre 1 e 31." data-val-range-max="31" data-val-range-min="1" data-val-required="O campo Dia é obrigatório" type="text" value="" />
                 <input class="mes" data-val="true" data-val-length="Mês do Nascimento não pode exceder 2 caracteres" data-val-length-max="2" data-val-range="O mês deve estar entre 1 e 12." data-val-range-max="12" data-val-range-min="1" data-val-required="O campo Mês é obrigatório" type="text" value="" />
