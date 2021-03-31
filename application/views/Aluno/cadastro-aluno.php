@@ -1,4 +1,3 @@
-
 <style>
 main,.cadastro{
   margin-top:2em;
@@ -56,11 +55,13 @@ margin-left: 1em;
         border-radius: 5px;
         color:#DE4545;  
         border: 2px solid #f44336;
+        padding: 7px 45px;
       }
 
 .btn-cancelar:hover {
   background-color: #f44336;
   color: white;
+  
 }
 
 .btn-salvar{
@@ -69,16 +70,14 @@ margin-left: 1em;
         color: #FFFF!important;
         border-radius: 5px;
         border: none;
-        padding: 10px 60px;
+        padding: 10px 55px;
       }
 
 .btn-salvar:hover {
   background-color: #198754;
 }
 
-a{
-  border: none;
-  padding: 7px 50px;
+.btn-salvar,.btn-cancelar{
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -509,7 +508,7 @@ a{
                   <option value=""></option>
                   <option>Muito satisfeito(a) </option>
                   <option>Satisfeito(a)</option>
-                  <option>Insatisfeito(a)</option>
+                   <option>Insatisfeito(a)</option>
                   <option>Muito insatisfeito(a)</option>
                   <option>Indiferente</option>
                   </select>
