@@ -29,6 +29,7 @@ input ,.dia,.mes,.ano{
   border: 1.5px solid #CECECE;
   border-radius: 5px;
 }
+
 select,.form-select{
   height:2.3em; 
   border: 1.5px solid #CECECE;
