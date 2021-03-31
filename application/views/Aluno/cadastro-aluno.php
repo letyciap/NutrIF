@@ -1,5 +1,8 @@
 
 <style>
+main,.cadastro{
+  margin-top:2em;
+}
   label{
     color:#737373;
   }
@@ -65,6 +68,8 @@ margin-left: 1em;
         border-color: #77C043;
         color: #FFFF!important;
         border-radius: 5px;
+        border: none;
+        padding: 10px 60px;
       }
 
 .btn-salvar:hover {
@@ -73,7 +78,7 @@ margin-left: 1em;
 
 a{
   border: none;
-  padding: 7px 60px;
+  padding: 7px 50px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -91,6 +96,7 @@ a{
   <main class="conteudo"> 
             <div class="container">
             <div class="py-5 text-center" style="color:#DE4545;"><h2>Cadastro do Usuário</h2></div>
+<div class="cadastro">
 
             <form class="needs-validation" novalidate>
             <div class="row g-3">
@@ -529,9 +535,9 @@ a{
              </form>
               </div>
             </div>
-
+</div>
 </main>
-
+</body>
 
             
             
