@@ -48,6 +48,41 @@ width:4em;
 margin-left: 1em;
 }
 
+.btn-cancelar {
+        border-color: #77C043;
+        border-radius: 5px;
+        color:#DE4545;  
+        border: 2px solid #f44336;
+      }
+
+.btn-cancelar:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn-salvar{
+        background-color: #4CAF50;
+        border-color: #77C043;
+        color: #FFFF!important;
+        border-radius: 5px;
+      }
+
+.btn-salvar:hover {
+  background-color: #198754;
+}
+
+a{
+  border: none;
+  padding: 7px 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 40px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+}
 </style> 
     <!-- Custom styles for this template -->
   <link href="form-validation.css" rel="stylesheet">
@@ -476,7 +511,7 @@ margin-left: 1em;
                     </div> 
               </div> 
 
-              <div class="col-sm-6">
+              <div class="col-sm-6" style="margin-bottom:3em;">
                 <label for="datre" class="form-label" >Data da resposta do cadastro</label>
                 <div class="dataresp">                  
                 <input class="dia" data-val="true" data-val-length="Dia do Nascimento não pode exceder 2 caracteres" data-val-length-max="2" data-val-range="O dia deve estar entre 1 e 31." data-val-range-max="31" data-val-range-min="1" data-val-required="O campo Dia é obrigatório" type="text" value="" />
@@ -485,6 +520,18 @@ margin-left: 1em;
                     <div class="invalid-feedback">Inválido.</div>
                 </div> 
               </div>
+              
+            <div class="botoes" style="text-align:center;">   
+              <div class="botoes2">
+              <form class="d-flex">
+              <a  href="" class="btn-cancelar"><b>Cancelar</b></a> 
+              <a  href="" class="btn-salvar"><b>Salvar</b></a>
+             </form>
+              </div>
+            </div>
+
 </main>
+
+
             
             
