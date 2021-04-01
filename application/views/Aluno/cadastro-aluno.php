@@ -96,7 +96,7 @@ margin-left: 1em;
   <body class="bg-light">
   <main class="conteudo"> 
             <div class="container">
-            <div class="py-5 text-center" style="color:#DE4545;"><h2>Cadastro do Usuário</h2></div>
+            <div class="py-5 text-center" style="color:#DE4545;font-weight: bold;"><h2>Cadastro do Usuário</h2></div>
 <div class="cadastro">
 
             <form class="needs-validation" novalidate>
