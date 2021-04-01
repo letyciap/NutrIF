@@ -7,6 +7,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route ['index'] = 'welcome/index';
 $route ['aluno'] = 'aluno/index';
+$route ['login'] = 'aluno/login';
 
 $route ['aluno/cadastro'] = 'aluno/cadastro';
 $route ['aluno/cadastro/editar'] = 'aluno/editar_cadastro';

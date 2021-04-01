@@ -75,10 +75,10 @@
         <div class="collapse d-flex justify-content-end navbar-collapse" id="navbarNav">
         <ul class="navbar-nav" style="font-size: 1.1rem">
             <li class="nav-item mx-2"> 
-          <a class="nav-link item-menu" href="#"><b>Avaliação</b></a>
+          <a class="nav-link item-menu" href="#"><b>Meud Dados</b></a>
             </li>
             <li class="nav-item mx-2">
-          <a class="nav-link item-menu" href="#"><b>Cadastro</b></a>
+          <a class="nav-link item-menu" href="#"><b>Avaliar</b></a>
             </li>
             <li class="nav-item mx-2">
           <a class="nav-link item-menu" href="#"><b>Estatísticas</b></a>

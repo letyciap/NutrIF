@@ -10,6 +10,11 @@ class Aluno extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	public function login()
+  {
+    $this->load->view('login');
+  }
+
 	public function cadastro()
   	{
     $this->load->view('aluno/header-aluno');
