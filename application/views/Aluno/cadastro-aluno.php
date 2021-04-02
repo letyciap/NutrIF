@@ -56,7 +56,7 @@ margin-left: 1em;
         border-color: #77C043;
         border-radius: 5px;
         color:#DE4545;  
-        border: 2px solid #f44336;
+        border: 2px solid #DE4545;
         padding: 7px 45px;
       }
 
@@ -93,10 +93,10 @@ margin-left: 1em;
     <!-- Custom styles for this template -->
   <link href="form-validation.css" rel="stylesheet">
   </head>
-  <body class="bg-light">
+  <body class="bg-white">
   <main class="conteudo"> 
             <div class="container">
-            <div class="py-5 text-center" style="color:#DE4545;font-weight: bold;"><h2>Cadastro do Usuário</h2></div>
+            <div class="py-5 text-center" style="color:#DE4545;font-weight: bold;"><h2><b>Cadastro do Usuário</b></h2></div> 
 <div class="cadastro">
 
             <form class="needs-validation" novalidate>
