@@ -66,7 +66,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
      <div class="container">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="<?= base_url()?>aluno">
       <img style="height:2rem;" src="<?= base_url()?>/assets/logo.png" alt="">    
       </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -75,16 +75,16 @@
         <div class="collapse d-flex justify-content-end navbar-collapse" id="navbarNav">
         <ul class="navbar-nav" style="font-size: 1.1rem">
             <li class="nav-item mx-2"> 
-          <a class="nav-link item-menu" href="#"><b>Meus Dados</b></a>
+          <a class="nav-link item-menu" href="<?= base_url()?>aluno/cadastro/editar"><b>Meus Dados</b></a>
             </li>
             <li class="nav-item mx-2">
-          <a class="nav-link item-menu" href="#"><b>Avaliar</b></a>
+          <a class="nav-link item-menu" href="<?= base_url()?>aluno/avaliacao"><b>Avaliar</b></a>
             </li>
             <li class="nav-item mx-2">
-          <a class="nav-link item-menu" href="#"><b>Estatísticas</b></a>
+          <a class="nav-link item-menu" href="<?= base_url()?>aluno/estatisticas"><b>Estatísticas</b></a>
             </li>
             <li class="nav-item mx-2">
-          <a class="nav-link text-danger sair-hover" href="#"><b>Sair</b></a>
+          <a class="nav-link text-danger sair-hover" href="<?= base_url()?>aluno/sair"><b>Sair</b></a>
             </li>
         </ul>
             </div>

@@ -66,8 +66,8 @@
     <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
 
       <form class="d-flex">
-        <a  href="" class="btn btn-outline-success me-3"><b>Cadastro</b></a> 
-        <a  href="" class="btn btn-success px-4"><b>Login</b></a>
+        <a  href="<?= base_url()?>aluno/cadastro" class="btn btn-outline-success me-3"><b>Cadastro</b></a> 
+        <a  href="<?= base_url()?>login" class="btn btn-success px-4"><b>Login</b></a>
       </form>
     </div>
   </div>

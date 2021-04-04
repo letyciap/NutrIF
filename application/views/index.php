@@ -15,7 +15,7 @@
         <div class="card-body my-4 pb-4">
           <h5 class="card-title"><b>Cadastro</b></h5>
           <p class="card-text">Faça a inserção de suas informações alimentares no sistema.</p>
-          <a href="#" class="btn btn-danger botaoseta position-absolute bottom-0 start-0"><i class="bi bi-arrow-right h4"></i></a>
+          <a href="<?= base_url()?>aluno/cadastro" class="btn btn-danger botaoseta position-absolute bottom-0 start-0"><i class="bi bi-arrow-right h4"></i></a>
         </div>
       </div>
 
@@ -23,7 +23,7 @@
         <div class="card-body my-4 pb-4">
           <h5 class="card-title"><b>Faça Login</b></h5>
           <p class="card-text">Já tem uma conta? Entre no sistema para participar das atividades</p>
-          <a href="#" class="btn btn-danger botaoseta position-absolute bottom-0 start-0"><i class="bi bi-arrow-right h4"></i></a>
+          <a href="<?= base_url()?>login" class="btn btn-danger botaoseta position-absolute bottom-0 start-0"><i class="bi bi-arrow-right h4"></i></a>
         </div>
       </div>
 

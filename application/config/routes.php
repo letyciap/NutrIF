@@ -12,6 +12,7 @@ $route ['login'] = 'aluno/login';
 $route ['aluno/cadastro'] = 'aluno/cadastro';
 $route ['aluno/cadastro/editar'] = 'aluno/editar_cadastro';
 $route ['aluno/cadastro-realizado'] = 'aluno/cadastro_realizado';
+$route ['aluno/sair'] = 'aluno/sair';
 
 $route ['aluno/avaliacao'] = 'avaliacao/index';
 $route ['aluno/avaliacao-realizada'] = 'avaliacao/avaliacao_realizada';
