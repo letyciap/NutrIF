@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -13,65 +13,65 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
-<style>
-* {
-  font-family: 'Lato', sans-serif;
-}
-.botaoseta {
-  border-radius: 0px 10px 10px 18px;
-}
-.btn-danger {
-  background-color: #DE4545;
-}
-.text-danger {
-  color: #DE4545!important;
-  font-weight: bold;
-}
-.btn-success {
+    <style>
+
+      * {font-family: 'Lato', sans-serif}
+
+      .botaoseta {border-radius: 0px 10px 10px 18px}
+
+      .btn-danger {background-color: #DE4545}
+
+      .text-danger {
+        color: #DE4545!important;
+        font-weight: bold;
+      }
+
+      .btn-success {
         background-color: #77C043;
         border-color: #77C043;
         border-radius: 5px;
       }
 
-  .btn-outline-success {
+      .btn-outline-success {
         border-color: #77C043;
         color: #77C043!important;
         border-radius: 5px;
       }
-  .bg-success {
-        background-color: #81B155!important;
-      }
-  .mt-footer {
-      margin-top: 6rem;
-  }
-  p, h5 {
-    color: #6A6A6A;
-  }
-  .border-2 {
-    border-color: #6A6A6A;
-  }
-</style>
 
-    <title>NutrIF</title>
+      .bg-success {background-color: #81B155!important}
+
+      .mt-footer {margin-top: 6rem}
+
+      p, h5 {color: #6A6A6A}
+        
+      .border-2 {border-color: #6A6A6A}
+
+    </style>
+
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-     <div class="container">
-      <a class="navbar-brand" href="#">
-      <img style="height:2rem;" src="<?= base_url()?>/assets/logo.png" alt="">    
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      </button>
-    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
 
-      <form class="d-flex">
-        <a  href="<?= base_url()?>aluno/cadastro" class="btn btn-outline-success me-3"><b>Cadastro</b></a> 
-        <a  href="<?= base_url()?>login" class="btn btn-success px-4"><b>Login</b></a>
-      </form>
-    </div>
-  </div>
-</nav>
+
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container">
+
+        <a class="navbar-brand" href="#">
+        <img style="height:2rem;" src="<?= base_url()?>/assets/logo.png">
+        </a>
+        
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse " id="navbarsExample07">
+          <form class="d-flex justify-content-center ms-auto my-lg-0 my-sm-3">
+            <a  href="<?= base_url()?>aluno/cadastro" class="btn btn-outline-success me-3"><b>Cadastro</b></a> 
+            <a  href="<?= base_url()?>login" class="btn btn-success px-4"><b>Login</b></a>
+          </form>
+        </div>
+      </div>
+    </nav>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -83,5 +83,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
     -->
+    
   </body>
 </html>
