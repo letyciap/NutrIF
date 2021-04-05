@@ -84,11 +84,11 @@
 
         <form class="container row d-flex justify-content-center">
 
-          <div class="col-6">
+          <div class="col-lg-6 col-12 mb-5">
 
-            <div class="col my-3 row">
-              <label class="col-sm-6 col-form-label">Alimento</label>
-              <div class="col-sm-6 estrelas">
+            <div class="col me-lg-auto text-center my-3 row">
+              <label class="col-lg-6 col-form-label">Alimento</label>
+              <div class="col-lg-6 estrelas">
                 <input type="radio" id="avaliacao-alimento" name="lanche-alimento" value="" checked/>
                 <label for="lanche-alimento_star-1"><i class="fa"></i></label>
                 <input type="radio" id="lanche-alimento_star-1" name="lanche-alimento" value="1"/>
@@ -103,9 +103,9 @@
               </div>
             </div>
 
-            <div class="col my-3 row">
-              <label class="col-sm-6 col-form-label">Bebida</label>
-              <div class="col-sm-6 estrelas">
+            <div class="col me-lg-auto text-center my-3 row">
+              <label class="col-lg-6 col-form-label">Bebida</label>
+              <div class="col-lg-6 estrelas">
                 <input type="radio" id="avaliacao-bebida" name="lanche-bebida" value="" checked/>
                 <label for="lanche-bebida-1"><i class="fa"></i></label>
                 <input type="radio" id="lanche-bebida-1" name="lanche-bebida" value="1"/>
@@ -120,9 +120,9 @@
               </div>
             </div>
 
-            <div class="col my-3 row">
-              <label class="col-sm-6 col-form-label">Atendimento</label>
-              <div class="col-sm-6 estrelas">
+            <div class="col me-lg-auto text-center my-3 row">
+              <label class="col-lg-6 col-form-label">Atendimento</label>
+              <div class="col-lg-6 estrelas">
                 <input type="radio" id="avaliacao-atendimento" name="lanche-atendimento" value="" checked/>
                 <label><i class="fa"></i></label>
                 <input type="radio" id="lanche-atendimento_star-1" name="lanche-atendimento" value="1"/>
@@ -139,7 +139,7 @@
 
           </div>
 
-          <div class="col-6">
+          <div class="col-lg-6 col-12">
 
             <div class="col my-3 row">
               <label class="col form-label">Data da refeição</label>
@@ -157,11 +157,11 @@
 
           </div>
 
-          <div class="col-12 mt-3 row justify-content-center">
-            <div class="col-3">
+          <div class="col-lg-12 col-12 mt-3 row justify-content-center gx-3">
+            <div class="col-lg-2 col-6">
               <a  href="<?= base_url()?>aluno" class="btn btn-outline-danger py-2 w-100"><b>Cancelar</b></a>
             </div>
-            <div class="col-3">
+            <div class="col-lg-2 col-6">
               <button type="submit" class="btn btn-success py-2 w-100">Salvar</button>
             </div>
           </div>
@@ -174,9 +174,9 @@
 
         <form class="container row d-flex justify-content-center">
 
-          <div class="col-6">
+          <div class="col-lg-6 col-12 mb-5">
 
-            <div class="col my-3 row">
+            <div class="col me-lg-auto text-center my-3 row">
               <label class="col-sm-6 col-form-label">Alimento</label>
               <div class="col-sm-6 estrelas">
                 <input type="radio" id="avaliacao-alimento" name="almoco-alimento" value="" checked/>
@@ -193,7 +193,7 @@
               </div>
             </div>
 
-            <div class="col my-3 row">
+            <div class="col me-lg-auto text-center my-3 row">
               <label class="col-sm-6 col-form-label">Bebida</label>
               <div class="col-sm-6 estrelas">
                 <input type="radio" id="avaliacao-bebida" name="almoco-bebida" value="" checked/>
@@ -210,7 +210,7 @@
               </div>
             </div>
 
-            <div class="col my-3 row">
+            <div class="col me-lg-auto text-center my-3 row">
               <label class="col-sm-6 col-form-label">Atendimento</label>
               <div class="col-sm-6 estrelas">
                 <input type="radio" id="avaliacao-atendimento" name="almoco-atendimento" value="" checked/>
@@ -229,7 +229,7 @@
 
           </div>
 
-          <div class="col-6">
+          <div class="col-lg-6 col-12">
 
             <div class="col my-3 row">
               <label class="col form-label">Data da refeição</label>
@@ -247,11 +247,11 @@
 
           </div>
 
-          <div class="col-12 mt-3 row justify-content-center">
-            <div class="col-3">
+          <div class="col-lg-12 col-12 mt-3 row justify-content-center gx-3">
+            <div class="col-lg-2 col-6">
               <a  href="<?= base_url()?>aluno" class="btn btn-outline-danger py-2 w-100"><b>Cancelar</b></a>
             </div>
-            <div class="col-3">
+            <div class="col-lg-2 col-6">
               <button type="submit" class="btn btn-success py-2 w-100">Salvar</button>
             </div>
           </div>
@@ -263,9 +263,9 @@
 
         <form class="container row d-flex justify-content-center">
 
-          <div class="col-6">
+          <div class="col-lg-6 col-12 mb-5">
 
-            <div class="col my-3 row">
+            <div class="col me-lg-auto text-center my-3 row">
               <label class="col-sm-6 col-form-label">Alimento</label>
               <div class="col-sm-6 estrelas">
                 <input type="radio" id="avaliacao-alimento" name="janta-alimento" value="" checked/>
@@ -282,7 +282,7 @@
               </div>
             </div>
 
-            <div class="col my-3 row">
+            <div class="col me-lg-auto text-center my-3 row">
               <label class="col-sm-6 col-form-label">Bebida</label>
               <div class="col-sm-6 estrelas">
                 <input type="radio" id="avaliacao-bebida" name="janta-bebida" value="" checked/>
@@ -299,7 +299,7 @@
               </div>
             </div>
 
-            <div class="col my-3 row">
+            <div class="col me-lg-auto text-center my-3 row">
               <label class="col-sm-6 col-form-label">Atendimento</label>
               <div class="col-sm-6 estrelas">
                 <input type="radio" id="avaliacao-atendimento" name="janta-atendimento" value="" checked/>
@@ -318,7 +318,7 @@
 
           </div>
 
-          <div class="col-6">
+          <div class="col-lg-6 col-12">
 
             <div class="col my-3 row">
               <label class="col form-label">Data da refeição</label>
@@ -336,11 +336,11 @@
 
           </div>
 
-          <div class="col-12 mt-3 row justify-content-center">
-            <div class="col-3">
+          <div class="col-lg-12 col-12 mt-3 row justify-content-center gx-3">
+            <div class="col-lg-2 col-6">
               <a  href="<?= base_url()?>aluno" class="btn btn-outline-danger py-2 w-100"><b>Cancelar</b></a>
             </div>
-            <div class="col-3">
+            <div class="col-lg-2 col-6">
               <button type="submit" class="btn btn-success py-2 w-100">Salvar</button>
             </div>
           </div>
