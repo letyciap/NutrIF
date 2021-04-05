@@ -526,11 +526,11 @@ margin-left: 1em;
                 </div> 
               </div>
               
-            <div class="botoes" style="text-align:center;">   
+              <div class="botoes" style="text-align:center;">   
               <div class="botoes2">
               <form class="d-flex">
-              <a  href="" class="btn-cancelar"><b>Cancelar</b></a> 
-              <a  href="" class="btn-salvar"><b>Salvar</b></a>
+              <a  href="<?= base_url()?>aluno" class="btn-cancelar"><b>Cancelar</b></a> 
+              <input type="submit" value="Salvar" class='btn-salvar'>
              </form>
               </div>
             </div>

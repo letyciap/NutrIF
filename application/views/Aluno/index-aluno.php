@@ -14,7 +14,7 @@
         <div class="card-body my-4 pb-4">
           <h5 class="card-title"><b>Avaliações</b></h5>
           <p class="card-text">Conte o que você achou da refeição que consumiu.</p>
-          <a href="#" class="btn btn-danger botaoseta position-absolute bottom-0 start-0"><i class="bi bi-arrow-right h4"></i></a>
+          <a href="<?= base_url()?>aluno/avaliacao" class="btn btn-danger botaoseta position-absolute bottom-0 start-0"><i class="bi bi-arrow-right h4"></i></a>
         </div>
       </div>
 
@@ -22,13 +22,13 @@
         <div class="card-body my-4 pb-4">
           <h5 class="card-title"><b>Estatísticas</b></h5>
           <p class="card-text">Acompanhe as estatísticas de alimentação no campus.</p>
-          <a href="#" class="btn btn-danger botaoseta position-absolute bottom-0 start-0"><i class="bi bi-arrow-right h4"></i></a>
+          <a href="<?= base_url()?>aluno/estatisticas" class="btn btn-danger botaoseta position-absolute bottom-0 start-0"><i class="bi bi-arrow-right h4"></i></a>
         </div>
       </div>
     </div>
 
     <div class="col">
-      <img src="<?= base_url()?>/assets/ilustracaohomealuno.png" alt="">
+      <img class='img-fluid' src="<?= base_url()?>/assets/ilustracaohomealuno.png" alt="">
     </div>
 
   </div>

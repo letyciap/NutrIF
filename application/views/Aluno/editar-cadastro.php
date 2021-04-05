@@ -93,7 +93,7 @@ margin-left: 1em;
     <!-- Custom styles for this template -->
   <link href="form-validation.css" rel="stylesheet">
   </head>
-  <body class="bg-light">
+  <body class="bg-white">
   <main class="conteudo"> 
             <div class="container">
             <div class="py-5 text-center" style="color:#DE4545;font-weight: bold;"><h2>Edite seus Dados</h2></div>
@@ -529,8 +529,8 @@ margin-left: 1em;
             <div class="botoes" style="text-align:center;">   
               <div class="botoes2">
               <form class="d-flex">
-              <a  href="" class="btn-cancelar"><b>Cancelar</b></a> 
-              <a  href="" class="btn-salvar"><b>Salvar</b></a>
+              <a  href="<?= base_url()?>aluno" class="btn-cancelar"><b>Cancelar</b></a> 
+              <input type="submit" value="Salvar" class='btn-salvar'>
              </form>
               </div>
             </div>
