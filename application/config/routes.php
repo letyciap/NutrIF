@@ -16,4 +16,6 @@ $route ['aluno/sair'] = 'aluno/sair';
 
 $route ['aluno/avaliacao'] = 'avaliacao/index';
 $route ['aluno/avaliacao-realizada'] = 'avaliacao/avaliacao_realizada';
-$route ['aluno/estatisticas'] = 'avaliacao/estatisticas';
+$route ['aluno/estatisticas'] = 'aluno/estatisticas';
+
+$route ['avaliacao/estatisticas'] = 'avaliacao/estatisticas';

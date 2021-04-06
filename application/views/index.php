@@ -21,9 +21,9 @@
 
       <div class="card border-2 me-lg-4 me-sm-0 mb-4" style="width: 18rem; border-radius:20px; height:14rem;">
         <div class="card-body my-4 pb-4">
-          <h5 class="card-title"><b>Faça Login</b></h5>
-          <p class="card-text">Já tem uma conta? Entre no sistema para participar das atividades</p>
-          <a href="<?= base_url()?>login" class="btn btn-danger botaoseta position-absolute bottom-0 start-0"><i class="bi bi-arrow-right h4"></i></a>
+          <h5 class="card-title"><b>Estatísticas</b></h5>
+          <p class="card-text">Acompanhe as estatísticas de alimentação no campus.</p>
+          <a href="<?= base_url()?>avaliacao/estatisticas" class="btn btn-danger botaoseta position-absolute bottom-0 start-0"><i class="bi bi-arrow-right h4"></i></a>
         </div>
       </div>
 

@@ -19,7 +19,7 @@ class Avaliacao extends CI_Controller {
 
   public function estatisticas()
   {
-    $this->load->view('aluno/header-aluno');
+    $this->load->view('header');
     $this->load->view('avaliacoes/estatisticas');
     $this->load->view('footer');
   }

@@ -41,7 +41,7 @@
     border-color: #6A6A6A!important
   }
 
-  .nav-link {color: #6A6A6A!important}
+  .text-secondary {color: #6A6A6A!important}
 
   .rating>label::before {
       content: "\2605";
@@ -68,13 +68,13 @@
 
     <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
       <li class="nav-item" role="presentation">
-        <button class="nav-link h5 active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><b>Lanche</b></button> 
+        <button class="nav-link text-secondary h5 active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><b>Lanche</b></button> 
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link h5" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><b>Almoço</b></button>
+        <button class="nav-link text-secondary h5" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><b>Almoço</b></button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link h5" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false"><b>Jantar</b></button>
+        <button class="nav-link text-secondary h5" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false"><b>Jantar</b></button>
       </li>
     </ul>
 
