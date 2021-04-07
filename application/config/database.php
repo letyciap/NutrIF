@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
+	'hostname' => 'profaalbalopes.info',
+	'username' => 'profaa16_nutrif',
 	'password' => '',
-	'database' => '',
+	'database' => 'profaa16_nutrif',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
