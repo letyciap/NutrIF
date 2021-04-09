@@ -2,6 +2,34 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Usuario extends CI_Controller {
+
+    public function cadastro()
+  	{
+        $this->load->model('Dieta_model');
+        $dados["dietas"] = $this->Dieta_model->recuperarTodos();
+
+        $this->load->model('Etnia_model');
+        $dados["etnias"] = $this->Etnia_model->recuperarTodos();
+
+        $this->load->model('Campus_model');
+        $dados["campus"] = $this->Campus_model->recuperarTodos();
+
+        $this->load->model('FreqConsumoCampus_model');
+        $dados["freqconsumocampus"] = $this->FreqConsumoCampus_model->recuperarTodos();
+
+        $this->load->model('Genero_model');
+        $dados["generos"] = $this->Genero_model->recuperarTodos();
+
+        $this->load->model('SatisfacaoCorpo_model');
+        $dados["satisfacaocorpo"] = $this->SatisfacaoCorpo_model->recuperarTodos();
+
+        $this->load->model('FrequenciaFome_model');
+        $dados["frequenciafome"] = $this->FrequenciaFome_model->recuperarTodos();
+        
+        $this->load->view('aluno/cadastro-aluno', $dados);
+        $this->load->view('footer');
+  	}
+
     public function salvarDados(){
         $this->load->model('Usuario_model');
 

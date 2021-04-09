@@ -9,7 +9,7 @@ $route ['index'] = 'welcome/index';
 $route ['aluno'] = 'aluno/index';
 $route ['login'] = 'aluno/login';
 
-$route ['aluno/cadastro'] = 'aluno/cadastro';
+$route ['aluno/cadastro'] = 'usuario/cadastro';
 $route ['aluno/cadastro/editar'] = 'aluno/editar_cadastro';
 $route ['aluno/cadastro-realizado'] = 'aluno/cadastro_realizado';
 $route ['aluno/sair'] = 'aluno/sair';

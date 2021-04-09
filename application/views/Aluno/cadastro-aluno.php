@@ -75,7 +75,7 @@
         
           <div class="cadastro">
 
-            <form method="POST" action="<?= base_url()?>aluno/cadastro/salvar" class="container row d-flex justify-content-center needs-validation" novalidate>
+            <form method="POST" action="<?= base_url()?>aluno/cadastro/salvar" class="container row d-flex justify-content-center needs-validation">
               
               <div class="row gx-lg-5 gy-lg-5 gy-3">
 
@@ -101,26 +101,16 @@
                   <label class="form-label">Campus <i>*</i></label>
                   <select class="form-select form-control"  id="campus" required>
                     <option selected></option>
-                    <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Apodi </option>
-                    <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Caicó </option>
-                    <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Canguaretama </option>
-                    <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Ceará-mirim </option>
-                    <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Currais Novos </option>
-                    <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Ipanguaçu </option>
-                    <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus João Câmara </option>
-                    <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Jucurutu </option>
-                    <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Lajes </option>
-                    <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Macau </option>
-                    <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Mossoró </option>
-                    <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Natal-Central </option>
-                    <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Natal-Cidade Alta </option>
-                    <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Natal-Zona Leste </option>
-                    <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Natal-Zona Norte </option>
-                    <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Parelhas </option>
-                    <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Pau dos Ferros </option>
-                    <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Santa Cruz </option>
-                    <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus São Gonsalo do Amarante </option>
-                    <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus São Paulo do Potengi </option>
+                    <?php
+                      $c_campus = 0;
+                      foreach ($campus as $campus) { 
+                    ?>
+                    <option value="<?= $campus->codcampus; ?>">IFRN - Campus <?= $campus->campus; ?></option>
+                    <?php
+                        $c_campus++;
+                      }
+                    ?>
+                    
                   </select>
                   <div class="invalid-feedback">Inválido.</div>
                 </div>
@@ -136,10 +126,15 @@
                   <label for="gen" class="form-label">Gênero <i>*</i></label>
                   <select class="form-select form-control" id="genero" required>
                     <option selected></option>
-                    <option>Feminino </option>
-                    <option>Masculino</option>
-                    <option>Não binário</option>
-                    <option>Prefiro não responder </option>
+                    <?php
+                      $c_genero = 0;
+                      foreach ($generos as $genero) { 
+                    ?>
+                    <option value="<?= $genero->codgenero; ?>"><?= $genero->genero; ?></option>
+                    <?php
+                        $c_genero++;
+                      }
+                    ?>
                   </select>
                   <div class="invalid-feedback">Inválido.</div>
                 </div> 
@@ -148,11 +143,15 @@
                   <label class="form-label">Etnia <i>*</i></label>
                   <select class="form-select form-control" id="etnia" required>
                     <option selected></option>
-                    <option>Amarelo</option>
-                    <option>Branco </option>
-                    <option>Indígena </option>
-                    <option>Pardo</option>
-                    <option>Preto </option>
+                    <?php
+                      $c_etnia = 0;
+                      foreach ($etnias as $etnia) { 
+                    ?>
+                    <option value="<?= $etnia->codeetnia; ?>"><?= $etnia->etnia; ?></option>
+                    <?php
+                        $c_etnia++;
+                      }
+                    ?>
                   </select>
                   <div class="invalid-feedback">Inválido.</div>
                 </div>
@@ -179,11 +178,15 @@
                   <label class="form-label"> Quantas vezes na semana costuma consumir os lanches oferecidos no campus? <i>*</i></label>
                   <select class="form-select" id="freqconsumocampus" required>
                     <option value=""></option>
-                    <option value="0">Não consumo </option>
-                    <option value="1">Raramente </option>
-                    <option value="2">1-2 dias</option>
-                    <option value="3">3-4 dias</option>
-                    <option value="4">Todos os dias</option>
+                    <?php
+                      $c_freqconsumocampus = 0;
+                      foreach ($freqconsumocampus as $freqconsumocampus) { 
+                    ?>
+                    <option value="<?= $freqconsumocampus->codfreqconsumocampus; ?>"><?= $freqconsumocampus->freqconsumocampus; ?></option>
+                    <?php
+                        $c_freqconsumocampus++;
+                      }
+                    ?>
                   </select>
                   <div class="invalid-feedback">Inválido.</div>
                 </div>  
@@ -192,10 +195,15 @@
                   <label for="ultimo" class="form-label">No último mês, com que frequência você ficou com fome por não ter comida suficiente em casa? <i>*</i></label>
                   <select class="form-select" id="frequenciafome" required>
                     <option value=""></option>
-                    <option value="0">Nunca</option>
-                    <option value="1">Raramente</option>
-                    <option value="2">Muitas vezes</option>
-                    <option value="3">Sempre</option>
+                    <?php
+                      $c_frequenciafome = 0;
+                      foreach ($frequenciafome as $frequenciafome) { 
+                    ?>
+                    <option value="<?= $frequenciafome->codfrequenciafome; ?>"><?= $frequenciafome->frequenciafome; ?></option>
+                    <?php
+                        $c_frequenciafome++;
+                      }
+                    ?>
                   </select>
                   <div class="invalid-feedback">Inválido.</div>
                 </div> 
@@ -310,33 +318,45 @@
                   <div class="mb-2">
                     <input type="checkbox" class="form-check-input" id="ale-outra">
                     <label class="form-check-label" for="ale-outra">Outra:</label>
-                    <input type="text" class="outra-linha" id="outraalergia" required>
+                    <input type="text" class="outra-linha" id="outraalergia">
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
 
                 </div>
-              
-              
+                
                 <div class="col-lg-4 col-12">
                   <label class="form-label">Dietas <i>*</i></label>
                   <select class="form-select" id="coddieta" required>
                     <option value=""></option>
-                    <option value="0">Tradicional (inclui carnes e outros produtos de origem animal, além de outros tipos de alimentos)</option>
-                    <option value="1">Vegetariano (ovolactovegetariano ou vegetariano estrito)</option>
-                    <option value="2">Vegano (sem consumo de produtos de origem animal)</option>
-                  </select>
+                    <?php
+                      $c_dieta = 0;
+                      foreach ($dietas as $dieta) { 
+                    ?>
+                    <option value="<?= $dieta->coddieta; ?>"><?= $dieta->dieta; ?></option>
+                    <?php
+                        $c_dieta++;
+                      }
+                    ?>
+                   </select>
                   <div class="invalid-feedback">Inválido.</div>
                 </div> 
+
+                
 
                 <div class="col-lg-4 col-12">
                   <label for="sentircorpo" class="form-label">Como você se sente em relação ao seu corpo? <i>*</i></label>
                   <select class="form-select" id="codsatisfacaocorpo" required>
                     <option value=""></option>
-                    <option value="0">Muito satisfeito(a) </option>
-                    <option value="1">Satisfeito(a)</option>
-                    <option value="2">Insatisfeito(a)</option>
-                    <option value="3">Muito insatisfeito(a)</option>
-                    <option value="4">Indiferente</option>
+                    <?php
+                      $c_satisfacaocorpo = 0;
+                      foreach ($satisfacaocorpo as $satisfacaocorpo) { 
+                    ?>
+                    <option value="<?= $satisfacaocorpo->codsatisfacaocorpo; ?>"><?= $satisfacaocorpo->satisfacaocorpo; ?></option>
+                    <?php
+                        $c_satisfacaocorpo++;
+                      }
+                    ?>
+
                   </select>
                   <div class="invalid-feedback">Inválido.</div>
                 </div> 

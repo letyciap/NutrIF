@@ -1,16 +1,16 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Etnia_model extends CI_Model {
-    public $codeetnia;
-    public $etnia;
+class FreqConsumoCampus_model extends CI_Model {
+    public $codfreqconsumocampus;
+    public $freqconsumocampus;
 
     public function __construct() {
         parent::__construct();
     }
 
     function recuperarTodos(){
-        $sql = "SELECT * from Etnia";
+        $sql = "SELECT * from FreqConsumoCampus";
         return $this->db->query($sql)->result();
     }
 }
