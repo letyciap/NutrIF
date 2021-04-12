@@ -13,4 +13,9 @@ class FreqConsumoCampus_model extends CI_Model {
         $sql = "SELECT * from FreqConsumoCampus";
         return $this->db->query($sql)->result();
     }
+
+    function recuperarTodos(){
+        $sql = "SELECT * from FreqConsumoCampus";
+        return $this->db->query($sql)->result();
+    }
 }

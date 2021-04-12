@@ -47,5 +47,6 @@ class Aluno extends CI_Controller {
       $this->load->view('avaliacoes/estatisticas');
       $this->load->view('footer');
     }
-  
+ 
+    
 }

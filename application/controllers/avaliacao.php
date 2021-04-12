@@ -24,4 +24,14 @@ class Avaliacao extends CI_Controller {
     $this->load->view('footer');
   }
 
+  function listar() {
+    $dados_header["titulo"] = "Avaliacao";
+    $this->load->view('admin/header', $dados_header);
+
+    $this->load->model('Avaliacao_model');        
+    $dados["alergias"] = $this->avaliacao_model->recuperarTodos();
+    $this->load->view('admin/avaliacao', $dados);
+
+    $this->load->view('admin/footer');
+  } 
 }

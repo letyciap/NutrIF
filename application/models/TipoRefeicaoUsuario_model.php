@@ -8,4 +8,9 @@ class TipoRefeicaoUsuario_model extends CI_Model {
     public function __construct() {
         parent::__construct();
     }
+
+    function recuperarTodos(){
+        $sql = "SELECT * from TipoRefeicaoUsuario";
+        return $this->db->query($sql)->result();
+    }
 }

@@ -50,4 +50,15 @@ class Usuario extends CI_Controller {
         
         $this->Usuario_model->inserir();
     }
+
+    function listar() {
+      $dados_header["titulo"] = "Usuário";
+      $this->load->view('admin/header', $dados_header);
+
+      $this->load->model('Usuario');        
+      $dados["alergias"] = $this->Usuario_model->recuperarTodos();
+      $this->load->view('admin/usuario', $dados);
+
+      $this->load->view('admin/footer');
+    }
 }

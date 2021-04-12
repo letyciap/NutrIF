@@ -13,4 +13,9 @@ class Genero_model extends CI_Model {
         $sql = "SELECT * from Genero";
         return $this->db->query($sql)->result();
     }
+
+    function recuperarTodos(){
+        $sql = "SELECT * from Genero";
+        return $this->db->query($sql)->result();
+    }
 }

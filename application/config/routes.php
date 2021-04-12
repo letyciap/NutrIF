@@ -21,3 +21,5 @@ $route ['aluno/estatisticas'] = 'aluno/estatisticas';
 $route ['avaliacao/estatisticas'] = 'avaliacao/estatisticas';
 
 $route ['aluno/cadastro/salvar'] = 'Usuario/salvarDados';
+
+$route ['admin/alergias/listar'] = 'Alergia/listar';
