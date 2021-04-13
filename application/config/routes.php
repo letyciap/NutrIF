@@ -22,7 +22,7 @@ $route ['avaliacao/estatisticas'] = 'avaliacao/estatisticas';
 
 $route ['aluno/cadastro/salvar'] = 'Usuario/salvarDados';
 
-$route ['admin/alergias/listar'] = 'Alergia/listar';
-$route ['admin/alergias/salvar'] = 'Alergia/salvar';
-$route ['admin/alergias/editar'] = 'Alergia/editar';
-$route ['admin/alergias/excluir'] = 'Alergia/excluir';
+$route ['alergias/listar'] = 'Alergia/listar';
+$route ['alergias/salvar'] = 'Alergia/salvar';
+$route ['alergias/editar'] = 'Alergia/editar';
+$route ['alergias/excluir'] = 'Alergia/excluir';

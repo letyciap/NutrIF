@@ -13,4 +13,13 @@ class Alergia_model extends CI_Model {
         $sql = "SELECT * from Alergia";
         return $this->db->query($sql)->result();
     }
+
+    public function inserir() {
+        $dados = array(
+            'codalergia' => $this->codalergia,
+            'alergia' => $this->alergia
+        );
+
+        return $this->db->insert('Alergia', $dados);
+    }
 }

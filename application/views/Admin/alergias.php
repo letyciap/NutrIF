@@ -24,7 +24,7 @@
                 <h5 class="modal-title text-danger" id="exampleModalLabel"><b>Doenças e Alergias</b></h5>
                 <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
             </div>
-            <form action="<?=base_url();?>admin/alergias/salvar/" method="POST">
+            <form action="<?=base_url();?>/alergias/salvar/" method="POST">
                 <div class="modal-body">
                     <p>Informe os valores para cadastrar uma nova doença ou alergia.</p>
                     <div class="row">
