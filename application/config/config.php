@@ -24,6 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/NutrIF';
+//$config['base_url'] = 'https://nutr-if.herokuapp.com/';
 
 /*
 |--------------------------------------------------------------------------
