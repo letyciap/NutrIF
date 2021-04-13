@@ -20,14 +20,28 @@ class Alergia extends CI_Controller {
 
         $this->Alergia_model->codalergia = $this->input->post('codalergia');
         $this->Alergia_model->alergia = $this->input->post('alergia');
-
-        // teste: os valores estão passando para o model e sendo inseridos no banco
-        // problema: o $this->input->post('') não está recebendo os valores
-        // $this->Alergia_model->codalergia = '16';
-        // $this->Alergia_model->alergia = 'alergia teste';
-
         $this->Alergia_model->inserir();
 
         redirect('alergias/listar');
     }
+
+    function editar(){
+
+      $alergia = $this->input->post('alergia');
+      $codalergia = $this->input->post('codalergia');
+      $this->load->model('Alergia_model');
+      $this->Alergia_model->atualizar($codalergia, $alergia);
+
+      redirect('alergias/listar');
+  }
+
+  function excluir(){
+
+    //$alergia = $this->input->post('alergia');
+    $codalergia = $this->input->post('codalergia');
+    $this->load->model('Alergia_model');
+    $this->Alergia_model->excluir($codalergia);
+
+    redirect('alergias/listar');
+  }
 }

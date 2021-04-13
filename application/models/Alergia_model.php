@@ -22,4 +22,16 @@ class Alergia_model extends CI_Model {
 
         return $this->db->insert('Alergia', $dados);
     }
+
+    public function atualizar($codalergia, $alergia) {
+        $sql = "UPDATE Alergia SET alergia = '".$alergia."' WHERE codalergia = ".$codalergia;
+        $dados = array($sql, $dados);
+        return $this->db->query($sql, $dados);
+    }
+
+    public function excluir($codalergia) {
+        $sql = "DELETE FROM Alergia WHERE codalergia = ".$codalergia;
+        $dados = array($sql, $dados);
+        return $this->db->query($sql, $dados);
+    }
 }

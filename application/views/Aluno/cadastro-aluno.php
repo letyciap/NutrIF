@@ -81,25 +81,25 @@
 
                 <div class="col-lg-6 col-12 ">
                   <label class="form-label">Nome completo <i>*</i></label>
-                  <input type="text" class="form-control" id="usuario" placeholder="" value="" required>
+                  <input type="text" class="form-control" id="usuario" name="usuario" placeholder="" value="" required>
                   <div class="invalid-feedback">Inválido.</div>
                 </div>
 
                 <div class="col-lg-6 col-12 ">
                   <label class="form-label">Matrícula  <i>*</i></label>
-                  <input type="text" class="form-control" id="matricula" placeholder="" value="" required>
+                  <input type="text" class="form-control" id="matricula" name="matricula" placeholder="" value="" required>
                   <div class="invalid-feedback">Inválido.</div>
                 </div> 
 
                 <div class="col-lg-6 col-12 ">
                   <label class="form-label">Senha <i>*</i></label>
-                  <input type="password" class="form-control" id="senha" placeholder="" value="" required>
+                  <input type="password" class="form-control" id="senha" name="senha" placeholder="" value="" required>
                   <div class="invalid-feedback">Inválido.</div>
                 </div>
 
                 <div class="col-lg-6 col-12 ">
                   <label class="form-label">Campus <i>*</i></label>
-                  <select class="form-select form-control"  id="campus" required>
+                  <select class="form-select form-control"  id="campus" name="campus" required>
                     <option selected></option>
                     <?php
                       $c_campus = 0;
@@ -117,14 +117,14 @@
 
                 <div class="col-lg-6 col-12 ">
                   <label class="form-label">Data de nascimento <i>*</i></label>
-                  <input type="date" id="datanascimento" class="form-control" required>
+                  <input type="date" id="datanascimento" name="datanascimento" class="form-control" required>
                   <div class="invalid-feedback">Inválido.</div>
                 </div>
 
                 
                 <div class="col-lg-6 col-12 ">
                   <label for="gen" class="form-label">Gênero <i>*</i></label>
-                  <select class="form-select form-control" id="genero" required>
+                  <select class="form-select form-control" id="genero" name="genero" required>
                     <option selected></option>
                     <?php
                       $c_genero = 0;
@@ -141,7 +141,7 @@
 
                 <div class="col-lg-6 col-12 ">
                   <label class="form-label">Etnia <i>*</i></label>
-                  <select class="form-select form-control" id="etnia" required>
+                  <select class="form-select form-control" id="etnia" name="etnia" required>
                     <option selected></option>
                     <?php
                       $c_etnia = 0;
@@ -160,7 +160,7 @@
 
                   <div class="col-5 ">
                     <label for="alt" class="form-label">Altura (m)  <i>*</i></label>
-                      <input type="number" class="form-control" id="altura" required>          
+                      <input type="number" class="form-control" id="altura" name="altura" required>          
                     <div class="invalid-feedback">Inválido.</div>
                   </div> 
 
@@ -168,7 +168,7 @@
 
                   <div class="col-5 ">
                     <label class="form-label">Peso (Kg) <i>*</i></label>
-                    <input type="number" class="form-control" id="peso" required>
+                    <input type="number" class="form-control" id="peso" name="peso" required>
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
 
@@ -176,7 +176,7 @@
 
                 <div class="col-lg-4 col-12 ">
                   <label class="form-label"> Quantas vezes na semana costuma consumir os lanches oferecidos no campus? <i>*</i></label>
-                  <select class="form-select" id="freqconsumocampus" required>
+                  <select class="form-select" id="freqconsumocampus" name="freqconsumocampus" required>
                     <option value=""></option>
                     <?php
                       $c_freqconsumocampus = 0;
@@ -193,7 +193,7 @@
 
                 <div class="col-lg-4 col-12 ">
                   <label for="ultimo" class="form-label">No último mês, com que frequência você ficou com fome por não ter comida suficiente em casa? <i>*</i></label>
-                  <select class="form-select" id="frequenciafome" required>
+                  <select class="form-select" id="frequenciafome" name="frequenciafome" required>
                     <option value=""></option>
                     <?php
                       $c_frequenciafome = 0;
@@ -210,7 +210,7 @@
 
                 <div class="col-lg-4 col-12 ">
                   <label for="refeicao" class="form-label">Quais refeições você costuma realizar no campus? <i>*</i></label>
-                  <select class="form-select" id="campuss" required>
+                  <select class="form-select" id="campuss" name="campuss" required>
                     <option value=""></option>
                     <option value="0">Café-da-manhã </option>
                     <option value="1">lanche da manhã </option>
@@ -227,43 +227,43 @@
                   <label  class='mb-3'>Alergias, intolerâncias e outras condições de saúde <i>*</i></label>  
 
                   <div class="mb-2">
-                    <input type="checkbox" class="form-check-input" id="não-ale">
+                    <input type="checkbox" class="form-check-input" id="sem-alergia" name="sem-alergia">
                     <label class="form-check-label" for="não-ale">Não tenho alergias</label>
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
 
                   <div class="mb-2">
-                    <input type="checkbox" class="form-check-input" id="save-info">
+                    <input type="checkbox" class="form-check-input" id="save-info" name="save-info">
                     <label class="form-check-label" for="save-info">Dislipidemias (alterações nas gosrduras do sangue)</label>
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
 
                   <div class="mb-2">
-                    <input type="checkbox" class="form-check-input" id="ale-ovo">
+                    <input type="checkbox" class="form-check-input" id="alergia-ovo" name="alergia-ovo>
                     <label class="form-check-label" for="ale-ovo">Alergia ao ovo</label>
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
 
                   <div class="mb-2">
-                    <input type="checkbox" class="form-check-input" id="ale-trigo">
+                    <input type="checkbox" class="form-check-input" id="alergia-trigo" name="alergia-trigo">
                     <label class="form-check-label" for="ale-trigo">Alergia ao trigo</label>
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
 
                   <div class="mb-2">
-                    <input type="checkbox" class="form-check-input" id="ale-amen">
+                    <input type="checkbox" class="form-check-input" id="alergia-amendoim" name="alergia-amendoim">
                     <label class="form-check-label" for="ale-amen">Alergia ao amendoim</label>
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
 
                   <div class="mb-2" >
-                    <input type="checkbox" class="form-check-input" id="ale-doenca">
+                    <input type="checkbox" class="form-check-input" id="alergia-doenca" name="alergia-doenca">
                     <label class="form-check-label" for="ale-doenca">Doenças celíaca (sensível ao glúten)</label>
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
 
                   <div class="mb-2">
-                    <input type="checkbox" class="form-check-input" id="ale-casta">
+                    <input type="checkbox" class="form-check-input" id="alergia-castanha" name="alergia-castanha">
                     <label class="form-check-label" for="ale-casta">Alergia às castanhas</label>
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
@@ -274,51 +274,51 @@
                   <label class='mb-3'> </label>
 
                   <div class="mb-2" >
-                    <input type="checkbox" class="form-check-input" id="ale-diabet">
+                    <input type="checkbox" class="form-check-input" id="alergia-diabetes" name="alergia-diabetes">
                     <label class="form-check-label" for="ale-diabet">Diabetes melittus ()</label>
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
 
                   <div class="mb-2">
-                    <input type="checkbox" class="form-check-input" id="ale-soja">
+                    <input type="checkbox" class="form-check-input" id="alergia-soja" name="alergia-soja">
                     <label class="form-check-label" for="ale-soja">Alergia à soja</label>
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
 
                   <div class="mb-2" >
-                    <input type="checkbox" class="form-check-input" id="obesi">
+                    <input type="checkbox" class="form-check-input" id="obesidade" name="obesidade">
                     <label class="form-check-label" for="obesi">Obesidade</label>
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
 
                   <div class="mb-2">
-                    <input type="checkbox" class="form-check-input" id="ale-latex">
+                    <input type="checkbox" class="form-check-input" id="alergia-latex" name="alergia-latex">
                     <label class="form-check-label" for="ale-latex">Alergia ao látex</label>
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
 
                   <div class="mb-2" >
-                    <input type="checkbox" class="form-check-input" id="lact">
+                    <input type="checkbox" class="form-check-input" id="lactose" name="lactose">
                     <label class="form-check-label" for="lact">Intolerância a lactose</label>
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
 
                   <div class="mb-2">
-                    <input type="checkbox" class="form-check-input" id="hiper">
+                    <input type="checkbox" class="form-check-input" id="hipertensao" name="hipertensao">
                     <label class="form-check-label" for="hiper">Hipertensão arterial (Pressão alta)</label>
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
 
                   <div class="mb-2" >
-                    <input type="checkbox" class="form-check-input" id="ale-coran">
+                    <input type="checkbox" class="form-check-input" id="alergia-corante" name="alergia-corante">
                     <label class="form-check-label" for="ale-coran">Alergia à corantes e outros aditivos</label>
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
 
                   <div class="mb-2">
-                    <input type="checkbox" class="form-check-input" id="ale-outra">
+                    <input type="checkbox" class="form-check-input" id="outra-alergia" name="outra-alergia">
                     <label class="form-check-label" for="ale-outra">Outra:</label>
-                    <input type="text" class="outra-linha" id="outraalergia">
+                    <input type="text" class="outra-linha" id="outraalergia" name="outraalergia">
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
 
@@ -326,7 +326,7 @@
                 
                 <div class="col-lg-4 col-12">
                   <label class="form-label">Dietas <i>*</i></label>
-                  <select class="form-select" id="coddieta" required>
+                  <select class="form-select" id="coddieta" name="coddieta" required>
                     <option value=""></option>
                     <?php
                       $c_dieta = 0;
@@ -345,7 +345,7 @@
 
                 <div class="col-lg-4 col-12">
                   <label for="sentircorpo" class="form-label">Como você se sente em relação ao seu corpo? <i>*</i></label>
-                  <select class="form-select" id="codsatisfacaocorpo" required>
+                  <select class="form-select" id="codsatisfacaocorpo" name="codsatisfacaocorpo" required>
                     <option value=""></option>
                     <?php
                       $c_satisfacaocorpo = 0;
@@ -363,7 +363,7 @@
 
                 <div class="col-lg-4 col-12 ">
                   <label class="form-label">Data da resposta do cadastro <i>*</i></label>
-                  <input type="date" class="form-control" id="datacadastro" required>
+                  <input type="date" class="form-control" id="datacadastro" name="datacadastro" required>
                   <div class="invalid-feedback">Inválido.</div>
                 </div>
 
