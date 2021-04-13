@@ -14,8 +14,5 @@ class Etnia_model extends CI_Model {
         return $this->db->query($sql)->result();
     }
 
-    function recuperarTodos(){
-        $sql = "SELECT * from Etnia";
-        return $this->db->query($sql)->result();
-    }
+   
 }

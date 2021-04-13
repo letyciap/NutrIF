@@ -14,8 +14,5 @@ class Campus_model extends CI_Model {
         return $this->db->query($sql)->result();
     }
 
-    function recuperarTodos(){
-        $sql = "SELECT * from Campus";
-        return $this->db->query($sql)->result();
-    }
+
 }

@@ -14,8 +14,5 @@ class Dieta_model extends CI_Model {
 		return $this->db->query($sql)->result();
 	}
 
-    function recuperarTodos(){
-        $sql = "SELECT * from Dieta";
-        return $this->db->query($sql)->result();
-    }
+  
 }

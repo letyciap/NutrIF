@@ -40,7 +40,7 @@ class Usuario_model extends CI_Model {
                 'codfrequenciafome' => $this->codfrequenciafome,
                 'cadastro' => $this->cadastro
             );
-            return $this->db->insert('post', $dados);
+            return $this->db->insert('Usuario', $dados);
         }
 
         function recuperarTodos(){

@@ -13,4 +13,16 @@ class Alergia extends CI_Controller {
   
         $this->load->view('admin/footer');
       }
+
+      function salvar(){
+
+        $this->load->model('Alergia_model');
+
+        $this->Alergia_model->codalergia = $this->input->post('codalergia');
+        $this->Alergia_model->alergia = $this->input->post('alergia');
+
+        $this->Alergia_model->inserir();
+        
+        redirect('admin/alergias/listar');
+    }
 }
