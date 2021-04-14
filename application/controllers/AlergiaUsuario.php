@@ -9,6 +9,13 @@ class AlergiaUsuario extends CI_Controller {
   
         $this->load->model('AlergiaUsuario_model');        
         $dados["alergiausuario"] = $this->AlergiaUsuario_model->recuperarTodos();
+
+        $this->load->model('Alergia_model');        
+        $dados["alergias"] = $this->Alergia_model->recuperarTodos();
+
+        $this->load->model('Usuario_model');        
+        $dados["usuarios"] = $this->Usuario_model->recuperarTodos();
+
         $this->load->view('admin/alergiausuario', $dados);
   
         $this->load->view('admin/footer');
