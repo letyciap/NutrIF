@@ -1,17 +1,73 @@
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
 <style>
+
+  .estrelas input{display: none}
+
+  .estrelas label i.fa{font-size: 2.5em;margin:0em 1em 0em 1em }
+  
+  .estrelas label i.fa:before {
+    content:'\f005';
+    position:relative;
+    display:block;
+    color: #FC0; 
+    font-size:30px
+  }
+
+  .estrelas label i.fa:after{
+    content:'\f005';
+    color: #FC0;
+    top:0;
+    opacity:0;
+    position:absolute;
+    display:block;
+    font-size:30px;
+    transition:0.5s;
+    text-shadow:0 2px 5px rgba(0,0,0,0.5)
+  }
+
+  .estrelas label i.fa:hover:after,
+  .estrelas label i.fa:hover ~ label:after,
+  .estrelas label i.fa:checked ~ label:after{opacity:1}
+
+  .estrelas input[type=radio]:checked ~ label i.fa:before {color: #CCC}
+
+  i{color: #DE4545}
+
+  .nav-item .active {
+    border-bottom: 3px solid;
+    background-color: #FFFFFF!important;
+    color: #6A6A6A!important;
+    border-color: #6A6A6A!important
+  }
+
+  .text-secondary {color: #6A6A6A!important}
+
+  .rating>label::before {
+      content: "\2605";
+      position: absolute;
+      opacity: 0
+  }
+
+  .rating>label:hover:before,
+  .rating>label:hover~label:before {opacity: 1 !important}
+
+  .rating>input:checked~label:before {opacity: 1}
+  
+  .rating:hover>input:checked~label:before {opacity: 0.4}
 
 </style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 <div class = "container  ">
-<div class=" p-3 pb-md-3 mx-auto text-center" style="color:#DE4545;"><h2 class="display-7 fw-normal"><b>Estatísticas</b></div>
+<div class=" p-3 mx-auto text-center" style="color:#DE4545;"><h2 class=""><b>Estatísticas</b></h2></div>
           
           <div class="row justify-content-center">
-
           <div class="col-lg-9 col-12">
-              <label class="form-label display-7" style="font-size:1.2em; color:#6a6a6a;">Por favor, selecioine o Campi IFRN de interesse: </label>
+              <label class="form-label display-6 fw-normal" style="font-size:1.2em; color:#6a6a6a;">Por favor, selecioine o Campi IFRN de interesse: </label>
               <select class="form-select form-control"  required>
-                <option selected></option>
+                <option selected>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Natal-Zona Norte </option>
                 <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Apodi </option>
                 <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Caicó </option>
                 <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Canguaretama </option>
@@ -37,227 +93,230 @@
             </div>
    
         </div>
-
+                                                        <!--ALERGIAS-->
           
-             
-    <div class="row">
+        <div class="row">
 
-          <div class="col row row-cols-1 justify-content-center py-5 px-3  mx-auto">   
+            <div class="col row row-cols-1 justify-content-center py-5 px-3  mx-auto">   
                 <div class="card card-cover w-75  overflow-hidden border-2" style="border-radius:20px; color:#6a6a6a;">
-                <div class=" d-flex flex-column  p-1 pb-1 px-5 ">
-                <h2 class="pt-0 mt-3 mb-0 display-7 fw-bold text-center ">Alergias</h2>
-                  <canvas class="d-flex  flex-row-reverse" id="myChartAl" ></canvas>
+                 
+                  <div class=" d-flex flex-column  p-1 pb-1 px-5 ">
+                  <h3 class="pt-0 mt-3 mb-0  fw-bold text-center ">Alergias</h3>
+                  <p class="mt-3 text-center">Número de alunos por alergia no <b>Campus Natal Zona Norte</b></p>
+                  </div>
+
+                        <div class="row row-cols-5 justify-content-center">
+
+                              <div class="col d-flex align-items-start">
+                                <div>
+                                <h4 class=" display-5 fw-bold mb-0">8</h4>
+                                <p class="">Ovo</p>
+                                </div>
+                              </div>
+
+                              <div class="col d-flex align-items-start ">
+                                <div>
+                                <h4 class=" display-5 fw-bold mb-0">12</h4>
+                                <p class="mx-2 ">Látex</p>
+                                </div>
+                              </div>
+
+                              <div class="col d-flex align-items-start ">
+                                <div>
+                                <h4 class=" display-5 fw-bold mb-0">18</h4>
+                                <p class=" mx-2 ">Trigo</p>
+                                </div>
+                              </div>
+
+                              <div class="col d-flex align-items-start  ">
+                                <div>
+                                <h4 class=" display-5 fw-bold mb-0 mx-5 ">20</h4>
+                                <p class=" text-center">Proteínas do leite de vaca</p>
+                                </div>
+                              </div>
+
+                              <div class="col d-flex align-items-start mx-1">
+                                <div>
+                                <h4 class=" display-5 fw-bold mb-0 mx-4">2</h4>
+                                <p class=" ">Castanhas</p>
+                                </div>
+                              </div>
+
+                              <div class="col d-flex align-items-start ">
+                                <div>
+                                <h4 class=" display-5 fw-bold mb-0 mx-4">4</h4>
+                                <p class=" mx-2 ">Amendoim</p>
+                                </div>
+                              </div>
+
+                              <div class="col d-flex align-items-start ">
+                                <div>
+                                <h4 class=" display-5 fw-bold mb-0 mx-5">32</h4>
+                                <p class="text-center ">Corantes e outros aditivos</p>
+                                </div>
+                              </div>
+
+                              <div class="col d-flex align-items-start mx-4 ">
+                                <div>
+                                <h4 class=" display-5 fw-bold mb-0  mx-5 ">8</h4>
+                                <p class=" mx-3 text-center">Não-alérgicos</p>
+                                </div>
+                              </div>
+           
+                                  
+                        </div>
                 </div>
-                </div>
 
-          </div>
-    </div>   <!---->
-
-
-
-
-    <div class="col">
-
-        <div class="col row row-cols-2 col-sm-6 mx-5 justify-content-center py-5 px-4">   
-              <div class="card card-cover w-75 overflow-hidden border-2" style="border-radius:20px; color:#6a6a6a;">
-              <div class=" d-flex flex-column p-1 pb-1 px-5 py-2 ">
-                  <h3 class="pt-1 mt-3 mb-1 display-7 fw-bold text-center">Outras Doenças</h3>
-                  <canvas id="myChart" style="margin-top:1em;" width="100" height="100"></canvas>
-              </div>
-              </div>
-        </div>
-
-        <div class="col row row-cols-2  px-5  ">
-              <div class="card card-cover w-50 overflow-hidden border-2" style="border-radius:20px; color:#6a6a6a;">
-              <div class="d-flex flex-column p-6 pb-3 ">
-                <h2 class="pt-1 mt-3 mb-1 display-7 fw-bold text-center">Dietas</h2>
-                <canvas id="myChartDie"></canvas>
-              </div>
-              </div>
-        </div>
-
-  </div>
-
-</div>
-
-
-
-
-
-                                            <!-- RESULTADOS-->
-
-
-<div class=" p-3 pb-md-3 mx-auto text-center" style="color:#DE4545;"><h2 class="display-7 fw-normal"><b>Resultado das Avaliações</b></div>
- 
-<div class="container">
-
-        <form class="container row  needs-validation" novalidate>
-          
-          <div class="row gx-lg-5 gy-lg-5 gy-3">
-
-          <div class="col-lg-3 col-12 ">
-              <label class="form-label">Data de nascimento </label>
-              <input type="date" class="form-control" required>
-              <div class="invalid-feedback">Inválido.</div>
             </div>
 
-            
+        </div>   
 
-        </div>
-</form>
+                                                        <!--OUTRAS DOENÇAS-->
 
-        </div>
+        <div class="row">
 
-        <div class="container my-5">
-  <div class="row" >
-  <div class="col-md-12 mb-4" ><canvas id="barChart"></canvas></div>
-  </div>
-  </div>
+            <div class="col row row-cols-1 justify-content-center py-5 px-3  mx-auto">   
+                <div class="card card-cover w-75  overflow-hidden border-2" style="border-radius:20px; color:#6a6a6a;">
+                 
+                  <div class=" d-flex flex-column  p-1 pb-1 px-5 ">
+                  <h3 class="pt-0 mt-3 mb-0  fw-bold text-center ">Outras doenças</h3>
+                  <p class="mt-3 text-center">Número de alunos por doença no <b>Campus Natal Zona Norte</b></p>
+                  </div>
 
+                        <div class="row row-cols-4 justify-content-center">
 
+                              <div class="col d-flex justify-content-center">
+                                <div>
+                                <h4 class=" display-5 fw-bold mb-0 mx-5">8</h4>
+                                <p class="text-center ">Doença celiaca</p>
+                                </div>
+                              </div>
 
+                              <div class="col d-flex justify-content-center mx-5">
+                                <div>
+                                <h4 class=" display-5 fw-bold mb-0 mx-5">12</h4>
+                                <p class=" text-center">Diabetes melittus</p>
+                                </div>
+                              </div>
 
-
-
-
-
-
-
-
-                  <!--Alergias-->
-<script>
-Chart.defaults.global.legend.labels.usePointStyle = true;
-var ctx = document.getElementById('myChartAl').getContext('2d');
-
-var myChartAl = new Chart(ctx, {
-  type: 'pie',
-  data: {
-    datasets: [{
-      data: [10, 20, 30, 40, 50, 60,70,80], 
-      backgroundColor: [
-        'rgb(119, 197, 67)',
-        'rgb(222, 69, 69)',
-	      'rgb(67, 180, 120)',
-	      'rgb(119, 197, 67)',
-	      'rgb(247, 194, 44)',
-        'rgb(119, 197, 67)',
-        'rgb(67, 180, 120)',
-        'rgb(222, 69, 69)'
-    ],
-
-    }],
-    labels: [
-    'Ovo',
-    'Látex',
-    'Trigo',
-    'Amendoim',
-    'Castanhas',
-    'Protéinas do leite de vaca',
-    'Corantes e outros aditivos',
-    'Não-alérgicos'
-
-  ],
-  hoverOffset: 4
-  },
-  options: {
-    responsive: true,
-    layout:{
-    padding:70
-
-    },
-    legend: {
-      position: 'right',
-    
-    },
-  }
-});
-
-</script>
+                              <div class="col d-flex justify-content-center mx-3 ">
+                                <div>
+                                <h4 class=" display-5 fw-bold mb-0 mx-3">20</h4>
+                                <p class="  text-center">Dislipidemias</p>
+                                </div>
+                              </div>
 
 
-              <!--Outras Doenças-->
+                              <div class="col d-flex justify-content-center mx-2">
+                                <div>
+                                <h4 class=" display-5 fw-bold mb-0 mx-5">2</h4>
+                                <p class=" text-center">Hipertensão</p>
+                                </div>
+                              </div>
 
-<script>
-Chart.defaults.global.legend.labels.usePointStyle = true;
-var ctx = document.getElementById('myChart').getContext('2d');
+                              <div class="col d-flex justify-content-center mx-4">
+                                <div>
+                                <h4 class=" display-5 fw-bold mb-0 mx-4">4</h4>
+                                <p class=" text-center ">Obesidade</p>
+                                </div>
+                              </div>
 
-var myChart = new Chart(ctx, {
-  type: 'pie',
-  data: {
-    datasets: [{
-      data: [40, 30, 20,10], 
-      backgroundColor: [
-      'rgb(255, 171, 15)',
-      'rgb(36,122,253)',
-      'rgb(70, 254, 159)',
-      'rgb(254, 70, 165)'
-    ],
+                              <div class="col d-flex justify-content-center mx-3 ">
+                                <div>
+                                <h4 class=" display-5 fw-bold mb-0  mx-5 ">8</h4>
+                                <p class=" text-center">Intolerância à lactose</p>
+                                </div>
+                              </div>                                  
+                        </div>
 
-    }],
-    labels: [
-    'Obesidade',
-    'Doença celiaca',
-    'Hipertensão arterial',
-    'Diabete Melittus'
-  ],
-  hoverOffset: 4
-  },
-  options: {
-    responsive: true,
-    layout:{
-    padding:10
+                </div>
+            </div>
+        </div>   
 
-    },
-    legend: {
-      position: 'bottom',
-      
-    },
-  }
-});
+                                                        <!--DIETAS-->
 
-</script>
+        <div class="row">
+
+            <div class="col row row-cols-1 justify-content-center py-5 px-3  mx-auto">   
+                <div class="card card-cover w-75  overflow-hidden border-2" style="border-radius:20px; color:#6a6a6a;">
+                
+                  <div class=" d-flex flex-column  p-1 pb-1 px-5 ">
+                    <h3 class="pt-0 mt-3 mb-0 fw-bold text-center ">Dietas</h3>
+                    <p class="mt-3 text-center">Número de alunos por dietas no <b>Campus Natal Zona Norte</b></p>
+                  </div>
+
+                        <div class="row row-cols-4 justify-content-center">
+
+                              <div class="col d-flex justify-content-center">
+                                <div>
+                                <h4 class=" display-5 fw-bold mb-0 mx-5">20</h4>
+                                <p class=" text-center ">Tradicional</p>
+                                </div>
+                              </div>
+
+                              <div class="col d-flex justify-content-center mx-5">
+                                <div>
+                                <h4 class=" display-5 fw-bold mb-0 mx-5">12</h4>
+                                <p class=" text-center">Vegano</p>
+                                </div>
+                              </div>
+
+                              <div class="col d-flex justify-content-center mx-2 ">
+                                <div>
+                                <h4 class=" display-5 fw-bold mb-0 mx-5">8</h4>
+                                <p class="  text-center">Vegetariano</p>
+                                </div>
+                              </div>
+
+                        </div>
+
+                </div>
+            </div>
+        </div>   
 
 
-                  <!--Dietas-->
-<script>
-Chart.defaults.global.legend.labels.usePointStyle = true;
-var ctx = document.getElementById('myChartDie').getContext('2d');
+                                                  <!--GRÁFICO BARRA-->
 
-var myChartDie = new Chart(ctx, {
-  type: 'pie',
-  data: {
-    datasets: [{
-      data: [20, 30,40], 
-      backgroundColor: [
-      'rgb(252, 130, 74)',
-      'rgb(176,1,73)',
-      'rgb(12, 23, 147)'
-      
-    ],
 
-    }],
-    labels: [
-    'Onívora',
-    'Vegana',
-    'Vegetariana'
-  ],
-  hoverOffset: 4
-  },
-  options: {
-    responsive: true,
-    layout:{
-    padding:30
+        <div class="row">
 
-    },
-    legend: {
-      position: 'bottom',
-      
-    },
-  }
-});
+              <div class="col row row-cols-1 justify-content-center py-5 px-3  mx-auto">   
+                  <div class="card card-cover w-75  overflow-hidden border-2" style="border-radius:20px; color:#6a6a6a;">
+                  <div class=" d-flex flex-column  p-1 pb-1 px-5 ">
+                      <h3 class="pt-0 mt-3 mb-0 fw-bold text-center ">Avaliações: lanche</h3>
+                      <div class="col my-4 row mx-auto ">
+                        <label class="col form-label py-1 h5 ">Data</label>
+                        <div class="col">
+                        <input type="date" class="form-control">
+                        </div>
+                      </div>
 
-</script>
+                      <div class=" estrelas text-center ">
+                          <input type="radio" id="avaliacao-bebida" name="lanche-bebida" value="" checked/>
+                          <label for="lanche-bebida-1"><i class="fa"></i></label>
+                          <input type="radio" id="lanche-bebida-1" name="lanche-bebida" value="1"/>
+                          <label for="lanche-bebida-2"><i class="fa"></i></label>
+                          <input type="radio" id="lanche-bebida-2" name="lanche-bebida" value="2"/>
+                          <label for="lanche-bebida-3"><i class="fa"></i></label>
+                          <input type="radio" id="lanche-bebida-3" name="lanche-bebida" value="3"/>
+                          <label for="lanche-bebida-4"><i class="fa"></i></label>
+                          <input type="radio" id="lanche-bebida-4" name="lanche-bebida" value="4"/>
+                          <label for="lanche-bebida-5"><i class="fa"></i></label>
+                          <input type="radio" id="lanche-bebida-5" name="lanche-bebida" value="5"/>
+                      </div>
 
+
+                      
+                       <canvas id="barChart" ></canvas>
+                      
+
+                  </div>
+                  </div>
+
+              </div>
+        </div>  
+
+</div> <!--DIV CONTAINER-->
 
 
 
@@ -275,15 +334,21 @@ window.onload = function() {
     data: horizontalBarChartData,
     options: {
       responsive: true,
+     
+      layout:{
+      padding:40
+      },
       legend:{
         display: false
       },
+    
       
       scales: {
         yAxes: [{
         ticks: {
         fontColor:"#6a6a6a",
         padding: 10,
+        
 					//display: false - remove this and commenting to display: false
 		},   
         }],
@@ -339,16 +404,6 @@ window.onload = function() {
 
 	Samples.utils.srand(Date.now());
 
-	// Google Analytics
-	/* eslint-disable */
-	if (document.location.hostname.match(/^(www\.)?chartjs\.org$/)) {
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-28909194-3', 'auto');
-		ga('send', 'pageview');
-	}
 	/* eslint-enable */
 
 }(this));
@@ -357,16 +412,17 @@ window.onload = function() {
 var color = Chart.helpers.color;
 var horizontalBarChartData = {
   labels: ['Segunda','Terça', 'Quarta','Quinta','Sexta'],
+ 
   datasets: [{
         maxBarThickness: 60,
         minBarLength:20,
  
     backgroundColor: [
-     'rgb(119, 197, 67)',
-     'rgb(222, 69, 69)',
-	  'rgb(9, 197, 85)',
-	  'rgb(255, 69, 69)',
-	 'rgb(247, 194, 44)'
+    'rgb(143, 25, 19)',
+    'rgb(217, 37, 28)',
+	  'rgb(233, 99, 92)',
+    'rgb(217, 37, 28)',
+    'rgb(143, 25, 19)'
     ],
     data: [
       randomScalingFactor(),
@@ -487,9 +543,5 @@ Chart.elements.Rectangle.prototype.draw = function() {
 };
 
 
-
-
-
-
-
 </script>
+
