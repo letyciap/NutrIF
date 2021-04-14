@@ -31,3 +31,5 @@ $route ['alergiausuario/listar'] = 'AlergiaUsuario/listar';
 $route ['alergiausuario/salvar'] = 'AlergiaUsuario/salvar';
 $route ['alergiausuario/editar'] = 'AlergiaUsuario/editar';
 $route ['alergiausuario/excluir'] = 'AlergiaUsuario/excluir';
+
+$route ['avaliacao/salvar'] = 'avaliacao/salvar';

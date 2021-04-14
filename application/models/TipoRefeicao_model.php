@@ -13,4 +13,9 @@ class TipoRefeicao_model extends CI_Model {
         $sql = "SELECT * from TipoRefeicao";
         return $this->db->query($sql)->result();
     }
+
+    function recuperarTodosMenosNDA(){
+        $sql = "SELECT * FROM TipoRefeicao WHERE codtiporefeicao NOT IN ('6')";
+        return $this->db->query($sql)->result();
+    }
 }

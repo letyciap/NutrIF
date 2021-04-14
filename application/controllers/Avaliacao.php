@@ -6,7 +6,9 @@ class Avaliacao extends CI_Controller {
   public function index()
   {
     $this->load->view('aluno/header-aluno');
-    $this->load->view('avaliacoes/avaliacao');
+    $this->load->model('TipoRefeicao_model');
+    $dados["tiporefeicao"] = $this->TipoRefeicao_model->recuperarTodosMenosNDA();
+    $this->load->view('avaliacoes/avaliacao', $dados);
     $this->load->view('footer');
   }
 
@@ -34,4 +36,21 @@ class Avaliacao extends CI_Controller {
 
     $this->load->view('admin/footer');
   } 
+
+  function salvar(){
+
+    $this->load->model('Avaliacao_model');
+
+    $this->Avaliacao_model->codavaliacao = $this->input->post('codavaliacao');
+    $this->Avaliacao_model->matricula = $this->input->post('matricula');
+    $this->Avaliacao_model->codtiporefeicao = $this->input->post('codtiporefeicao');
+    $this->Avaliacao_model->datarefeicao = $this->input->post('datarefeicao');
+    $this->Avaliacao_model->alimento = $this->input->post('alimento');
+    $this->Avaliacao_model->bebida = $this->input->post('bebida');
+    $this->Avaliacao_model->atendimento = $this->input->post('atendimento');
+    $this->Avaliacao_model->comentario = $this->input->post('comentario');
+    $this->Avaliacao_model->inserir();
+
+    redirect('aluno/avaliacao-realizada');
+  }
 }
