@@ -6,6 +6,6 @@
   </div>
 </div>
 <div class="text-center">
-<a  href="" class="btn btn-outline-success me-3"><b> Página Inicial</b></a> 
-<a  href="" class="btn btn-outline-success me-3"><b>Estatísticas</b></a> 
+<a  href="<?=base_url();?>aluno" class="btn btn-outline-success me-3"><b> Página Inicial</b></a> 
+<a  href="<?=base_url();?>avaliacao/estatisticas" class="btn btn-outline-success me-3"><b>Estatísticas</b></a> 
 </div>

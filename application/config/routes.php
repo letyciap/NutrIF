@@ -11,16 +11,16 @@ $route ['login'] = 'aluno/login';
 
 $route ['aluno/cadastro'] = 'usuario/cadastro';
 $route ['aluno/cadastro/editar'] = 'aluno/editar_cadastro';
-$route ['aluno/cadastro-realizado'] = 'aluno/cadastro_realizado';
+$route ['aluno/cadastro-realizado'] = 'usuario/cadastro_realizado';
 $route ['aluno/sair'] = 'aluno/sair';
 
 $route ['aluno/avaliacao'] = 'avaliacao/index';
 $route ['aluno/avaliacao-realizada'] = 'avaliacao/avaliacao_realizada';
-$route ['aluno/estatisticas'] = 'aluno/estatisticas';
+
 
 $route ['avaliacao/estatisticas'] = 'avaliacao/estatisticas';
 
-$route ['aluno/cadastro/salvar'] = 'Usuario/salvarDados';
+$route ['aluno/cadastro/salvar'] = 'Usuario/salvar';
 
 $route ['alergias/listar'] = 'Alergia/listar';
 $route ['alergias/salvar'] = 'Alergia/salvar';

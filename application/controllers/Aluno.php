@@ -34,13 +34,6 @@ class Aluno extends CI_Controller {
     $this->load->view('footer');
   	}
 
-  public function cadastro_realizado()
-  	{
-    $this->load->view('aluno/header-aluno');
-    $this->load->view('aluno/cadastro-realizado');
-    $this->load->view('footer');
-  	}
-
     public function estatisticas()
     {
       $this->load->view('aluno/header-aluno');

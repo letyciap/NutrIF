@@ -12,7 +12,7 @@ class Usuario_model extends CI_Model {
         public $codeetnia;
         public $altura;
         public $peso;
-        public $freqconsumocampus;
+        public $codfreqconsumocampus;
         public $coddieta;
         public $codsatisfacaocorpo;
         public $codfrequenciafome;
@@ -31,14 +31,14 @@ class Usuario_model extends CI_Model {
                 'datanascimento' => $this->datanascimento,
                 'datacadastro' => $this->datacadastro,
                 'codgenero' => $this->codgenero,
-                'codeetnia' => $this->codetnia,
+                'codeetnia' => $this->codeetnia,
                 'altura' => $this->altura,
                 'peso' => $this->peso,
-                'freqconsumocampus' => $this->freqconsumocampus,
+                'codfreqconsumocampus' => $this->codfreqconsumocampus,
                 'coddieta' => $this->coddieta,
                 'codsatisfacaocorpo' => $this->codsatisfacaocorpo,
                 'codfrequenciafome' => $this->codfrequenciafome,
-                'cadastro' => $this->cadastro
+                'outraalergia' => $this->outraalergia
             );
             return $this->db->insert('Usuario', $dados);
         }

@@ -93,6 +93,12 @@ body {
           border-color: #81B155;
           box-shadow: 0 0 0 .25rem rgba(129, 177, 85,.25);
       }
+.text-gray {
+    color: #6A6A6A;
+  }
+.text-gray:hover {
+    color: #121212;
+  }
 </style>
 
     <title>NutrIF</title>
@@ -114,8 +120,8 @@ body {
              <label for="floatingPassword">Senha</label>
         </div>
 
-        <button class="mb-3 w-100 btn btn-lg btn-success" type="submit">Entrar</button>
-        <a herf="" class="mt-5 mb-3 text-muted"> Não tenho cadastro</a>
+        <button  class="mb-3 w-100 btn btn-lg btn-success" type="submit">Entrar</button>
+        <a class= "text-gray" href="<?=base_url();?>aluno/cadastro" class="mt-5 mb-3">Não tenho cadastro</a>
      </form>
 </main>
 
