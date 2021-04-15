@@ -175,7 +175,7 @@
 
         <div class="row">
 
-            <div class="col row row-cols-1 justify-content-center py-5 px-3  mx-auto">   
+            <div class="col row row-cols-1 justify-content-center py-3 px-3  mx-auto">   
                 <div class="card card-cover w-75  overflow-hidden border-2" style="border-radius:20px; color:#6a6a6a;">
                  
                   <div class=" d-flex flex-column  p-1 pb-1 px-5 ">
@@ -237,7 +237,7 @@
 
         <div class="row">
 
-            <div class="col row row-cols-1 justify-content-center py-5 px-3  mx-auto">   
+            <div class="col row row-cols-1 justify-content-center py-5 px-3 mx-auto">   
                 <div class="card card-cover w-75  overflow-hidden border-2" style="border-radius:20px; color:#6a6a6a;">
                 
                   <div class=" d-flex flex-column  p-1 pb-1 px-5 ">
@@ -276,21 +276,45 @@
 
 
                                                   <!--GRÁFICO BARRA-->
-
-
+         
         <div class="row">
 
-              <div class="col row row-cols-1 justify-content-center py-5 px-3  mx-auto">   
+            <div class="col row row-cols-1 justify-content-center py-5 px-3 mx-auto ">   
+            <div class="card card-cover w-75 py-3 overflow-hidden border-0">
+
+                <div class="row row-cols-2 justify-content-center">
+                  <div class="d-flex align-items-start">
+                      <div class="col col-lg-9">
+                          <label class="form-label display-6 fw-normal" style="font-size:1.2em; color:#6a6a6a;">Selecioine a refeição de interesse: </label>
+                          <select class="form-select form-control"  required>
+                          <option selected>Lanche</option>
+                          <option>Almoço</option>
+                          <option>Janta</option>
+                          </select>
+                          <div class="invalid-feedback">Inválido.</div>
+                      </div>
+                    </div>
+                     
+                    <div class="d-flex flex-row-reverse">
+                      <div class="col col-lg-8  ">
+                      <label class="col form-label h5 " style="color:#6a6a6a;">Data</label>
+                      <input type="date" class="form-control">
+                      </div>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </div>     
+
+
+        <div class="row ">
+
+              <div class="col row row-cols-1 justify-content-center px-3 mx-auto">   
                   <div class="card card-cover w-75  overflow-hidden border-2" style="border-radius:20px; color:#6a6a6a;">
                   <div class=" d-flex flex-column  p-1 pb-1 px-5 ">
-                      <h3 class="pt-0 mt-3 mb-0 fw-bold text-center ">Avaliações: lanche</h3>
-                      <div class="col my-4 row mx-auto ">
-                        <label class="col form-label py-1 h5 ">Data</label>
-                        <div class="col">
-                        <input type="date" class="form-control">
-                        </div>
-                      </div>
-
+                      <h3 class="pt-0 mt-3 py-4 fw-bold text-center ">Avaliações: lanche</h3>
+                     
                       <div class=" estrelas text-center ">
                           <input type="radio" id="avaliacao-bebida" name="lanche-bebida" value="" checked/>
                           <label for="lanche-bebida-1"><i class="fa"></i></label>
@@ -305,10 +329,7 @@
                           <input type="radio" id="lanche-bebida-5" name="lanche-bebida" value="5"/>
                       </div>
 
-
-                      
-                       <canvas id="barChart" ></canvas>
-                      
+                       <canvas  id="barChart" ></canvas>             
 
                   </div>
                   </div>

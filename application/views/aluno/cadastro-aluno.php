@@ -145,13 +145,14 @@
                     <option selected></option>
                     <?php
                       $c_etnia = 0;
-                      foreach ($etnias as $etnia) { 
+                      foreach ($etnia as $etnia) { 
                     ?>
-                    <option value="<?= $etnia->codeetnia; ?>"><?= $etnia->etnia; ?></option>
+                    <option value="<?= $etnia->codeetnia; ?>"> <?= $etnia->etnia; ?></option>
                     <?php
                         $c_etnia++;
                       }
                     ?>
+                    
                   </select>
                   <div class="invalid-feedback">Inválido.</div>
                 </div>
@@ -208,7 +209,7 @@
                   <div class="invalid-feedback">Inválido.</div>
                 </div> 
 
-                <div class="col-lg-4 col-12 ">
+                <div class="col-lg-4 col-12 py-4">
                   <label for="refeicao" class="form-label">Quais refeições você costuma realizar no campus? <i>*</i></label>
                   <select class="form-select" id="campuss" name="campuss" required>
                     <option value=""></option>
@@ -239,7 +240,7 @@
                   </div>
 
                   <div class="mb-2">
-                    <input type="checkbox" class="form-check-input" id="alergia-ovo" name="alergia-ovo>
+                    <input type="checkbox" class="form-check-input" id="alergia-ovo" name="alergia-ovo">
                     <label class="form-check-label" for="ale-ovo">Alergia ao ovo</label>
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
@@ -273,49 +274,49 @@
                 <div class="col-lg-6">
                   <label class='mb-3'> </label>
 
-                  <div class="mb-2" >
+                  <div class="mb-2 mx-5" >
                     <input type="checkbox" class="form-check-input" id="alergia-diabetes" name="alergia-diabetes">
-                    <label class="form-check-label" for="ale-diabet">Diabetes melittus ()</label>
+                    <label class="form-check-label" for="ale-diabet">Diabetes melittus</label>
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
 
-                  <div class="mb-2">
+                  <div class="mb-2 mx-5">
                     <input type="checkbox" class="form-check-input" id="alergia-soja" name="alergia-soja">
                     <label class="form-check-label" for="ale-soja">Alergia à soja</label>
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
 
-                  <div class="mb-2" >
+                  <div class="mb-2 mx-5" >
                     <input type="checkbox" class="form-check-input" id="obesidade" name="obesidade">
                     <label class="form-check-label" for="obesi">Obesidade</label>
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
 
-                  <div class="mb-2">
+                  <div class="mb-2 mx-5">
                     <input type="checkbox" class="form-check-input" id="alergia-latex" name="alergia-latex">
                     <label class="form-check-label" for="ale-latex">Alergia ao látex</label>
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
 
-                  <div class="mb-2" >
+                  <div class="mb-2 mx-5" >
                     <input type="checkbox" class="form-check-input" id="lactose" name="lactose">
                     <label class="form-check-label" for="lact">Intolerância a lactose</label>
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
 
-                  <div class="mb-2">
+                  <div class="mb-2 mx-5">
                     <input type="checkbox" class="form-check-input" id="hipertensao" name="hipertensao">
                     <label class="form-check-label" for="hiper">Hipertensão arterial (Pressão alta)</label>
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
 
-                  <div class="mb-2" >
+                  <div class="mb-2 mx-5" >
                     <input type="checkbox" class="form-check-input" id="alergia-corante" name="alergia-corante">
                     <label class="form-check-label" for="ale-coran">Alergia à corantes e outros aditivos</label>
                     <div class="invalid-feedback">Inválido.</div>
                   </div>
 
-                  <div class="mb-2">
+                  <div class="mb-2 mx-5">
                     <input type="checkbox" class="form-check-input" id="outra-alergia" name="outra-alergia">
                     <label class="form-check-label" for="ale-outra">Outra:</label>
                     <input type="text" class="outra-linha" id="outraalergia" name="outraalergia">
@@ -324,7 +325,9 @@
 
                 </div>
                 
-                <div class="col-lg-4 col-12">
+                <div class="d-flex justify-content-center">
+                
+                <div class="col-lg-3 col-12 mx-4">
                   <label class="form-label">Dietas <i>*</i></label>
                   <select class="form-select" id="coddieta" name="coddieta" required>
                     <option value=""></option>
@@ -340,10 +343,8 @@
                    </select>
                   <div class="invalid-feedback">Inválido.</div>
                 </div> 
-
                 
-
-                <div class="col-lg-4 col-12">
+                <div class="col-lg-4 col-12 mx-5">
                   <label for="sentircorpo" class="form-label">Como você se sente em relação ao seu corpo? <i>*</i></label>
                   <select class="form-select" id="codsatisfacaocorpo" name="codsatisfacaocorpo" required>
                     <option value=""></option>
@@ -361,13 +362,16 @@
                   <div class="invalid-feedback">Inválido.</div>
                 </div> 
 
-                <div class="col-lg-4 col-12 ">
+                <div class="col-lg-3 col-12 mx-4">
                   <label class="form-label">Data da resposta do cadastro <i>*</i></label>
                   <input type="date" class="form-control" id="datacadastro" name="datacadastro" required>
                   <div class="invalid-feedback">Inválido.</div>
                 </div>
 
               </div> 
+
+                </div>
+                
 
               <div class="col-12 mt-5 row justify-content-center gx-3">
                 <div class="col-lg-2 col-6">
