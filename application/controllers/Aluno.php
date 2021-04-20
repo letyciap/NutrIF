@@ -3,13 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Aluno extends CI_Controller {
 
-	public function index()
-	{
-		$this->load->view('aluno/header-aluno');
-		$this->load->view('aluno/index-aluno');
-		$this->load->view('footer');
-	}
-
 	public function login()
   {
     $this->load->view('login');
@@ -33,13 +26,4 @@ class Aluno extends CI_Controller {
     $this->load->view('aluno/editar-cadastro');
     $this->load->view('footer');
   	}
-
-    public function estatisticas()
-    {
-      $this->load->view('aluno/header-aluno');
-      $this->load->view('avaliacoes/estatisticas');
-      $this->load->view('footer');
-    }
- 
-    
 }

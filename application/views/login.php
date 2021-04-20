@@ -106,17 +106,18 @@ body {
   <body class="text-center">
 
   <main class="form-signin">
-    <form>
+    <p><?= $this->session->flashdata('msg');?></p>
+    <form method='POST' action='<?=base_url();?>usuario/autenticar'>
         <img class="mb-3" style="height:4rem;" src="<?= base_url()?>/assets/logo.png" alt="">
          
 
         <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <input type="text" class="form-control" name='matricula' id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">Matrícula</label>
         </div>
         
         <div class="form-floating">
-             <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+             <input type="password" name='senha' class="form-control" id="floatingPassword" placeholder="Password">
              <label for="floatingPassword">Senha</label>
         </div>
 

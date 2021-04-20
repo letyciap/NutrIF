@@ -47,4 +47,10 @@ class Usuario_model extends CI_Model {
             $sql = "SELECT * from Usuario";
             return $this->db->query($sql)->result();
         }
+
+        function recuperarPorLoginESenha($matricula, $senha) {
+            $sql = "SELECT * FROM Usuario WHERE matricula = ? AND senha = ?";
+            $dados = array($matricula, $senha);
+            return $this->db->query($sql, $dados)->result();
+        }
 }

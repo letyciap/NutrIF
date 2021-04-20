@@ -72,16 +72,16 @@
         <div class="navbar-collapse collapse" id="navbarsExample07" style="">
           <ul class="navbar-nav ms-lg-auto text-center mb-2 mb-lg-0" style="font-size: 1.1rem">
             <li class="nav-item mx-lg-2">
-              <a class="nav-link item-menu" href="<?= base_url()?>aluno/cadastro/editar"><b>Meus Dados</b></a>
+              <a class="nav-link item-menu" href="<?= base_url()?>usuario/cadastro/editar"><b>Meus Dados</b></a>
             </li>
             <li class="nav-item mx-lg-2">
-            <a class="nav-link item-menu" href="<?= base_url()?>aluno/avaliacao"><b>Avaliar</b></a>
+            <a class="nav-link item-menu" href="<?= base_url()?>usuario/avaliacao"><b>Avaliar</b></a>
             </li>
             <li class="nav-item mx-lg-2">
-              <a class="nav-link item-menu" href="<?= base_url()?>aluno/estatisticas"><b>Estatísticas</b></a>
+              <a class="nav-link item-menu" href="<?= base_url()?>estatisticas"><b>Estatísticas</b></a>
             </li>
             <li class="nav-item mx-lg-2">
-              <a class="nav-link text-danger sair-hover" href="<?= base_url()?>aluno/sair"><b>Sair</b></a>
+              <a class="nav-link text-danger sair-hover" href="<?= base_url()?>usuario/sair"><b>Sair</b></a>
             </li>
           </ul>
         </div>

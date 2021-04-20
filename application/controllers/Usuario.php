@@ -3,6 +3,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Usuario extends CI_Controller {
 
+  public function index()
+	{
+    if  (! $this->session->userdata('usuario')) {
+      redirect('login');
+    }
+
+		$this->load->view('aluno/header-aluno');
+		$this->load->view('aluno/index-aluno');
+		$this->load->view('footer');
+	}
+
+  public function editar_cadastro()
+  	{
+      if  (! $this->session->userdata('usuario')) {
+        $this->session->set_flashdata('msg', 'Você não tem permissão para acessar essa página. Por favor, Cadastre-se ou Faça Login.');
+        redirect('login');
+      }
+      
+      $this->load->view('aluno/header-aluno');
+      $this->load->view('aluno/editar-cadastro');
+      $this->load->view('footer');
+  	}
+
   public function cadastro() {
 
     $this->load->model('Dieta_model');
@@ -39,9 +62,11 @@ class Usuario extends CI_Controller {
   public function salvar() {
     $this->load->model('Usuario_model');
 
+    $senhaCriptografada = md5($this->input->post('senha'));
+
     $this->Usuario_model->matricula = $this->input->post('matricula');
     $this->Usuario_model->usuario = $this->input->post('usuario');
-    $this->Usuario_model->senha = $this->input->post('senha');
+    $this->Usuario_model->senha = $senhaCriptografada;
     $this->Usuario_model->codcampus = $this->input->post('codcampus');
     $this->Usuario_model->datanascimento = $this->input->post('datanascimento');
     $this->Usuario_model->datacadastro = $this->input->post('datacadastro');
@@ -76,6 +101,30 @@ class Usuario extends CI_Controller {
     $this->load->view('aluno/cadastro-realizado');
     $this->load->view('footer');
   	}
+
+  public function autenticar() {
+    $matricula = $this->input->post('matricula');
+    $senha = $this->input->post('senha');
+
+    $this->load->model('Usuario_model');
+    $usuario = $this->Usuario_model->recuperarPorLoginESenha($matricula, md5($senha));
+
+    if ($usuario) {
+      $this->session->set_userdata('usuario', $usuario[0]);
+      $this->session->set_flashdata('msg','');
+      redirect('aluno');
+    } else {
+      $this->session->set_flashdata('msg', 'Matrícula ou Senha inválidos!');
+      redirect('login');
+    }
+  }
+
+  public function logoff() {
+    $this->session->unset_userdata('usuario');
+    redirect('login');
+  }
+
+  
 
   
 }

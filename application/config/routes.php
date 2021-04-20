@@ -6,19 +6,21 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route ['index'] = 'welcome/index';
-$route ['aluno'] = 'aluno/index';
+$route ['aluno'] = 'Usuario/index';
 $route ['login'] = 'aluno/login';
+$route ['usuario/autenticar'] = 'Usuario/autenticar';
+$route ['usuario/sair'] = 'Usuario/logoff';
 
 $route ['aluno/cadastro'] = 'usuario/cadastro';
-$route ['aluno/cadastro/editar'] = 'aluno/editar_cadastro';
+$route ['usuario/cadastro/editar'] = 'usuario/editar_cadastro';
 $route ['aluno/cadastro-realizado'] = 'usuario/cadastro_realizado';
 $route ['aluno/sair'] = 'aluno/sair';
 
-$route ['aluno/avaliacao'] = 'avaliacao/index';
+$route ['usuario/avaliacao'] = 'Avaliacao/index';
 $route ['aluno/avaliacao-realizada'] = 'avaliacao/avaliacao_realizada';
 
 
-$route ['avaliacao/estatisticas'] = 'avaliacao/estatisticas';
+$route ['estatisticas'] = 'avaliacao/estatisticas';
 
 $route ['aluno/cadastro/salvar'] = 'Usuario/salvar';
 

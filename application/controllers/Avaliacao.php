@@ -5,6 +5,11 @@ class Avaliacao extends CI_Controller {
 
   public function index()
   {
+    if  (! $this->session->userdata('usuario')) {
+      $this->session->set_flashdata('msg', 'Você não tem permissão para acessar essa página. Por favor, Cadastre-se ou Faça Login.');
+      redirect('login');
+    }
+
     $this->load->view('aluno/header-aluno');
     $this->load->model('TipoRefeicao_model');
     $dados["tiporefeicao"] = $this->TipoRefeicao_model->recuperarTodosMenosNDA();
@@ -21,7 +26,12 @@ class Avaliacao extends CI_Controller {
 
   public function estatisticas()
   {
-    $this->load->view('header');
+    if  (! $this->session->userdata('usuario')) {
+      $this->load->view('header');
+      $this->load->view('avaliacoes/estatisticas');
+      $this->load->view('footer');
+    }
+    $this->load->view('aluno/header-aluno');
     $this->load->view('avaliacoes/estatisticas');
     $this->load->view('footer');
   }
