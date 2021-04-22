@@ -27,13 +27,17 @@ class Avaliacao extends CI_Controller {
   public function estatisticas()
   {
     if  (! $this->session->userdata('usuario')) {
+      $this->load->view('aluno/header-aluno');
+      $this->load->view('avaliacoes/estatisticas');
+      $this->load->view('footer');
+    }
+    else{
+    
       $this->load->view('header');
       $this->load->view('avaliacoes/estatisticas');
       $this->load->view('footer');
     }
-    $this->load->view('aluno/header-aluno');
-    $this->load->view('avaliacoes/estatisticas');
-    $this->load->view('footer');
+ 
   }
 
   function listar() {

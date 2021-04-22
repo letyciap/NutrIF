@@ -1,6 +1,5 @@
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-
 <style>
 
   .estrelas input{display: none}
@@ -105,7 +104,14 @@
                   <p class="mt-3 text-center">Número de alunos por alergia no <b>Campus Natal Zona Norte</b></p>
                   </div>
 
-                        <div class="row row-cols-5 justify-content-center">
+                        <div class="row row-cols-6 justify-content-center">
+
+                              <div class="col d-flex align-items-start mx-4">
+                                <div>
+                                <h4 class=" display-5 fw-bold mb-0 text-center " style="color:#498221;">57</h4>
+                                <p class=" text-center mx-0 " style="color:#498221;">Alunos cadastrados</p>
+                                </div>
+                              </div>
 
                               <div class="col d-flex align-items-start">
                                 <div>
@@ -114,24 +120,24 @@
                                 </div>
                               </div>
 
-                              <div class="col d-flex align-items-start ">
+                              <div class="col d-flex align-items-start">
                                 <div>
                                 <h4 class=" display-5 fw-bold mb-0">12</h4>
                                 <p class="mx-2 ">Látex</p>
                                 </div>
                               </div>
 
-                              <div class="col d-flex align-items-start ">
+                              <div class="col d-flex align-items-start">
                                 <div>
                                 <h4 class=" display-5 fw-bold mb-0">18</h4>
                                 <p class=" mx-2 ">Trigo</p>
                                 </div>
                               </div>
 
-                              <div class="col d-flex align-items-start  ">
+                              <div class="col d-flex align-items-start ">
                                 <div>
-                                <h4 class=" display-5 fw-bold mb-0 mx-5 ">20</h4>
-                                <p class=" text-center">Proteínas do leite de vaca</p>
+                                <h4 class=" display-5 fw-bold mb-0 mx-4 ">20</h4>
+                                <p class=" text-center mx-1">Proteínas do leite de vaca</p>
                                 </div>
                               </div>
 
@@ -183,7 +189,14 @@
                   <p class="mt-3 text-center">Número de alunos por doença no <b>Campus Natal Zona Norte</b></p>
                   </div>
 
-                        <div class="row row-cols-4 justify-content-center">
+                        <div class="row row-cols-5 justify-content-center">
+
+                        <div class="col d-flex align-items-start ">
+                                <div>
+                                <h4 class=" display-5 fw-bold mb-0 text-center " style="color:#498221;">57</h4>
+                                <p class=" text-center mx-2 " style="color:#498221;">Alunos cadastrados</p>
+                                </div>
+                              </div>
 
                               <div class="col d-flex justify-content-center">
                                 <div>
@@ -247,6 +260,13 @@
 
                         <div class="row row-cols-4 justify-content-center">
 
+                        <div class="col d-flex align-items-start ">
+                                <div>
+                                <h4 class=" display-5 fw-bold mb-0 text-center " style="color:#498221;">57</h4>
+                                <p class=" text-center mx-4 " style="color:#498221;">Alunos cadastrados</p>
+                                </div>
+                              </div>
+
                               <div class="col d-flex justify-content-center">
                                 <div>
                                 <h4 class=" display-5 fw-bold mb-0 mx-5">20</h4>
@@ -254,14 +274,14 @@
                                 </div>
                               </div>
 
-                              <div class="col d-flex justify-content-center mx-5">
+                              <div class="col d-flex justify-content-center ">
                                 <div>
                                 <h4 class=" display-5 fw-bold mb-0 mx-5">12</h4>
                                 <p class=" text-center">Vegano</p>
                                 </div>
                               </div>
 
-                              <div class="col d-flex justify-content-center mx-2 ">
+                              <div class="col d-flex justify-content-center  ">
                                 <div>
                                 <h4 class=" display-5 fw-bold mb-0 mx-5">8</h4>
                                 <p class="  text-center">Vegetariano</p>
@@ -562,7 +582,6 @@ Chart.elements.Rectangle.prototype.draw = function() {
         ctx.stroke();
     }
 };
-
 
 </script>
 
