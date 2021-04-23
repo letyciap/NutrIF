@@ -59,314 +59,231 @@
 </style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-<div class = "container  ">
-<div class=" p-3 mx-auto text-center" style="color:#DE4545;"><h2 class=""><b>Estatísticas</b></h2></div>
+
+<div class = "container">
+  <div class="p-3 mx-auto text-center text-danger"><h2 class="fw-bold">Estatísticas</h2></div>
+  <div class="col-lg-9 col-12 mx-auto justify-content-center">
+    <div class="">
+      <label class="form-label h5 fw-bold text-secondary">Por favor, selecione o Campi IFRN de interesse:</label>
+      <select class="form-select form-control"  required>
+        <option selected></option>
+        <?php foreach ($campus as $campus):?>
+          <option value="<?= $campus->codcampus;?>">Instituto Federal de Educação, Ciencia e Tecnologia do Rio Grande do Norte - Campus <?= $campus->campus; ?></option>
+        <?php endforeach;?>
+      </select>
+    </div>
+  </div>
+</div>
+    
+<!--ALERGIAS-->
           
-          <div class="row justify-content-center">
-          <div class="col-lg-9 col-12">
-              <label class="form-label display-6 fw-normal" style="font-size:1.2em; color:#6a6a6a;">Por favor, selecioine o Campi IFRN de interesse: </label>
-              <select class="form-select form-control"  required>
-                <option selected>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Natal-Zona Norte </option>
-                <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Apodi </option>
-                <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Caicó </option>
-                <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Canguaretama </option>
-                <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Ceará-mirim </option>
-                <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Currais Novos </option>
-                <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Ipanguaçu </option>
-                <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus João Câmara </option>
-                <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Jucurutu </option>
-                <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Lajes </option>
-                <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Macau </option>
-                <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Mossoró </option>
-                <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Natal-Central </option>
-                <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Natal-Cidade Alta </option>
-                <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Natal-Zona Leste </option>
-                <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Natal-Zona Norte </option>
-                <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Parelhas </option>
-                <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Pau dos Ferros </option>
-                <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus Santa Cruz </option>
-                <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus São Gonsalo do Amarante </option>
-                <option>Instituto Federal de Ciencia e Tecnologia do Rio Grande do Norte - Campus São Paulo do Potengi </option>
-              </select>
-              <div class="invalid-feedback">Inválido.</div>
-            </div>
-   
+<div class="container">
+  <div class="col-lg-9 col-12 py-5 mx-auto">   
+    <div class="card card-cover text-secondary border-2" style="border-radius:1rem">        
+      <div class="col mx-auto p-1 pb-1 px-5">
+        <h3 class="pt-0 mt-3 mb-0  fw-bold text-center ">Alergias</h3>
+        <p class="mt-3 text-center">Número de alunos por alergia no <b>Campus Natal Zona Norte</b></p>
+      </div>
+
+      <div class="col-10 mb-4 mx-auto row row-cols-lg-5 row-cols-2 justify-content-center">
+
+        <div class="col text-center text-success">
+          <h4 class=" display-5 fw-bold mb-0 text-center">57</h4>
+          <p class=" text-center mx-0 text-success">Alunos cadastrados</p>
         </div>
-                                                        <!--ALERGIAS-->
-          
-        <div class="row">
 
-            <div class="col row row-cols-1 justify-content-center py-5 px-3  mx-auto">   
-                <div class="card card-cover w-75  overflow-hidden border-2" style="border-radius:20px; color:#6a6a6a;">
-                 
-                  <div class=" d-flex flex-column  p-1 pb-1 px-5 ">
-                  <h3 class="pt-0 mt-3 mb-0  fw-bold text-center ">Alergias</h3>
-                  <p class="mt-3 text-center">Número de alunos por alergia no <b>Campus Natal Zona Norte</b></p>
-                  </div>
+        <div class="col text-center">
+          <h4 class=" display-5 fw-bold mb-0">8</h4>
+          <p>Ovo</p>
+        </div>
 
-                        <div class="row row-cols-6 justify-content-center">
+        <div class="col text-center">
+          <h4 class=" display-5 fw-bold mb-0">12</h4>
+          <p>Látex</p>
+        </div>
 
-                              <div class="col d-flex align-items-start mx-4">
-                                <div>
-                                <h4 class=" display-5 fw-bold mb-0 text-center " style="color:#498221;">57</h4>
-                                <p class=" text-center mx-0 " style="color:#498221;">Alunos cadastrados</p>
-                                </div>
-                              </div>
+        <div class="col text-center">
+          <h4 class=" display-5 fw-bold mb-0">18</h4>
+          <p>Trigo</p>
+        </div>
 
-                              <div class="col d-flex align-items-start">
-                                <div>
-                                <h4 class=" display-5 fw-bold mb-0">8</h4>
-                                <p class="">Ovo</p>
-                                </div>
-                              </div>
+        <div class="col text-center ">
+          <h4 class="display-5 fw-bold mb-0">20</h4>
+          <p>Proteínas do leite de vaca</p>
+        </div>
 
-                              <div class="col d-flex align-items-start">
-                                <div>
-                                <h4 class=" display-5 fw-bold mb-0">12</h4>
-                                <p class="mx-2 ">Látex</p>
-                                </div>
-                              </div>
+        <div class="col text-center">
+          <h4 class="display-5 fw-bold mb-0">2</h4>
+          <p>Castanhas</p>
+        </div>
 
-                              <div class="col d-flex align-items-start">
-                                <div>
-                                <h4 class=" display-5 fw-bold mb-0">18</h4>
-                                <p class=" mx-2 ">Trigo</p>
-                                </div>
-                              </div>
+        <div class="col text-center ">
+          <h4 class="display-5 fw-bold mb-0">4</h4>
+          <p class="">Amendoim</p>
+        </div>
 
-                              <div class="col d-flex align-items-start ">
-                                <div>
-                                <h4 class=" display-5 fw-bold mb-0 mx-4 ">20</h4>
-                                <p class=" text-center mx-1">Proteínas do leite de vaca</p>
-                                </div>
-                              </div>
+        <div class="col text-center ">
+          <h4 class="display-5 fw-bold mb-0">32</h4>
+          <p>Corantes e outros aditivos</p>
+        </div>
 
-                              <div class="col d-flex align-items-start mx-1">
-                                <div>
-                                <h4 class=" display-5 fw-bold mb-0 mx-4">2</h4>
-                                <p class=" ">Castanhas</p>
-                                </div>
-                              </div>
-
-                              <div class="col d-flex align-items-start ">
-                                <div>
-                                <h4 class=" display-5 fw-bold mb-0 mx-4">4</h4>
-                                <p class=" mx-2 ">Amendoim</p>
-                                </div>
-                              </div>
-
-                              <div class="col d-flex align-items-start ">
-                                <div>
-                                <h4 class=" display-5 fw-bold mb-0 mx-5">32</h4>
-                                <p class="text-center ">Corantes e outros aditivos</p>
-                                </div>
-                              </div>
-
-                              <div class="col d-flex align-items-start mx-4 ">
-                                <div>
-                                <h4 class=" display-5 fw-bold mb-0  mx-5 ">8</h4>
-                                <p class=" mx-3 text-center">Não-alérgicos</p>
-                                </div>
-                              </div>
-           
-                                  
-                        </div>
-                </div>
-
-            </div>
-
+        <div class="col text-center ">
+          <h4 class=" display-5 fw-bold mb-0">8</h4>
+          <p>Não-alérgicos</p>
         </div>   
 
-                                                        <!--OUTRAS DOENÇAS-->
+      </div>
+    </div>
+  </div>
+</div>   
 
-        <div class="row">
+<!--OUTRAS DOENÇAS-->
 
-            <div class="col row row-cols-1 justify-content-center py-3 px-3  mx-auto">   
-                <div class="card card-cover w-75  overflow-hidden border-2" style="border-radius:20px; color:#6a6a6a;">
-                 
-                  <div class=" d-flex flex-column  p-1 pb-1 px-5 ">
-                  <h3 class="pt-0 mt-3 mb-0  fw-bold text-center ">Outras doenças</h3>
-                  <p class="mt-3 text-center">Número de alunos por doença no <b>Campus Natal Zona Norte</b></p>
-                  </div>
+<div class="container">
+  <div class="col-lg-9 col-12 py-5 mx-auto">   
+    <div class="card card-cover text-secondary border-2" style="border-radius:1rem">
+      <div class=" d-flex flex-column  p-1 pb-1 px-5 ">
+        <h3 class="pt-0 mt-3 mb-0  fw-bold text-center ">Outras doenças</h3>
+        <p class="mt-3 text-center">Número de alunos por doença no <b>Campus Natal Zona Norte</b></p>
+      </div>
 
-                        <div class="row row-cols-5 justify-content-center">
+      <div class="col-10 mb-4 mx-auto row row-cols-lg-5 row-cols-2 justify-content-center">
 
-                        <div class="col d-flex align-items-start ">
-                                <div>
-                                <h4 class=" display-5 fw-bold mb-0 text-center " style="color:#498221;">57</h4>
-                                <p class=" text-center mx-2 " style="color:#498221;">Alunos cadastrados</p>
-                                </div>
-                              </div>
+        <div class="col text-center text-success">
+          <h4 class="display-5 fw-bold mb-0">57</h4>
+          <p>Alunos cadastrados</p>
+        </div>
 
-                              <div class="col d-flex justify-content-center">
-                                <div>
-                                <h4 class=" display-5 fw-bold mb-0 mx-5">8</h4>
-                                <p class="text-center ">Doença celiaca</p>
-                                </div>
-                              </div>
+        <div class="col text-center">
+          <h4 class=" display-5 fw-bold mb-0">8</h4>
+          <p>Doença celiaca</p>                                
+        </div>
 
-                              <div class="col d-flex justify-content-center mx-5">
-                                <div>
-                                <h4 class=" display-5 fw-bold mb-0 mx-5">12</h4>
-                                <p class=" text-center">Diabetes melittus</p>
-                                </div>
-                              </div>
+        <div class="col text-center">
+          <h4 class=" display-5 fw-bold mb-0">12</h4>
+          <p>Diabetes melittus</p>
+        </div>
 
-                              <div class="col d-flex justify-content-center mx-3 ">
-                                <div>
-                                <h4 class=" display-5 fw-bold mb-0 mx-3">20</h4>
-                                <p class="  text-center">Dislipidemias</p>
-                                </div>
-                              </div>
+        <div class="col text-center">
+          <h4 class=" display-5 fw-bold mb-0">20</h4>
+          <p>Dislipidemias</p>
+        </div>
 
+        <div class="col text-center">
+          <h4 class=" display-5 fw-bold mb-0">2</h4>
+          <p>Hipertensão</p>
+        </div>
 
-                              <div class="col d-flex justify-content-center mx-2">
-                                <div>
-                                <h4 class=" display-5 fw-bold mb-0 mx-5">2</h4>
-                                <p class=" text-center">Hipertensão</p>
-                                </div>
-                              </div>
+        <div class="col text-center">
+          <h4 class=" display-5 fw-bold mb-0">4</h4>
+          <p>Obesidade</p>
+        </div>
 
-                              <div class="col d-flex justify-content-center mx-4">
-                                <div>
-                                <h4 class=" display-5 fw-bold mb-0 mx-4">4</h4>
-                                <p class=" text-center ">Obesidade</p>
-                                </div>
-                              </div>
+        <div class="col text-center">
+          <h4 class=" display-5 fw-bold mb-0">8</h4>
+          <p>Intolerância à lactose</p>
+        </div>                                  
+      </div>
+    </div>
+  </div>
+</div>   
 
-                              <div class="col d-flex justify-content-center mx-3 ">
-                                <div>
-                                <h4 class=" display-5 fw-bold mb-0  mx-5 ">8</h4>
-                                <p class=" text-center">Intolerância à lactose</p>
-                                </div>
-                              </div>                                  
-                        </div>
+<!--DIETAS-->
 
-                </div>
-            </div>
-        </div>   
+<div class="container">
+  <div class="col-lg-9 col-12 py-5 mx-auto">   
+    <div class="card card-cover text-secondary border-2" style="border-radius:1rem">
+      <div class=" d-flex flex-column  p-1 pb-1 px-5 ">
+        <h3 class="pt-0 mt-3 mb-0 fw-bold text-center ">Dietas</h3>
+        <p class="mt-3 text-center">Número de alunos por dietas no <b>Campus Natal Zona Norte</b></p>
+      </div>
 
-                                                        <!--DIETAS-->
+      <div class="col-10 mb-4 mx-auto row row-cols-lg-5 row-cols-2 justify-content-center">
 
-        <div class="row">
+        <div class="col text-center text-success">
+          <h4 class="display-5 fw-bold mb-0">57</h4>
+          <p>Alunos cadastrados</p>
+        </div>
 
-            <div class="col row row-cols-1 justify-content-center py-5 px-3 mx-auto">   
-                <div class="card card-cover w-75  overflow-hidden border-2" style="border-radius:20px; color:#6a6a6a;">
-                
-                  <div class=" d-flex flex-column  p-1 pb-1 px-5 ">
-                    <h3 class="pt-0 mt-3 mb-0 fw-bold text-center ">Dietas</h3>
-                    <p class="mt-3 text-center">Número de alunos por dietas no <b>Campus Natal Zona Norte</b></p>
-                  </div>
+        <div class="col text-center">
+          <h4 class=" display-5 fw-bold mb-0">20</h4>
+          <p>Tradicional</p>
+        </div>
 
-                        <div class="row row-cols-4 justify-content-center">
+        <div class="col text-center">
+          <h4 class=" display-5 fw-bold mb-0">12</h4>
+          <p>Vegano</p>
+        </div>
 
-                        <div class="col d-flex align-items-start ">
-                                <div>
-                                <h4 class=" display-5 fw-bold mb-0 text-center " style="color:#498221;">57</h4>
-                                <p class=" text-center mx-4 " style="color:#498221;">Alunos cadastrados</p>
-                                </div>
-                              </div>
+        <div class="col text-center">
+          <h4 class=" display-5 fw-bold mb-0">8</h4>
+          <p>Vegetariano</p>
+        </div>
 
-                              <div class="col d-flex justify-content-center">
-                                <div>
-                                <h4 class=" display-5 fw-bold mb-0 mx-5">20</h4>
-                                <p class=" text-center ">Tradicional</p>
-                                </div>
-                              </div>
+      </div>
+    </div>
+  </div>
+</div>   
 
-                              <div class="col d-flex justify-content-center ">
-                                <div>
-                                <h4 class=" display-5 fw-bold mb-0 mx-5">12</h4>
-                                <p class=" text-center">Vegano</p>
-                                </div>
-                              </div>
-
-                              <div class="col d-flex justify-content-center  ">
-                                <div>
-                                <h4 class=" display-5 fw-bold mb-0 mx-5">8</h4>
-                                <p class="  text-center">Vegetariano</p>
-                                </div>
-                              </div>
-
-                        </div>
-
-                </div>
-            </div>
-        </div>   
-
-
-                                                  <!--GRÁFICO BARRA-->
+<!--GRÁFICO BARRA-->
          
-        <div class="row">
+<div class="container">
+  <div class="col-lg-9 col-12 py-5 mx-auto">   
+    <div class="card card-cover border-0">
+      <div class="row row-cols-1 row-cols-lg-2 justify-content-center">
 
-            <div class="col row row-cols-1 justify-content-center py-5 px-3 mx-auto ">   
-            <div class="card card-cover w-75 py-3 overflow-hidden border-0">
+        <div class="d-flex mb-5 mb-lg-0">
+          <div class="col col-lg-9">
+          <label class="form-label display-6 fw-normal" style="font-size:1.2em; color:#6a6a6a;">Selecione a refeição: </label>
+              <select class="form-select form-control"  required>
+              <option selected>Lanche</option>
+              <option>Almoço</option>
+              <option>Janta</option>
+              </select>
+          </div>
+        </div> 
 
-                <div class="row row-cols-2 justify-content-center">
-                  <div class="d-flex align-items-start">
-                      <div class="col col-lg-9">
-                          <label class="form-label display-6 fw-normal" style="font-size:1.2em; color:#6a6a6a;">Selecioine a refeição de interesse: </label>
-                          <select class="form-select form-control"  required>
-                          <option selected>Lanche</option>
-                          <option>Almoço</option>
-                          <option>Janta</option>
-                          </select>
-                          <div class="invalid-feedback">Inválido.</div>
-                      </div>
-                    </div>
-                     
-                    <div class="d-flex flex-row-reverse">
-                      <div class="col col-lg-8  ">
-                      <label class="col form-label h5 " style="color:#6a6a6a;">Data</label>
-                      <input type="date" class="form-control">
-                      </div>
-                    </div>
-                </div>
+        <div class="d-flex flex-row-reverse ">
+          <div class="col col-lg-8  ">
+          <label class="col form-label h5 " style="color:#6a6a6a;">Data:</label>
+          <input type="date" class="form-control">
+          </div>
+        </div>
 
-            </div>
-            </div>
-        </div>     
+      </div>
+    </div>
+  </div>
+</div>   
 
+<div class="container">
+  <div class="col-lg-9 col-12 py-5 mx-auto">   
+    <div class="card card-cover text-secondary border-2" style="border-radius:1rem">
+      <div class=" d-flex flex-column py-lg-1 px-lg-5 px-0">
+        <h3 class="pt-0 mt-3 py-4 fw-bold text-center ">Avaliações: lanche</h3>
+        
+        <div class="estrelas text-center">
+          <label>
+            <i class="fa mx-2 mx-lg-5"></i>
+            <i class="fa mx-2 mx-lg-5"></i>
+            <i class="fa mx-2 mx-lg-5"></i>
+            <i class="fa mx-2 mx-lg-5"></i>
+            <i class="fa mx-2 mx-lg-5"></i>
+          </label>
+        </div>
 
-        <div class="row ">
+        <canvas class='p-lg-4 p-0' id="barChart"></canvas>             
 
-              <div class="col row row-cols-1 justify-content-center px-3 mx-auto">   
-                  <div class="card card-cover w-75  overflow-hidden border-2" style="border-radius:20px; color:#6a6a6a;">
-                  <div class=" d-flex flex-column  p-1 pb-1 px-5 ">
-                      <h3 class="pt-0 mt-3 py-4 fw-bold text-center ">Avaliações: lanche</h3>
-                     
-                      <div class=" estrelas text-center ">
-                          <input type="radio" id="avaliacao-bebida" name="lanche-bebida" value="" checked/>
-                          <label for="lanche-bebida-1"><i class="fa"></i></label>
-                          <input type="radio" id="lanche-bebida-1" name="lanche-bebida" value="1"/>
-                          <label for="lanche-bebida-2"><i class="fa"></i></label>
-                          <input type="radio" id="lanche-bebida-2" name="lanche-bebida" value="2"/>
-                          <label for="lanche-bebida-3"><i class="fa"></i></label>
-                          <input type="radio" id="lanche-bebida-3" name="lanche-bebida" value="3"/>
-                          <label for="lanche-bebida-4"><i class="fa"></i></label>
-                          <input type="radio" id="lanche-bebida-4" name="lanche-bebida" value="4"/>
-                          <label for="lanche-bebida-5"><i class="fa"></i></label>
-                          <input type="radio" id="lanche-bebida-5" name="lanche-bebida" value="5"/>
-                      </div>
-
-                       <canvas  id="barChart" ></canvas>             
-
-                  </div>
-                  </div>
-
-              </div>
-        </div>  
-
-</div> <!--DIV CONTAINER-->
-
-
+      </div>
+    </div>
+  </div>
+</div>  
 
 <!--grafico de barra lanche-->
 
 <script>
 
-console.log(Chart.defaults.scale.ticks);
-Chart.defaults.scale.ticks.beginAtZero = true;
+  console.log(Chart.defaults.scale.ticks);
+  Chart.defaults.scale.ticks.beginAtZero = true;
 
 window.onload = function() {
   var ctx = document.getElementById('barChart').getContext('2d');
@@ -376,14 +293,10 @@ window.onload = function() {
     options: {
       responsive: true,
      
-      layout:{
-      padding:40
-      },
       legend:{
         display: false
       },
     
-      
       scales: {
         yAxes: [{
         ticks: {
@@ -433,7 +346,6 @@ window.onload = function() {
 			return min + (this._seed / 233280) * (max - min);
 		},
 
-		
 	};
 
 	// DEPRECATED
@@ -442,42 +354,41 @@ window.onload = function() {
 	};
 
 	// INITIALIZATION
-
 	Samples.utils.srand(Date.now());
 
 	/* eslint-enable */
 
 }(this));
 
-// Bar chart
-var color = Chart.helpers.color;
-var horizontalBarChartData = {
-  labels: ['Segunda','Terça', 'Quarta','Quinta','Sexta'],
- 
-  datasets: [{
-        maxBarThickness: 60,
-        minBarLength:20,
- 
-    backgroundColor: [
-    'rgb(143, 25, 19)',
-    'rgb(217, 37, 28)',
-	  'rgb(233, 99, 92)',
-    'rgb(217, 37, 28)',
-    'rgb(143, 25, 19)'
-    ],
-    data: [
-      randomScalingFactor(),
-       randomScalingFactor(),
-       randomScalingFactor(),
-       randomScalingFactor(),
-       randomScalingFactor()
-    ] 
-  }]
-};
+  // Bar chart
+  var color = Chart.helpers.color;
+  var horizontalBarChartData = {
+    labels: ['Segunda','Terça', 'Quarta','Quinta','Sexta'],
+  
+    datasets: [{
+          maxBarThickness: 60,
+          minBarLength:20,
+  
+      backgroundColor: [
+      'rgb(143, 25, 19)',
+      'rgb(217, 37, 28)',
+      'rgb(233, 99, 92)',
+      'rgb(217, 37, 28)',
+      'rgb(143, 25, 19)'
+      ],
+      data: [
+        randomScalingFactor(),
+        randomScalingFactor(),
+        randomScalingFactor(),
+        randomScalingFactor(),
+        randomScalingFactor()
+      ] 
+    }]
+  };
 
-//Radius
+  //Radius
 
-Chart.elements.Rectangle.prototype.draw = function() {
+  Chart.elements.Rectangle.prototype.draw = function() {
     var ctx = this._chart.ctx;
     var vm = this._view;
     var left, right, top, bottom, signX, signY, borderSkipped, radius;
@@ -503,27 +414,30 @@ Chart.elements.Rectangle.prototype.draw = function() {
     }
 
     if (borderWidth) {
-        var barSize = Math.min(Math.abs(left - right), Math.abs(top - bottom));
-        borderWidth = borderWidth > barSize? barSize: borderWidth;
-        var halfStroke = borderWidth / 2;
-        var borderLeft = left + (borderSkipped !== 'left'? halfStroke * signX: 0);
-        var borderRight = right + (borderSkipped !== 'right'? -halfStroke * signX: 0);
-        var borderTop = top + (borderSkipped !== 'top'? halfStroke * signY: 0);
-        var borderBottom = bottom + (borderSkipped !== 'bottom'? -halfStroke * signY: 0);
-        if (borderLeft !== borderRight) {
-            top = borderTop;
-            bottom = borderBottom;
-        }
-        if (borderTop !== borderBottom) {
-            left = borderLeft;
-            right = borderRight;
-        }
+      var barSize = Math.min(Math.abs(left - right), Math.abs(top - bottom));
+      borderWidth = borderWidth > barSize? barSize: borderWidth;
+      var halfStroke = borderWidth / 2;
+      var borderLeft = left + (borderSkipped !== 'left'? halfStroke * signX: 0);
+      var borderRight = right + (borderSkipped !== 'right'? -halfStroke * signX: 0);
+      var borderTop = top + (borderSkipped !== 'top'? halfStroke * signY: 0);
+      var borderBottom = bottom + (borderSkipped !== 'bottom'? -halfStroke * signY: 0);
+
+      if (borderLeft !== borderRight) {
+        top = borderTop;
+        bottom = borderBottom;
+      }
+
+      if (borderTop !== borderBottom) {
+        left = borderLeft;
+        right = borderRight;
+      }
     }
 
     ctx.beginPath();
     ctx.fillStyle = vm.backgroundColor;
     ctx.strokeStyle = vm.borderColor;
     ctx.lineWidth = borderWidth;
+
     var corners = [
         [left, bottom],
         [left, top],
@@ -533,20 +447,23 @@ Chart.elements.Rectangle.prototype.draw = function() {
 
     var borders = ['bottom', 'left', 'top', 'right'];
     var startCorner = borders.indexOf(borderSkipped, 0);
+
     if (startCorner === -1) {
-        startCorner = 0;
+      startCorner = 0;
     }
 
     function cornerAt(index) {
-        return corners[(startCorner + index) % 4];
+      return corners[(startCorner + index) % 4];
     }
 
     var corner = cornerAt(0);
     ctx.moveTo(corner[0], corner[1]);
 
     for (var i = 1; i < 4; i++) {
+
         corner = cornerAt(i);
         nextCornerId = i+1;
+
         if(nextCornerId == 4){
             nextCornerId = 0
         }
@@ -561,8 +478,10 @@ Chart.elements.Rectangle.prototype.draw = function() {
         var radius = cornerRadius;
         
         if(radius > height/2){
-            radius = height/2;
-        }if(radius > width/2){
+          radius = height/2;
+        }
+
+        if(radius > width/2){
             radius = width/2;
         }
 
@@ -578,10 +497,9 @@ Chart.elements.Rectangle.prototype.draw = function() {
     }
 
     ctx.fill();
+
     if (borderWidth) {
-        ctx.stroke();
+      ctx.stroke();
     }
 };
-
 </script>
-
