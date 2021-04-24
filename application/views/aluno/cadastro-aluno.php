@@ -70,7 +70,7 @@
     <main class="conteudo"> 
       <div class="container">
         <div class='container text-center  mt-5'>
-          <h2 class="text-danger mb-3"><b>Cadastro do Usuário</b></h2>
+          <h2 class="text-danger mb-3"><b>Cadastro de usuário</b></h2>
         </div>
         
         <div class="cadastro">
@@ -157,7 +157,7 @@
               </div>
 
               <div class="col-lg-6 col-12 ">
-                <label class="form-label"> Quantas vezes na semana costuma consumir os lanches oferecidos no campus? <i>*</i></label>
+                <label class="form-label"> Quantas vezes na semana você costuma consumir os lanches oferecidos no campus? <i>*</i></label>
                 <select class="form-select" id="codfreqconsumocampus" name="codfreqconsumocampus" required>
                   <option value=""></option>
                   <?php
