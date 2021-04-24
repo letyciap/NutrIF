@@ -89,7 +89,7 @@
 
         <div class="col text-center text-success">
           <h4 class=" display-5 fw-bold mb-0 text-center" style="color:#498221";>57</h4>
-          <p class=" text-center mx-0 text-success" style="color:#498221"; >Alunos cadastrados</p>
+          <p style="color:#498221";>Alunos cadastrados</p>
         </div>
 
         <div class="col text-center">
