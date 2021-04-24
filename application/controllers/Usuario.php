@@ -9,8 +9,11 @@ class Usuario extends CI_Controller {
       redirect('login');
     }
 
+    $this->load->model("Usuario_model");
+    $matricula = $this->session->userdata('matricula');
+    $dados['nome'] = $this->Usuario_model->nomeCompleto($matricula);
 		$this->load->view('aluno/header-aluno');
-		$this->load->view('aluno/index-aluno');
+		$this->load->view('aluno/index-aluno', $dados);
 		$this->load->view('footer');
 	}
 

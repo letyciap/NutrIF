@@ -1,5 +1,5 @@
 <div class='container text-center  mt-5'>
-  <h2 class="text-danger mb-3"><b>Seja Bem-vindo, Fulano!</b></h2>
+  <h2 class="text-danger mb-3"><b>Seja Bem-vindo, <?php echo $nome ?></b></h2>
   <p class= "mb-5" >Participe das atividades do refeitório com praticidade e agilidade. <br> Role para baixo e mãos a obra.</p>
 
 </div>

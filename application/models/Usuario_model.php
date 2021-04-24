@@ -8,7 +8,6 @@ class Usuario_model extends CI_Model {
         public $codcampus;
         public $datanascimento;
         public $datacadastro;
-        public $codgenero;
         public $codeetnia;
         public $altura;
         public $peso;
@@ -21,6 +20,14 @@ class Usuario_model extends CI_Model {
         public function __construct() {
             parent::__construct();
         }
+
+        public function nomeCompleto($matricula){
+            $this->db->select('usuario');
+            $this->db->where('matricula', $matricula); 
+            $query = $this->db->get('Usuario');
+            $nome = $query->row()->usuario;
+            return $nome;
+            }
 
         public function inserir() {
             $dados = array(
