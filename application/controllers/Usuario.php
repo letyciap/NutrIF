@@ -20,9 +20,36 @@ class Usuario extends CI_Controller {
         $this->session->set_flashdata('msg', 'Você não tem permissão para acessar essa página. Por favor, Cadastre-se ou Faça Login.');
         redirect('login');
       }
-      
+
+      $this->load->model('Dieta_model');
+      $dados["dietas"] = $this->Dieta_model->recuperarTodos();
+  
+      $this->load->model('Etnia_model');
+      $dados["etnias"] = $this->Etnia_model->recuperarTodos();
+  
+      $this->load->model('Alergia_model');
+      $dados["alergias"] = $this->Alergia_model->recuperarTodos();
+  
+      $this->load->model('Campus_model');
+      $dados["campus"] = $this->Campus_model->recuperarTodos();
+  
+      $this->load->model('FreqConsumoCampus_model');
+      $dados["freqconsumocampus"] = $this->FreqConsumoCampus_model->recuperarTodos();
+  
+      $this->load->model('Genero_model');
+      $dados["generos"] = $this->Genero_model->recuperarTodos();
+  
+      $this->load->model('SatisfacaoCorpo_model');
+      $dados["satisfacaocorpo"] = $this->SatisfacaoCorpo_model->recuperarTodos();
+  
+      $this->load->model('FrequenciaFome_model');
+      $dados["frequenciafome"] = $this->FrequenciaFome_model->recuperarTodos();
+  
+      $this->load->model('TipoRefeicao_model');
+      $dados["tiporefeicao"] = $this->TipoRefeicao_model->recuperarTodos();
+
       $this->load->view('aluno/header-aluno');
-      $this->load->view('aluno/editar-cadastro');
+      $this->load->view('aluno/editar-cadastro', $dados);
       $this->load->view('footer');
   	}
 
