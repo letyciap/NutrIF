@@ -21,6 +21,11 @@ class Usuario extends CI_Controller {
         redirect('login');
       }
 
+      $matricula = $this->session->userdata('matricula');
+
+      $this->load->model('Usuario_model');
+      $dados["usuario"] = $this->Usuario_model->recuperarPorMatricula($matricula)[0];
+
       $this->load->model('Dieta_model');
       $dados["dietas"] = $this->Dieta_model->recuperarTodos();
   
@@ -138,6 +143,7 @@ class Usuario extends CI_Controller {
 
     if ($usuario) {
       $this->session->set_userdata('usuario', $usuario[0]);
+      $this->session->set_userdata('matricula', $matricula);
       $this->session->set_flashdata('msg','');
       redirect('aluno');
     } else {
@@ -150,8 +156,5 @@ class Usuario extends CI_Controller {
     $this->session->unset_userdata('usuario');
     redirect('login');
   }
-
-  
-
-  
+   
 }

@@ -53,4 +53,10 @@ class Usuario_model extends CI_Model {
             $dados = array($matricula, $senha);
             return $this->db->query($sql, $dados)->result();
         }
+
+        function recuperarPorMatricula($matricula) {
+            $sql = "SELECT * FROM Usuario WHERE matricula = ?";
+            $dados = array($matricula);
+            return $this->db->query($sql, $dados)->result();
+        }
 }

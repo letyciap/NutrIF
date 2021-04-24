@@ -21,37 +21,37 @@
 <main class="conteudo"> 
   <div class="container">
     <div class='container text-center  mt-5'>
-      <h2 class="text-danger mb-3"><b>Edite seus dados</b></h2>
+      <h2 class="text-danger mb-3"><b>Editar meus dados</b></h2>
     </div>
     
     <div class="cadastro">
 
-      <form method="POST" action="<?= base_url()?>aluno/cadastro/" class="container row d-flex justify-content-center needs-validation">
+      <form method="POST" action="<?= base_url()?>aluno/cadastro/editar/<?= $usuario->matricula?>" class="container row d-flex justify-content-center needs-validation">
           
         <div class="row gx-lg-5 gy-lg-5 gy-3">
 
           <div class="col-lg-6 col-12 ">
             <label class="form-label">Nome completo <i>*</i></label>
-            <input type="text" class="form-control" id="usuario" name="usuario" placeholder="" value="" required>
+            <input type="text" class="form-control" id="usuario" name="usuario" placeholder="" value="<?= $usuario->usuario?>">
             <div class="invalid-feedback">Inválido.</div>
           </div>
 
           <div class="col-lg-6 col-12 ">
             <label class="form-label">Matrícula  <i>*</i></label>
-            <input type="text" class="form-control" id="matricula" name="matricula" placeholder="" value="" required>
+            <input type="text" class="form-control" id="matricula" name="matricula" placeholder="" value="<?= $usuario->matricula?>">
             <div class="invalid-feedback">Inválido.</div>
           </div> 
 
           <div class="col-lg-6 col-12 ">
             <label class="form-label">Senha <i>*</i></label>
-            <input type="password" class="form-control" id="senha" name="senha" placeholder="" value="" required>
+            <input type="password" class="form-control" id="senha" name="senha" placeholder="" value="">
             <div class="invalid-feedback">Inválido.</div>
           </div>
 
           <div class="col-lg-6 col-12 ">
             <label class="form-label">Campus <i>*</i></label>
             <select class="form-select form-control"  id="codcampus" name="codcampus" required>
-              <option selected></option>
+              <option value='<?= $usuario->codcampus?>'>IFRN - Campus <?= $campus->campus;?></option>
               <?php foreach ($campus as $campus):?>
                 <option value="<?= $campus->codcampus; ?>">IFRN - Campus <?= $campus->campus; ?></option>
               <?php endforeach;?>
@@ -62,15 +62,15 @@
 
           <div class="col-lg-6 col-12 ">
             <label class="form-label">Data de nascimento <i>*</i></label>
-            <input type="date" id="datanascimento" name="datanascimento" class="form-control" required>
+            <input type="date" id="datanascimento" name="datanascimento" class="form-control" value='<?= $usuario->datanascimento?>'>
             <div class="invalid-feedback">Inválido.</div>
           </div>
 
           
           <div class="col-lg-6 col-12 ">
             <label for="gen" class="form-label">Gênero <i>*</i></label>
-            <select class="form-select form-control" id="codgenero" name="codgenero" required>
-              <option selected></option>
+            <select class="form-select form-control" id="codgenero" name="codgenero">
+              <option value='<?= $usuario->codgenero?>'>IFRN - Campus <?= $genero->genero;?></option>
               <?php foreach ($generos as $genero): ?>
                 <option value="<?= $genero->codgenero; ?>"><?= $genero->genero; ?></option>
               <?php endforeach;?>
