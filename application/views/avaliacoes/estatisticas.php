@@ -88,8 +88,8 @@
       <div class="col-10 mb-4 mx-auto row row-cols-lg-5 row-cols-2 justify-content-center">
 
         <div class="col text-center text-success">
-          <h4 class=" display-5 fw-bold mb-0 text-center">57</h4>
-          <p class=" text-center mx-0 text-success">Alunos cadastrados</p>
+          <h4 class=" display-5 fw-bold mb-0 text-center" style="color:#498221";>57</h4>
+          <p class=" text-center mx-0 text-success" style="color:#498221"; >Alunos cadastrados</p>
         </div>
 
         <div class="col text-center">
@@ -150,8 +150,8 @@
       <div class="col-10 mb-4 mx-auto row row-cols-lg-5 row-cols-2 justify-content-center">
 
         <div class="col text-center text-success">
-          <h4 class="display-5 fw-bold mb-0">57</h4>
-          <p>Alunos cadastrados</p>
+          <h4 class="display-5 fw-bold mb-0" style="color:#498221";>57</h4>
+          <p style="color:#498221";>Alunos cadastrados</p>
         </div>
 
         <div class="col text-center">
@@ -201,8 +201,8 @@
       <div class="col-10 mb-4 mx-auto row row-cols-lg-5 row-cols-2 justify-content-center">
 
         <div class="col text-center text-success">
-          <h4 class="display-5 fw-bold mb-0">57</h4>
-          <p>Alunos cadastrados</p>
+          <h4 class="display-5 fw-bold mb-0" style="color:#498221";>57</h4>
+          <p style="color:#498221";>Alunos cadastrados</p>
         </div>
 
         <div class="col text-center">
@@ -238,7 +238,7 @@
               <select class="form-select form-control"  required>
               <option selected>Lanche</option>
               <option>Almoço</option>
-              <option>Janta</option>
+              <option>Jantar</option>
               </select>
           </div>
         </div> 
