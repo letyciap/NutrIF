@@ -67,9 +67,8 @@ class Usuario_model extends CI_Model {
             return $this->db->query($sql, $dados)->result();
         }
 
-        public function atualizar($matricula,$usuario,$codcampus,$datanascimento,
-        $datacadastro,$codgenero,$codeetnia,$altura,$peso,$codfreqconsumocampus,$coddieta,
-        $codsatisfacaocorpo,$codfrequenciafome,$outraalergia) {
+        public function atualizar($matricula,$usuario,$codcampus,$datanascimento,$datacadastro,$codgenero,$codeetnia,
+        $altura,$peso,$codfreqconsumocampus,$coddieta,$codsatisfacaocorpo,$codfrequenciafome,$outraalergia) {
 
             $sql = "UPDATE Usuario SET alergia = '".$alergia."' WHERE codalergia = ".$codalergia;
             $dados = array($sql, $dados);
