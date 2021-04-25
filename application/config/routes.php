@@ -29,6 +29,11 @@ $route ['alergias/salvar'] = 'Alergia/salvar';
 $route ['alergias/editar'] = 'Alergia/editar';
 $route ['alergias/excluir'] = 'Alergia/excluir';
 
+$route ['usuario/listar'] = 'Usuario/listar';
+$route ['usuario/salvar'] = 'Usuario/salvar';
+$route ['usuario/editar'] = 'Usuario/editar';
+$route ['usuario/excluir'] = 'Usuario/excluir';
+
 $route ['alergiausuario/listar'] = 'AlergiaUsuario/listar';
 $route ['alergiausuario/salvar'] = 'AlergiaUsuario/salvar';
 $route ['alergiausuario/editar'] = 'AlergiaUsuario/editar';
