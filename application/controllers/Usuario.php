@@ -119,13 +119,13 @@ class Usuario extends CI_Controller {
 
     redirect('aluno/cadastro-realizado');
   }
-
+  //mudei
   function listar() {
-    $dados_header["titulo"] = "Usuário";
+    $dados_header["titulo"] = "Usuário Cadastrado";
     $this->load->view('admin/header', $dados_header);
 
-    $this->load->model('Usuario');        
-    $dados["alergias"] = $this->Usuario_model->recuperarTodos();
+    $this->load->model('Usuario_model');        
+    $dados["usuario"] = $this->Usuario_model->recuperarTodos();
     $this->load->view('admin/usuario', $dados);
 
     $this->load->view('admin/footer');
@@ -160,4 +160,40 @@ class Usuario extends CI_Controller {
     redirect('login');
   }
    
+  function editar(){
+    $senhaCriptografada = md5($this->input->post('senha'));
+
+    $matricula = $this->input->post('matricula');
+    $usuario = $this->input->post('usuario');
+    $senha = $senhaCriptografada;
+    $codcampus = $this->input->post('codcampus');
+    $datanascimento = $this->input->post('datanascimento');
+    $datacadastro = $this->input->post('datacadastro');
+    $codgenero = $this->input->post('codgenero');
+    $codeetnia = $this->input->post('codeetnia');
+    $altura = $this->input->post('altura');
+    $peso = $this->input->post('peso');
+    $codfreqconsumocampus = $this->input->post('codfreqconsumocampus');
+    $coddieta = $this->input->post('coddieta');
+    $codsatisfacaocorpo = $this->input->post('codsatisfacaocorpo');
+    $codfrequenciafome = $this->input->post('codfrequenciafome');
+    $outraalergia = $this->input->post('outraalergia');
+
+    $this->load->model('Usuario_model');
+    $this->Usuario_model->atualizar($matricula,$usuario,$senha,$codcampus,$datanascimento,
+    $datacadastro,$codgenero,$codeetnia,$altura,$peso,$codfreqconsumocampus,$coddieta,
+    $codsatisfacaocorpo,$codfrequenciafome,$outraalergia);
+
+    redirect('usuario/listar');
+}
+
+  function excluir(){
+    //$alergia = $this->input->post('alergia');
+    $codalergia = $this->input->post('codalergia');
+    $this->load->model('Usuario_model');
+    $this->Alergia_model->excluir($codalergia);
+
+    redirect('usuario/listar');
+  }
+
 }
