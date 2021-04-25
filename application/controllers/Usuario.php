@@ -180,9 +180,8 @@ class Usuario extends CI_Controller {
     $outraalergia = $this->input->post('outraalergia');
 
     $this->load->model('Usuario_model');
-    $this->Usuario_model->atualizar($matricula,$usuario,$senha,$codcampus,$datanascimento,
-    $datacadastro,$codgenero,$codeetnia,$altura,$peso,$codfreqconsumocampus,$coddieta,
-    $codsatisfacaocorpo,$codfrequenciafome,$outraalergia);
+    $this->Usuario_model->atualizar($matricula,$usuario,$senha,$codcampus,$datanascimento, $datacadastro,$codgenero,
+    $codeetnia,$altura,$peso,$codfreqconsumocampus,$coddieta,$codsatisfacaocorpo,$codfrequenciafome,$outraalergia);
 
     redirect('usuario/listar');
 }
