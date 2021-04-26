@@ -37,6 +37,9 @@ class Usuario extends CI_Controller {
   
       $this->load->model('Alergia_model');
       $dados["alergias"] = $this->Alergia_model->recuperarTodos();
+
+      $this->load->model('AlergiaUsuario_model');
+      $dados["alergiausuario"] = $this->AlergiaUsuario_model->recuperarPorMatricula();
   
       $this->load->model('Campus_model');
       $dados["campus"] = $this->Campus_model->recuperarTodos();
@@ -55,6 +58,9 @@ class Usuario extends CI_Controller {
   
       $this->load->model('TipoRefeicao_model');
       $dados["tiporefeicao"] = $this->TipoRefeicao_model->recuperarTodos();
+
+      $this->load->model('TipoRefeicaoUsuario_model');
+      $dados["tiporefeicaousuario"] = $this->TipoRefeicaoUsuario_model->recuperarPorMatricula();
 
       $this->load->view('aluno/header-aluno');
       $this->load->view('aluno/editar-cadastro', $dados);
@@ -97,8 +103,13 @@ class Usuario extends CI_Controller {
   public function salvar() {
     $this->load->model('Usuario_model');
 
-    $senhaCriptografada = md5($this->input->post('senha'));
+    $this->load->model('TipoRefeicao_model');
+    $this->load->model('TipoRefeicaoUsuario_model');
 
+    $this->load->model('Alergia_model');
+    $this->load->model('AlergiaUsuario_model');
+
+    $senhaCriptografada = md5($this->input->post('senha'));
     $this->Usuario_model->matricula = $this->input->post('matricula');
     $this->Usuario_model->usuario = $this->input->post('usuario');
     $this->Usuario_model->senha = $senhaCriptografada;
@@ -114,8 +125,26 @@ class Usuario extends CI_Controller {
     $this->Usuario_model->codsatisfacaocorpo = $this->input->post('codsatisfacaocorpo');
     $this->Usuario_model->codfrequenciafome = $this->input->post('codfrequenciafome');
     $this->Usuario_model->outraalergia = $this->input->post('outraalergia');
-
     $this->Usuario_model->inserir();
+    
+    $dados["tiporefeicao"] = $this->TipoRefeicao_model->recuperarTodos();
+    $dados["alergia"] = $this->Alergia_model->recuperarTodos();
+
+    foreach ($dados["tiporefeicao"] as $tiporefeicao):
+      $this->TipoRefeicaoUsuario_model->matricula = $this->input->post('matricula');
+      $this->TipoRefeicaoUsuario_model->codtiporefeicao = $this->input->post('codtiporefeicao'.$tiporefeicao->codtiporefeicao);
+      if ($this->TipoRefeicaoUsuario_model->codtiporefeicao == true) {
+        $this->TipoRefeicaoUsuario_model->inserir();
+      }
+    endforeach;
+
+    foreach ($dados["alergia"] as $alergia):
+      $this->AlergiaUsuario_model->matricula = $this->input->post('matricula');
+      $this->AlergiaUsuario_model->codalergia = $this->input->post('codalergia'.$alergia->codalergia);
+      if ($this->AlergiaUsuario_model->codalergia == true) {
+        $this->AlergiaUsuario_model->inserir();
+      }
+    endforeach;
 
     redirect('aluno/cadastro-realizado');
   }
@@ -147,6 +176,7 @@ class Usuario extends CI_Controller {
     if ($usuario) {
       $this->session->set_userdata('usuario', $usuario[0]);
       $this->session->set_userdata('matricula', $matricula);
+      $this->session->set_userdata('autenticacao', md5($senha));
       $this->session->set_flashdata('msg','');
       redirect('aluno');
     } else {
@@ -161,29 +191,52 @@ class Usuario extends CI_Controller {
   }
    
   function editar(){
-    $senhaCriptografada = md5($this->input->post('senha'));
-
-    $matricula = $this->input->post('matricula');
-    $usuario = $this->input->post('usuario');
-    $senha = $senhaCriptografada;
-    $codcampus = $this->input->post('codcampus');
-    $datanascimento = $this->input->post('datanascimento');
-    $datacadastro = $this->input->post('datacadastro');
-    $codgenero = $this->input->post('codgenero');
-    $codeetnia = $this->input->post('codeetnia');
-    $altura = $this->input->post('altura');
-    $peso = $this->input->post('peso');
-    $codfreqconsumocampus = $this->input->post('codfreqconsumocampus');
-    $coddieta = $this->input->post('coddieta');
-    $codsatisfacaocorpo = $this->input->post('codsatisfacaocorpo');
-    $codfrequenciafome = $this->input->post('codfrequenciafome');
-    $outraalergia = $this->input->post('outraalergia');
-
     $this->load->model('Usuario_model');
-    $this->Usuario_model->atualizar($matricula,$usuario,$senha,$codcampus,$datanascimento, $datacadastro,$codgenero,
-    $codeetnia,$altura,$peso,$codfreqconsumocampus,$coddieta,$codsatisfacaocorpo,$codfrequenciafome,$outraalergia);
 
-    redirect('usuario/listar');
+    // $this->load->model('TipoRefeicao_model');
+    // $this->load->model('TipoRefeicaoUsuario_model');
+
+    // $this->load->model('Alergia_model');
+    // $this->load->model('AlergiaUsuario_model');
+
+    $senhaCriptografada = md5($this->input->post('senha'));
+    $this->Usuario_model->matricula = $this->input->post('matricula');
+    $this->Usuario_model->usuario = $this->input->post('usuario');
+    $this->Usuario_model->senha = $this->session->userdata('autenticacao');
+    $this->Usuario_model->codcampus = $this->input->post('codcampus');
+    $this->Usuario_model->datanascimento = $this->input->post('datanascimento');
+    $this->Usuario_model->datacadastro = $this->input->post('datacadastro');
+    $this->Usuario_model->codgenero = $this->input->post('codgenero');
+    $this->Usuario_model->codeetnia = $this->input->post('codeetnia');
+    $this->Usuario_model->altura = $this->input->post('altura');
+    $this->Usuario_model->peso = $this->input->post('peso');
+    $this->Usuario_model->codfreqconsumocampus = $this->input->post('codfreqconsumocampus');
+    $this->Usuario_model->coddieta = $this->input->post('coddieta');
+    $this->Usuario_model->codsatisfacaocorpo = $this->input->post('codsatisfacaocorpo');
+    $this->Usuario_model->codfrequenciafome = $this->input->post('codfrequenciafome');
+    $this->Usuario_model->outraalergia = $this->input->post('outraalergia');
+    $this->Usuario_model->atualizar();
+    
+    //$dados["tiporefeicao"] = $this->TipoRefeicao_model->recuperarTodos();
+    //$dados["alergia"] = $this->Alergia_model->recuperarTodos();
+
+    // foreach ($dados["tiporefeicao"] as $tiporefeicao):
+    //   $this->TipoRefeicaoUsuario_model->matricula = $this->input->post('matricula');
+    //   $this->TipoRefeicaoUsuario_model->codtiporefeicao = $this->input->post('codtiporefeicao'.$tiporefeicao->codtiporefeicao);
+    //   if ($this->TipoRefeicaoUsuario_model->codtiporefeicao == true) {
+    //     //$this->TipoRefeicaoUsuario_model->atualizar();
+    //   }
+    // endforeach;
+
+    // foreach ($dados["alergia"] as $alergia):
+    //   $this->AlergiaUsuario_model->matricula = $this->input->post('matricula');
+    //   $this->AlergiaUsuario_model->codalergia = $this->input->post('codalergia'.$alergia->codalergia);
+    //   if ($this->AlergiaUsuario_model->codalergia == true) {
+    //     //$this->AlergiaUsuario_model->atualizar();
+    //   }
+    // endforeach;
+
+    redirect('usuario/cadastro/editar');
 }
 
   function excluir(){

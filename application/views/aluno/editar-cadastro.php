@@ -26,7 +26,7 @@
     
     <div class="cadastro">
 
-      <form method="POST" action="<?= base_url()?>aluno/cadastro/editar/<?= $usuario->matricula?>" class="container row d-flex justify-content-center needs-validation">
+      <form method="POST" action="<?= base_url()?>usuario/editar" class="container row d-flex justify-content-center needs-validation">
           
         <div class="row gx-lg-5 gy-lg-5 gy-3">
 
@@ -51,7 +51,7 @@
           <div class="col-lg-6 col-12 ">
             <label class="form-label">Campus <i>*</i></label>
             <select class="form-select form-control"  id="codcampus" name="codcampus" required>
-              <option value='<?= $usuario->codcampus?>'>IFRN - Campus <?= $campus->campus;?></option>
+              <option value='<?= $campus[$usuario->codcampus]->codcampus?>'>IFRN - Campus <?= $campus[$usuario->codcampus]->campus;?></option>
               <?php foreach ($campus as $campus):?>
                 <option value="<?= $campus->codcampus; ?>">IFRN - Campus <?= $campus->campus; ?></option>
               <?php endforeach;?>
@@ -65,12 +65,11 @@
             <input type="date" id="datanascimento" name="datanascimento" class="form-control" value='<?= $usuario->datanascimento?>'>
             <div class="invalid-feedback">Inválido.</div>
           </div>
-
           
           <div class="col-lg-6 col-12 ">
             <label for="gen" class="form-label">Gênero <i>*</i></label>
             <select class="form-select form-control" id="codgenero" name="codgenero">
-              <option value='<?= $usuario->codgenero?>'>IFRN - Campus <?= $genero->genero;?></option>
+              <option value='<?= $usuario->codgenero?>'> <?= $generos[$usuario->codgenero]->genero;?></option>
               <?php foreach ($generos as $genero): ?>
                 <option value="<?= $genero->codgenero; ?>"><?= $genero->genero; ?></option>
               <?php endforeach;?>
@@ -81,7 +80,7 @@
           <div class="col-lg-6 col-12 ">
             <label class="form-label">Etnia <i>*</i></label>
             <select class="form-select form-control" id="codeetnia" name="codeetnia" required>
-              <option selected></option>
+              <option value="<?= $usuario->codeetnia;?>"><?= $etnias[$usuario->codeetnia]->etnia;?></option>
               <?php foreach ($etnias as $etnia): ?>
                 <option value="<?= $etnia->codetnia; ?>"> <?= $etnia->etnia; ?> </option>
               <?php endforeach;?>
@@ -93,7 +92,7 @@
 
             <div class="col-5 ">
               <label for="alt" class="form-label">Altura (m)  <i>*</i></label>
-                <input type="number" class="form-control" step="0.01" id="altura" name="altura" required>          
+                <input type="text" class="form-control" step="0.01" value='<?= $usuario->altura;?>' id="altura" name="altura" required>          
               <div class="invalid-feedback">Inválido.</div>
             </div> 
 
@@ -101,7 +100,7 @@
 
             <div class="col-5 ">
               <label class="form-label">Peso (Kg) <i>*</i></label>
-              <input type="number" class="form-control" step="0.01" id="peso" name="peso" required>
+              <input type="number" class="form-control" step="0.01" id="peso" name="peso"  value='<?= $usuario->altura;?>' required>
               <div class="invalid-feedback">Inválido.</div>
             </div>
 
@@ -110,16 +109,10 @@
           <div class="col-lg-6 col-12 ">
             <label class="form-label"> Quantas vezes na semana você costuma consumir os lanches oferecidos no campus? <i>*</i></label>
             <select class="form-select" id="codfreqconsumocampus" name="codfreqconsumocampus" required>
-              <option value=""></option>
-              <?php
-                $c_freqconsumocampus = 0;
-                foreach ($freqconsumocampus as $freqconsumocampus) { 
-              ?>
-              <option value="<?= $freqconsumocampus->codfreqconsumocampus; ?>"><?= $freqconsumocampus->freqconsumocampus; ?></option>
-              <?php
-                  $c_freqconsumocampus++;
-                }
-              ?>
+              <option value="<?= $usuario->codfreqconsumocampus;?>"><?= $freqconsumocampus[$usuario->codfreqconsumocampus]->freqconsumocampus;?></option>
+              <?php foreach ($freqconsumocampus as $freqconsumocampus):?>
+              <option value="<?= $freqconsumocampus->codfreqconsumocampus;?>"><?= $freqconsumocampus->freqconsumocampus; ?></option>
+              <?php endforeach;?>
             </select>
             <div class="invalid-feedback">Inválido.</div>
           </div>  
@@ -127,16 +120,10 @@
           <div class="col-lg-6 col-12 ">
             <label for="ultimo" class="form-label">No último mês, com que frequência você ficou com fome por não ter comida suficiente em casa? <i>*</i></label>
             <select class="form-select" id="codfrequenciafome" name="codfrequenciafome" required>
-              <option value=""></option>
-              <?php
-                $c_frequenciafome = 0;
-                foreach ($frequenciafome as $frequenciafome) { 
-              ?>
+              <option value="<?= $usuario->codfrequenciafome;?>"><?= $frequenciafome[$usuario->codfrequenciafome]->frequenciafome;?></option>
+              <?php foreach ($frequenciafome as $frequenciafome):?>
               <option value="<?= $frequenciafome->codfrequenciafome; ?>"><?= $frequenciafome->frequenciafome; ?></option>
-              <?php
-                  $c_frequenciafome++;
-                }
-              ?>
+              <?php endforeach;?>
             </select>
             <div class="invalid-feedback">Inválido.</div>
           </div> 
@@ -144,7 +131,7 @@
           <div class="col-lg-4 col-12">
             <label class="form-label">Qual é o tipo de dieta alimentar que você segue? <i>*</i></label>
             <select class="form-select" id="coddieta" name="coddieta" required>
-              <option value=""></option>
+              <option value="<?= $usuario->coddieta;?>"><?= $dietas[$usuario->coddieta]->dieta;?></option>
 
               <?php foreach ($dietas as $dieta): ?>
                 <option value="<?= $dieta->coddieta; ?>"><?= $dieta->dieta; ?></option>
@@ -157,7 +144,7 @@
           <div class="col-lg-4 col-12">
             <label for="sentircorpo" class="form-label">Como você se sente em relação ao seu corpo? <i>*</i></label>
             <select class="form-select" id="codsatisfacaocorpo" name="codsatisfacaocorpo" required>
-              <option value=""></option>
+              <option value="<?= $usuario->codsatisfacaocorpo;?>"><?= $satisfacaocorpo[$usuario->codsatisfacaocorpo]->satisfacaocorpo;?></option>
               <?php foreach ($satisfacaocorpo as $satisfacaocorpo): ?>
                 <option value="<?= $satisfacaocorpo->codsatisfacaocorpo; ?>"><?= $satisfacaocorpo->satisfacaocorpo; ?></option>
               <?php endforeach; ?>
@@ -167,7 +154,7 @@
 
           <div class="col-lg-4 col-12">
             <label class="form-label">Data que você está respondendo este formulário: <i>*</i></label>
-            <input type="date" class="form-control" id="datacadastro" name="datacadastro" required>
+            <input type="date" class="form-control" id="datacadastro" name="datacadastro" value='<?= $usuario->datacadastro;?>' required>
             <div class="invalid-feedback">Inválido.</div>
           </div>
 
@@ -191,12 +178,27 @@
             
             <div class="mb-2 row">
               <?php foreach ($tiporefeicao as $tiporefeicao): ?>
+
                 <div class="mb-2 col-lg-6 col-12">
-                  <input type="checkbox" class="form-check-input" id="codtiporefeicao" name="codtiporefeicao" value="<?= $tiporefeicao->codtiporefeicao; ?>">
+                  <input type="checkbox" class="form-check-input" id="codtiporefeicao<?= $tiporefeicao->codtiporefeicao;?>" name="codtiporefeicao<?= $tiporefeicao->codtiporefeicao;?>" value="<?= $tiporefeicao->codtiporefeicao;?>">
                   <label class="form-check-label" for="não-ale"><?= $tiporefeicao->tiporefeicao; ?></label>
                 </div>
-              <?php endforeach; ?>
+
+                <?php foreach ($tiporefeicaousuario as $t):?>
+                <script>
+                  var tiporefeicao = document.getElementById("codtiporefeicao<?= $tiporefeicao->codtiporefeicao;?>").value;
+                  var tiporefeicaocheck = <?= $t->codtiporefeicao;?>;
+
+                  if(tiporefeicao == tiporefeicaocheck) {
+                    document.getElementById("codtiporefeicao<?= $tiporefeicao->codtiporefeicao;?>").checked = true;
+                  }
+                </script>
+                <?php endforeach;?>
+
+              <?php endforeach;?>
             </div>
+
+            
             
 
           </div>
@@ -209,10 +211,22 @@
             <div class="mb-2 row">
               <?php foreach ($alergias as $alergia): ?>
                 <div class="mb-2 col-lg-6 col-12">
-                  <input type="checkbox" class="form-check-input" id="codalergia" name="codalergia" value="<?= $alergia->codalergia; ?>">
+                  <input type="checkbox" class="form-check-input" id="codalergia<?= $alergia->codalergia;?>" name="codalergia<?= $alergia->codalergia;?>" value="<?= $alergia->codalergia;?>">
                   <label class="form-check-label" for="não-ale"><?= $alergia->alergia; ?></label>
                 </div>
-              <?php endforeach; ?>
+
+                <?php foreach ($alergiausuario as $t):?>
+                  <script>
+                    var alergia = document.getElementById("codalergia<?= $alergia->codalergia;?>").value;
+                    var alergiacheck = <?= $t->codalergia;?>;
+
+                    if(alergia == alergiacheck) {
+                      document.getElementById("codalergia<?= $alergia->codalergia;?>").checked = true;
+                    }
+                  </script>
+                <?php endforeach;?>
+
+              <?php endforeach;?>
                 <div class="mb-2 col-lg-6 col-12">
                   <input type="checkbox" class="form-check-input" id="outra-alergia" name="outra-alergia">
                   <label class="form-check-label" for="ale-outra">Outra:</label>

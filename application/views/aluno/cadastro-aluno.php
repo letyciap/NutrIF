@@ -220,33 +220,17 @@
                 <div class="invalid-feedback">Inválido.</div>
               </div>
 
-              <!-- <div class="col-lg-4 col-12 py-4">
-                <label for="refeicao" class="form-label">Quais refeições você costuma realizar no campus? <i>*</i></label>
-                <select class="form-select" id="campuss" name="campuss" required>
-                  <option value=""></option>
-                  <option value="0">Café-da-manhã </option>
-                  <option value="1">lanche da manhã </option>
-                  <option value="2">Almoço</option>
-                  <option value="3">Lanche da tarde</option>
-                  <option value="4">Jantar</option>
-                  <option value="5">Lanche da noite</option>
-                  <option value="62">Nenhuma das anteriores</option>
-                </select>
-                <div class="invalid-feedback">Inválido.</div>
-              </div>  -->
-
               <div class="col-lg-12">
                 <label  class='mb-3'><b>Quais refeições você costuma realizar no campus?</b> <i>*</i></label>  
                 
                 <div class="mb-2 row">
                   <?php foreach ($tiporefeicao as $tiporefeicao): ?>
                     <div class="mb-2 col-lg-6 col-12">
-                      <input type="checkbox" class="form-check-input" id="codtiporefeicao" name="codtiporefeicao" value="<?= $tiporefeicao->codtiporefeicao; ?>">
+                      <input type="checkbox" class="form-check-input" id="codtiporefeicao" name="codtiporefeicao<?= $tiporefeicao->codtiporefeicao;?>" value="<?= $tiporefeicao->codtiporefeicao; ?>">
                       <label class="form-check-label" for="não-ale"><?= $tiporefeicao->tiporefeicao; ?></label>
                     </div>
                   <?php endforeach; ?>
                 </div>
-                
 
               </div>
 
@@ -258,7 +242,7 @@
                 <div class="mb-2 row">
                   <?php foreach ($alergias as $alergia): ?>
                     <div class="mb-2 col-lg-6 col-12">
-                      <input type="checkbox" class="form-check-input" id="codalergia" name="codalergia" value="<?= $alergia->codalergia; ?>">
+                      <input type="checkbox" class="form-check-input" id="codalergia" name="codalergia<?= $alergia->codalergia;?>" value="<?= $alergia->codalergia; ?>">
                       <label class="form-check-label" for="não-ale"><?= $alergia->alergia; ?></label>
                     </div>
                   <?php endforeach; ?>

@@ -67,12 +67,25 @@ class Usuario_model extends CI_Model {
             return $this->db->query($sql, $dados)->result();
         }
 
-        public function atualizar($matricula,$usuario,$codcampus,$datanascimento,$datacadastro,$codgenero,$codeetnia,
-        $altura,$peso,$codfreqconsumocampus,$coddieta,$codsatisfacaocorpo,$codfrequenciafome,$outraalergia) {
-
-            $sql = "UPDATE Usuario SET alergia = '".$alergia."' WHERE codalergia = ".$codalergia;
-            $dados = array($sql, $dados);
-            return $this->db->query($sql, $dados);
+        public function atualizar() {
+            $dados = array(
+                'matricula' => $this->matricula,
+                'usuario' => $this->usuario,
+                'senha' => $this->senha,
+                'codcampus' => $this->codcampus,
+                'datanascimento' => $this->datanascimento,
+                'datacadastro' => $this->datacadastro,
+                'codgenero' => $this->codgenero,
+                'codeetnia' => $this->codeetnia,
+                'altura' => $this->altura,
+                'peso' => $this->peso,
+                'codfreqconsumocampus' => $this->codfreqconsumocampus,
+                'coddieta' => $this->coddieta,
+                'codsatisfacaocorpo' => $this->codsatisfacaocorpo,
+                'codfrequenciafome' => $this->codfrequenciafome,
+                'outraalergia' => $this->outraalergia
+            );
+            return $this->db->replace('Usuario', $dados);
         }
     
         public function excluir($codalergia) {
