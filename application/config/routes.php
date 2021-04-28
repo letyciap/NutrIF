@@ -55,8 +55,4 @@ $route ['estatisticas'] = 'avaliacao/estatisticas';
 
 $route ['aluno/cadastro/salvar'] = 'Usuario/salvar';
 
-
-
-
-
 $route ['avaliacao/salvar'] = 'avaliacao/salvar';

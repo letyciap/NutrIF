@@ -69,7 +69,6 @@ class Usuario_model extends CI_Model {
 
         public function atualizar() {
             $dados = array(
-                'matricula' => $this->matricula,
                 'usuario' => $this->usuario,
                 'senha' => $this->senha,
                 'codcampus' => $this->codcampus,
@@ -85,7 +84,8 @@ class Usuario_model extends CI_Model {
                 'codfrequenciafome' => $this->codfrequenciafome,
                 'outraalergia' => $this->outraalergia
             );
-            return $this->db->replace('Usuario', $dados);
+            $this->db->where('matricula', $this->matricula);
+            return $this->db->update('Usuario', $dados);
         }
     
         public function excluir($codalergia) {

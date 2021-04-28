@@ -29,22 +29,17 @@ class TipoRefeicaoUsuario_model extends CI_Model {
         return $this->db->insert('TipoRefeicaoUsuario', $dados);
     }
 
-    // public function atualizar() {
-    //     $sql = "UPDATE TipoRefeicaoUsuario SET codtiporefeicao = '".$codtiporefeicao."' WHERE matricula = '".$matricula."'";
-    //     $dados = array($sql, $dados);
-    //     return $this->db->query($sql, $dados);
-    // }
-
     public function atualizar() {
-        $sql = "DELETE * FROM TipoRefeicaoUsuario WHERE matricula = '".$matricula."'";
-        $dadosOut = array($sql, $dados);
-        $this->db->query($sql, $dadosOut);
-
-        $dadosIn = array(
+        
+        $dados = array(
             'codtiporefeicao' => $this->codtiporefeicao,
             'matricula' => $this->matricula
         );
 
-        return $this->db->insert('TipoRefeicaoUsuario', $dadosIn);
+        $this->db->where($dados);
+        $this->db->delete('TiporefeicaoUsuario');
+        
+
+        return $this->db->insert('TipoRefeicaoUsuario', $dados);
     }
 }

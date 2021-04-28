@@ -22,7 +22,7 @@ class Alergia extends CI_Controller {
         $this->Alergia_model->alergia = $this->input->post('alergia');
         $this->Alergia_model->inserir();
 
-        redirect('alergias/listar');
+        redirect('admin/alergias/listar');
     }
 
     function editar(){
@@ -32,7 +32,7 @@ class Alergia extends CI_Controller {
       $this->load->model('Alergia_model');
       $this->Alergia_model->atualizar($codalergia, $alergia);
 
-      redirect('alergias/listar');
+      redirect('admin/alergias/listar');
   }
 
   function excluir(){
@@ -42,6 +42,6 @@ class Alergia extends CI_Controller {
     $this->load->model('Alergia_model');
     $this->Alergia_model->excluir($codalergia);
 
-    redirect('alergias/listar');
+    redirect('admin/alergias/listar');
   }
 }

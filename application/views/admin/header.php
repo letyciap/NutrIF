@@ -56,7 +56,7 @@
       <div class="container">
 
         <a class="navbar-brand" href="<?= base_url()?>admin">
-          <img style="height:2rem;" src="<?= base_url()?>/assets/logo.png"> Admin
+          <img style="height:2rem;" src="<?= base_url()?>/assets/logo-admin.png">
         </a>
         
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">

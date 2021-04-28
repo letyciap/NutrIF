@@ -26,6 +26,20 @@ class Avaliacao extends CI_Controller {
 
   public function estatisticas()
   {
+
+    $this->load->model("Avaliacao_model");
+
+		$dia='2021-04-06';
+
+		//$segunda = $this->nomeDoModel->media($dia);
+		//$dados['segunda'] = json_encode(number_format($segunda, 1));
+
+		$terca = $this->Avaliacao_model->media($dia);
+		$dados['terca'] = json_encode(number_format($terca, 1));
+
+		//[...]
+
+    
     $this->load->model('Campus_model');
     $dados["campus"] = $this->Campus_model->recuperarTodos();
 
@@ -57,7 +71,7 @@ class Avaliacao extends CI_Controller {
     $this->load->view('admin/header', $dados_header);
 
     $this->load->model('Avaliacao_model');        
-    $dados["alergias"] = $this->avaliacao_model->recuperarTodos();
+    $dados["avaliacao"] = $this->Avaliacao_model->recuperarTodos();
     $this->load->view('admin/avaliacao', $dados);
 
     $this->load->view('admin/footer');

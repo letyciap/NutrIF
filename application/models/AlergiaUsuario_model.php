@@ -30,21 +30,15 @@ class AlergiaUsuario_model extends CI_Model {
     }
 
     public function atualizar() {
-        $sql = "UPDATE AlergiaUsuario SET matricula = '".$matricula."' WHERE codalergia = ".$codalergia;
-        $dados = array($sql, $dados);
-        return $this->db->query($sql, $dados);
+        // $this->db->query("DELETE FROM AlergiaUsuario WHERE matricula = '".$this->matricula."'");
+
+        $dados = array(
+            'codalergia' => $this->codalergia,
+            'matricula' => $this->matricula
+        );
+
+        return $this->db->replace('AlergiaUsuario', $dados);
     }
-
-    // public function atualizar() {
-    //     $this->db->query("DELETE FROM AlergiaUsuario WHERE matricula = '".$this->matricula."'");
-
-    //     $dadosIn = array(
-    //         'codalergia' => $this->codalergia,
-    //         'matricula' => $this->matricula
-    //     );
-
-    //     return $this->db->insert('AlergiaUsuario', $dadosIn);
-    // }
 
     public function excluir($codalergia) {
         $sql = "DELETE FROM AlergiaUsuario WHERE codalergia = ".$codalergia;

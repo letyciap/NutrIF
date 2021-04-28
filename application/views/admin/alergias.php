@@ -24,7 +24,7 @@
                 <h5 class="modal-title text-danger" id="exampleModalLabel"><b>Doenças e Alergias</b></h5>
                 <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
             </div>
-            <form method="post" action="<?=base_url();?>alergias/salvar/">
+            <form method="post" action="<?=base_url();?>admin/alergias/salvar/">
                 <div class="modal-body">
                     <p>Informe os valores para cadastrar uma nova doença ou alergia.</p>
                     <div class="row">
@@ -115,7 +115,7 @@
                                 <h5 class="modal-title text-danger" id="exampleModalLabel"><b>Doenças e Alergias</b></h5>
                                 <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                             </div>
-                            <form method="post" action="<?=base_url();?>alergias/editar/">
+                            <form method="post" action="<?=base_url();?>admin/alergias/editar/">
                                 <div class="modal-body">
                                     <p>Edite os valores da doença ou alergia cadastrada.</p>
                                     <div class="row">
@@ -151,7 +151,7 @@
                                 <h5 class="modal-title text-danger" id="exampleModalLabel"><b>Deseja excluir permanentemente?</b></h5>
                                 <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                             </div>
-                            <form action="<?=base_url();?>alergias/excluir/" method="POST">
+                            <form action="<?=base_url();?>admin/alergias/excluir/" method="POST">
                                 <div class="modal-body">
                                     <input type="number" value="<?php echo $alergia->codalergia; ?>" class="form-control-plaintext d-none" name="codalergia">
                                     <p>"<?php echo $alergia->alergia; ?>" será excluído.</p>

@@ -9,44 +9,7 @@
         <div class="col">
             <p class="text-danger h5 mt-2"><b>Usuarios Cadastrados</b></p>
         </div>
-        <div class="col d-flex justify-content-end">
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Cadastrar
-            </button> 
-        </div>
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-danger" id="exampleModalLabel"><b>Doenças e Alergias</b></h5>
-                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-            </div>
-            <form method="post" action="<?=base_url();?>usuario/salvar/">
-                <div class="modal-body">
-                    <p>Informe os valores para cadastrar uma nova doença ou alergia.</p>
-                    <div class="row">
-                        <div class="col-lg-6 col-12 ">
-                        <label class="form-label">cód.</label>
-                        <input type="number" class="form-control" id="codalergia" name="codalergia">
-                        </div>
-                        <div class="col-lg-6 col-12 ">
-                        <label class="form-label">doença ou alergia</label>
-                        <input type="text" class="form-control" id="alergia" name="alergia">
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-success">Salvar</button>
-                </div>
-            </form>
-            </div>
-        </div>
-        </div>
-        
         
     </div>
 
@@ -60,11 +23,11 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($usuario as $usuario): ?>
+                <?php foreach ($usuarios as $usuario): ?>
                 <tr>
                     <th scope="row"><?= $usuario->matricula;?></th>
                     <td><?= $usuario->usuario;?></td>
-                    <td class='col-4'>
+                    <td class='col-2'>
                         
                         <!-- Button trigger modal ver -->
                         <a type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#ModalVer<?php echo $usuario->matricula; ?>">
@@ -73,83 +36,83 @@
 
                         <!-- Modal ver-->
                         <div class="modal fade" id="ModalVer<?php echo $usuario->matricula; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title text-danger" id="exampleModalLabel"><b>Dados dos Usuarios</b></h5>
+                                <h5 class="modal-title text-danger" id="exampleModalLabel"><b>Dados do Usuário</b></h5>
                                 <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                             </div>
                             <form>
                                 <div class="modal-body">
                                     <!-- <p>Edite os valores da doença ou alergia cadastrada.</p> -->
                                     <div class="row">
-                                        <div class="col-lg-6 col-12 ">
-                                        <label class="form-label"><b>matricula</b></label>
+                                        <div class="col-lg-3 col-12 ">
+                                        <label class="form-label"><b>Matrícula</b></label>
                                         <input type="number" readonly value="<?php echo $usuario->matricula; ?>" class="form-control-plaintext" id="matricula" name="matricula">
                                         </div>
 
-                                        <div class="col-lg-6 col-12 ">
-                                        <label class="form-label"><b>usuario</b></label>
+                                        <div class="col-lg-3 mb-3 col-12 ">
+                                        <label class="form-label"><b>Nome</b></label>
                                         <input type="text" readonly value="<?php echo $usuario->usuario; ?>" class="form-control-plaintext" id="matricula" name="matricula">
                                         </div>
 
-                                        <div class="col-lg-6 col-12 ">
-                                        <label class="form-label"><b>cód. campus</b></label>
-                                        <input type="number" readonly value="<?php echo $usuario->codcampus; ?>" class="form-control-plaintext" id="codalergia" name="codalergia">
+                                        <div class="col-lg-3 mb-3 col-12 ">
+                                        <label class="form-label"><b>Campus</b></label>
+                                        <input type="text" readonly value="<?= $campus[$usuario->codcampus]->campus;?>" class="form-control-plaintext" id="codalergia" name="codalergia">
                                         </div>
 
-                                        <div class="col-lg-6 col-12 ">
-                                        <label class="form-label"><b>data de nascimento</b></label>
+                                        <div class="col-lg-3 mb-3 col-12 ">
+                                        <label class="form-label"><b>Data de nascimento</b></label>
                                         <input type="date" readonly value="<?php echo $usuario->datanascimento; ?>" class="form-control-plaintext" id="codalergia" name="codalergia">
                                         </div>
 
-                                        <div class="col-lg-6 col-12 ">
-                                        <label class="form-label"><b>data de cadastro</b></label>
+                                        <div class="col-lg-3 mb-3 col-12 ">
+                                        <label class="form-label"><b>Data de cadastro</b></label>
                                         <input type="date" readonly value="<?php echo $usuario->datacadastro; ?>" class="form-control-plaintext" id="codalergia" name="codalergia">
                                         </div>
 
-                                        <div class="col-lg-6 col-12 ">
-                                        <label class="form-label"><b>cód. genero</b></label>
-                                        <input type="number" readonly value="<?php echo $usuario->codgenero; ?>" class="form-control-plaintext" id="alergia" name="alergia">
+                                        <div class="col-lg-3 mb-3 col-12 ">
+                                        <label class="form-label"><b>Gênero</b></label>
+                                        <input type="text" readonly value="<?= $generos[$usuario->codgenero]->genero;?>" class="form-control-plaintext">
                                         </div>
 
-                                        <div class="col-lg-6 col-12 ">
-                                        <label class="form-label"><b>cód. etnia</b></label>
-                                        <input type="number" readonly value="<?php echo $usuario->codeetnia; ?>" class="form-control-plaintext" id="alergia" name="alergia">
+                                        <div class="col-lg-3 mb-3 col-12 ">
+                                        <label class="form-label"><b>Etnia</b></label>
+                                        <input type="text" readonly value="<?= $etnias[$usuario->codeetnia]->etnia;?>" class="form-control-plaintext" id="alergia" name="alergia">
                                         </div>
 
-                                        <div class="col-lg-6 col-12 ">
-                                        <label class="form-label"><b>altura</b></label>
-                                        <input type="number" readonly value="<?php echo $usuario->altura; ?>" class="form-control-plaintext" id="alergia" name="alergia">
+                                        <div class="col-lg-3 mb-3 col-12 ">
+                                        <label class="form-label"><b>Altura</b></label>
+                                        <input type="text" readonly value="<?php echo $usuario->altura; ?>m" class="form-control-plaintext" id="alergia" name="alergia">
                                         </div>
 
-                                        <div class="col-lg-6 col-12 ">
-                                        <label class="form-label"><b>peso</b></label>
-                                        <input type="number" readonly value="<?php echo $usuario->peso; ?>" class="form-control-plaintext" id="alergia" name="alergia">
+                                        <div class="col-lg-3 mb-3 col-12 ">
+                                        <label class="form-label"><b>Peso</b></label>
+                                        <input type="text" readonly value="<?php echo $usuario->peso;?>kg" class="form-control-plaintext" id="alergia" name="alergia">
                                         </div>
 
-                                        <div class="col-lg-6 col-12 ">
-                                        <label class="form-label"><b>cód. frequencia de consumo no campus</b></label>
-                                        <input type="number" readonly value="<?php echo $usuario->codfrequenciafome; ?>" class="form-control-plaintext" id="codalergia" name="codalergia">
+                                        <div class="col-lg-3 mb-3 col-12 ">
+                                        <label class="form-label"><b>Frequência de consumo no campus</b></label>
+                                        <input type="text" readonly value="<?= $freqconsumocampus[$usuario->codfreqconsumocampus]->freqconsumocampus;?>" class="form-control-plaintext" id="codalergia" name="codalergia">
                                         </div>
 
-                                        <div class="col-lg-6 col-12 ">
-                                        <label class="form-label"><b>cód. dieta</b></label>
-                                        <input type="number" readonly value="<?php echo $usuario->coddieta; ?>" class="form-control-plaintext" id="codalergia" name="codalergia">
+                                        <div class="col-lg-3 mb-3 col-12 ">
+                                        <label class="form-label"><b>Dieta</b></label>
+                                        <input type="text" readonly value="<?= $dietas[$usuario->coddieta]->dieta;?>" class="form-control-plaintext" id="codalergia" name="codalergia">
                                         </div>
 
-                                        <div class="col-lg-6 col-12 ">
-                                        <label class="form-label"><b>cód. satisfação do corpo</b></label>
-                                        <input type="number" readonly value="<?php echo $usuario->codsatisfacaocorpo; ?>" class="form-control-plaintext" id="alergia" name="alergia">
+                                        <div class="col-lg-3 mb-3 col-12 ">
+                                        <label class="form-label"><b>Nível de satisfação do corpo</b></label>
+                                        <input type="text" readonly value="<?= $satisfacaocorpo[$usuario->codsatisfacaocorpo]->satisfacaocorpo;?>" class="form-control-plaintext" id="alergia" name="alergia">
                                         </div>
 
-                                        <div class="col-lg-6 col-12 ">
-                                        <label class="form-label"><b>cód. frequencia de fome</b></label>
-                                        <input type="number" readonly value="<?php echo $usuario->codfrequenciafome; ?>" class="form-control-plaintext" id="alergia" name="alergia">
+                                        <div class="col-lg-3 mb-3 col-12 ">
+                                        <label class="form-label"><b>Frequencia de fome</b></label>
+                                        <input type="text" readonly value="<?= $frequenciafome[$usuario->codfrequenciafome]->frequenciafome;?>" class="form-control-plaintext" id="alergia" name="alergia">
                                         </div>
 
-                                        <div class="col-lg-6 col-12 ">
-                                        <label class="form-label"><b>outra alergia</b></label>
+                                        <div class="col-lg-3 mb-3 col-12 ">
+                                        <label class="form-label"><b>Outras alergias</b></label>
                                         <input type="text" readonly value="<?php echo $usuario->outraalergia; ?>" class="form-control-plaintext" id="alergia" name="alergia">
                                         </div>
 
@@ -165,7 +128,7 @@
                         </div>
                         
                         <!-- Button trigger modal editar -->
-                        <a type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#ModalEditar<?php echo $usuario->matricula; ?>">
+                        <a type="button" class="btn btn-outline-warning d-none" data-bs-toggle="modal" data-bs-target="#ModalEditar<?php echo $usuario->matricula; ?>">
                         Editar
                         </a>
 
@@ -262,7 +225,7 @@
                         </div>
 
                         <!-- Button trigger modal excluir -->
-                        <a type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $usuario->matricula; ?>">
+                        <a type="button" class="btn btn-outline-danger d-none" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $usuario->matricula; ?>">
                         Excluir
                         </a> 
 

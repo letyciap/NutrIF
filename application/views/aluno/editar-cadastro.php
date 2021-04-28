@@ -100,7 +100,7 @@
 
             <div class="col-5 ">
               <label class="form-label">Peso (Kg) <i>*</i></label>
-              <input type="number" class="form-control" step="0.01" id="peso" name="peso"  value='<?= $usuario->altura;?>' required>
+              <input type="number" class="form-control" step="0.01" id="peso" name="peso"  value='<?= $usuario->peso;?>' required>
               <div class="invalid-feedback">Inválido.</div>
             </div>
 

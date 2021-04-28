@@ -154,7 +154,35 @@ class Usuario extends CI_Controller {
     $this->load->view('admin/header', $dados_header);
 
     $this->load->model('Usuario_model');        
-    $dados["usuario"] = $this->Usuario_model->recuperarTodos();
+    $dados["usuarios"] = $this->Usuario_model->recuperarTodos();
+
+    $this->load->model('Dieta_model');
+    $dados["dietas"] = $this->Dieta_model->recuperarTodos();
+
+    $this->load->model('Etnia_model');
+    $dados["etnias"] = $this->Etnia_model->recuperarTodos();
+
+    $this->load->model('Alergia_model');
+    $dados["alergias"] = $this->Alergia_model->recuperarTodos();
+
+    $this->load->model('Campus_model');
+    $dados["campus"] = $this->Campus_model->recuperarTodos();
+
+    $this->load->model('FreqConsumoCampus_model');
+    $dados["freqconsumocampus"] = $this->FreqConsumoCampus_model->recuperarTodos();
+
+    $this->load->model('Genero_model');
+    $dados["generos"] = $this->Genero_model->recuperarTodos();
+
+    $this->load->model('SatisfacaoCorpo_model');
+    $dados["satisfacaocorpo"] = $this->SatisfacaoCorpo_model->recuperarTodos();
+
+    $this->load->model('FrequenciaFome_model');
+    $dados["frequenciafome"] = $this->FrequenciaFome_model->recuperarTodos();
+
+    $this->load->model('TipoRefeicao_model');
+    $dados["tiporefeicao"] = $this->TipoRefeicao_model->recuperarTodos();
+    
     $this->load->view('admin/usuario', $dados);
 
     $this->load->view('admin/footer');
@@ -197,11 +225,11 @@ class Usuario extends CI_Controller {
   function editar(){
     $this->load->model('Usuario_model');
 
-    // $this->load->model('TipoRefeicao_model');
-    // $this->load->model('TipoRefeicaoUsuario_model');
+    $this->load->model('TipoRefeicao_model');
+    $this->load->model('TipoRefeicaoUsuario_model');
 
-    // $this->load->model('Alergia_model');
-    // $this->load->model('AlergiaUsuario_model');
+    $this->load->model('Alergia_model');
+    $this->load->model('AlergiaUsuario_model');
 
     $senhaCriptografada = md5($this->input->post('senha'));
     $this->Usuario_model->matricula = $this->input->post('matricula');
@@ -221,24 +249,24 @@ class Usuario extends CI_Controller {
     $this->Usuario_model->outraalergia = $this->input->post('outraalergia');
     $this->Usuario_model->atualizar();
     
-    //$dados["tiporefeicao"] = $this->TipoRefeicao_model->recuperarTodos();
-    //$dados["alergia"] = $this->Alergia_model->recuperarTodos();
+    $dados["tiporefeicao"] = $this->TipoRefeicao_model->recuperarTodos();
+    $dados["alergia"] = $this->Alergia_model->recuperarTodos();
 
-    // foreach ($dados["tiporefeicao"] as $tiporefeicao):
-    //   $this->TipoRefeicaoUsuario_model->matricula = $this->input->post('matricula');
-    //   $this->TipoRefeicaoUsuario_model->codtiporefeicao = $this->input->post('codtiporefeicao'.$tiporefeicao->codtiporefeicao);
-    //   if ($this->TipoRefeicaoUsuario_model->codtiporefeicao == true) {
-    //     //$this->TipoRefeicaoUsuario_model->atualizar();
-    //   }
-    // endforeach;
+    foreach ($dados["tiporefeicao"] as $tiporefeicao):
+      $this->TipoRefeicaoUsuario_model->matricula = $this->input->post('matricula');
+      $this->TipoRefeicaoUsuario_model->codtiporefeicao = $this->input->post('codtiporefeicao'.$tiporefeicao->codtiporefeicao);
+      if ($this->TipoRefeicaoUsuario_model->codtiporefeicao == true) {
+        $this->TipoRefeicaoUsuario_model->atualizar();
+      }
+    endforeach;
 
-    // foreach ($dados["alergia"] as $alergia):
-    //   $this->AlergiaUsuario_model->matricula = $this->input->post('matricula');
-    //   $this->AlergiaUsuario_model->codalergia = $this->input->post('codalergia'.$alergia->codalergia);
-    //   if ($this->AlergiaUsuario_model->codalergia == true) {
-    //     //$this->AlergiaUsuario_model->atualizar();
-    //   }
-    // endforeach;
+    foreach ($dados["alergia"] as $alergia):
+      $this->AlergiaUsuario_model->matricula = $this->input->post('matricula');
+      $this->AlergiaUsuario_model->codalergia = $this->input->post('codalergia'.$alergia->codalergia);
+      if ($this->AlergiaUsuario_model->codalergia == true) {
+        $this->AlergiaUsuario_model->atualizar();
+      }
+    endforeach;
 
     redirect('usuario/cadastro/editar');
 }
