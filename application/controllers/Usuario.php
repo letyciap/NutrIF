@@ -174,6 +174,10 @@ class Usuario extends CI_Controller {
     $usuario = $this->Usuario_model->recuperarPorLoginESenha($matricula, md5($senha));
 
     if ($usuario) {
+      if ($matricula == "admin") {
+        redirect('admin');
+      }
+
       $this->session->set_userdata('usuario', $usuario[0]);
       $this->session->set_userdata('matricula', $matricula);
       $this->session->set_userdata('autenticacao', md5($senha));

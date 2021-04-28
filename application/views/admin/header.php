@@ -51,3 +51,47 @@
   </head>
   
   <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container">
+
+        <a class="navbar-brand" href="<?= base_url()?>admin">
+          <img style="height:2rem;" src="<?= base_url()?>/assets/logo.png"> Admin
+        </a>
+        
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarsExample07" style="">
+          <ul class="navbar-nav ms-lg-auto text-center mb-2 mb-lg-0" style="font-size: 1.1rem">
+            <!-- <li class="nav-item mx-lg-2">
+              <a class="nav-link item-menu" href="<?= base_url()?>usuario/cadastro/editar"><b>Meus Dados</b></a>
+            </li>
+            <li class="nav-item mx-lg-2">
+            <a class="nav-link item-menu" href="<?= base_url()?>usuario/avaliacao"><b>Avaliar</b></a>
+            </li>-->
+
+            <li class="nav-item mx-lg-2">
+              <a class="nav-link item-menu fw-bold" href="<?= base_url()?>admin/estatisticas">Estatísticas</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Tabelas
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="<?=base_url()?>admin/alergias/listar">Alergias</a></li>
+                <li><a class="dropdown-item" href="<?=base_url()?>admin/alergiausuario/listar">AlergiaUsuario</a></li>
+                <li><a class="dropdown-item" href="<?=base_url()?>admin/usuarios/listar">Usuarios</a></li>
+                <li><a class="dropdown-item" href="<?=base_url()?>admin/avaliacoes/listar">Avaliação</a></li>
+              </ul>
+            </li>
+            <li class="nav-item mx-lg-2">
+              <a class="nav-link text-danger sair-hover" href="<?= base_url()?>usuario/sair"><b>Sair</b></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>

@@ -235,11 +235,16 @@
         <div class="d-flex mb-5 mb-lg-0">
           <div class="col col-lg-9">
           <label class="form-label display-6 fw-normal" style="font-size:1.2em; color:#6a6a6a;">Selecione a refeição: </label>
-              <select class="form-select form-control"  required>
-              <option selected>Lanche</option>
-              <option>Almoço</option>
-              <option>Jantar</option>
-              </select>
+            <select class="form-select form-control" id="tiporefeicao" name="tiporefeicao" required>
+              <option selected></option>
+              <?php
+                foreach ($tiporefeicao as $tiporefeicao): 
+              ?>
+              <option value="<?= $tiporefeicao->tiporefeicao; ?>"> <?= $tiporefeicao->tiporefeicao; ?></option>
+              <?php
+                endforeach;
+              ?>
+            </select>
           </div>
         </div> 
 

@@ -29,10 +29,20 @@ class Avaliacao extends CI_Controller {
     $this->load->model('Campus_model');
     $dados["campus"] = $this->Campus_model->recuperarTodos();
 
+    $this->load->model('TipoRefeicao_model');
+    $dados["tiporefeicao"] = $this->TipoRefeicao_model->recuperarTodosMenosND();
+    
     if (! $this->session->userdata('usuario')) {
-      $this->load->view('aluno/header-aluno');
-      $this->load->view('avaliacoes/estatisticas', $dados);
-      $this->load->view('footer');
+
+      if($this->session->userdata('matricula' == 'admin')){
+        $this->load->view('admin/header');
+        $this->load->view('avaliacoes/estatisticas', $dados);
+        $this->load->view('footer');
+      }else {
+        $this->load->view('aluno/header-aluno');
+        $this->load->view('avaliacoes/estatisticas', $dados);
+        $this->load->view('footer');
+      }
     }
     else{
       $this->load->view('header');

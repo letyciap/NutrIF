@@ -18,4 +18,9 @@ class TipoRefeicao_model extends CI_Model {
         $sql = "SELECT * FROM TipoRefeicao WHERE codtiporefeicao NOT IN ('6')";
         return $this->db->query($sql)->result();
     }
+
+    function recuperarTodosMenosND(){
+        $sql = "SELECT * FROM TipoRefeicao WHERE tiporefeicao NOT IN ('Café da manhã','Nenhuma das anteriores ')";
+        return $this->db->query($sql)->result();
+    }
 }
