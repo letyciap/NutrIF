@@ -28,17 +28,10 @@ class Avaliacao extends CI_Controller {
   {
     $this->load->model('Campus_model');
     $dados["campus"] = $this->Campus_model->recuperarTodos();
-<<<<<<< HEAD
 
     $this->load->model('TipoRefeicao_model');
     $dados["tiporefeicao"] = $this->TipoRefeicao_model->recuperarTodosMenosND();
-    
-=======
-    
-    $this->load->model('TipoRefeicao_model');
-    $dados["tiporefeicao"] = $this->TipoRefeicao_model->recuperarTodosMenosND();
   
->>>>>>> 5264de1601e06d2c14cbf8b1767d68cded6b773a
     if (! $this->session->userdata('usuario')) {
 
       if($this->session->userdata('matricula' == 'admin')){

@@ -235,11 +235,7 @@
         <div class="d-flex mb-5 mb-lg-0">
           <div class="col col-lg-9">
           <label class="form-label display-6 fw-normal" style="font-size:1.2em; color:#6a6a6a;">Selecione a refeição: </label>
-<<<<<<< HEAD
-            <select class="form-select form-control" id="tiporefeicao" name="tiporefeicao" required>
-=======
           <select class="form-select form-control" id="tiporefeicao" name="tiporefeicao" required>
->>>>>>> 5264de1601e06d2c14cbf8b1767d68cded6b773a
               <option selected></option>
               <?php
                 foreach ($tiporefeicao as $tiporefeicao): 
