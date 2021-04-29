@@ -39,7 +39,7 @@ class Usuario extends CI_Controller {
       $dados["alergias"] = $this->Alergia_model->recuperarTodos();
 
       $this->load->model('AlergiaUsuario_model');
-      $dados["alergiausuario"] = $this->AlergiaUsuario_model->recuperarPorMatricula();
+      $dados["alergiasusuario"] = $this->AlergiaUsuario_model->recuperarPorMatricula();
   
       $this->load->model('Campus_model');
       $dados["campus"] = $this->Campus_model->recuperarTodos();
@@ -252,28 +252,46 @@ class Usuario extends CI_Controller {
     $dados["tiporefeicao"] = $this->TipoRefeicao_model->recuperarTodos();
     $dados["alergia"] = $this->Alergia_model->recuperarTodos();
 
+    $this->TipoRefeicaoUsuario_model->matricula = $this->input->post('matricula');
+    $this->TipoRefeicaoUsuario_model->zerar_tiporefeicao();
+
     foreach ($dados["tiporefeicao"] as $tiporefeicao):
-      $this->TipoRefeicaoUsuario_model->matricula = $this->input->post('matricula');
-      $this->TipoRefeicaoUsuario_model->codtiporefeicao = $this->input->post('codtiporefeicao'.$tiporefeicao->codtiporefeicao);
-      //$this->TipoRefeicaoUsuario_model->atualizar();
-      if ($this->TipoRefeicaoUsuario_model->codtiporefeicao == true) {
-        $this->TipoRefeicaoUsuario_model->atualizar();
+      $codtiporefeicao = $this->input->post('codtiporefeicao'.$tiporefeicao->codtiporefeicao);
+      $this->TipoRefeicaoUsuario_model->codtiporefeicao = $codtiporefeicao;
+
+      if ($codtiporefeicao != NULL) {
+        if ($codtiporefeicao == true) {
+          $this->TipoRefeicaoUsuario_model->atualizar_cadastro();
+        } 
+        if ($codtiporefeicao == 0) {
+          $this->TipoRefeicaoUsuario_model->atualizar_cadastro_zero();
+        }
       } 
+
     endforeach;
 
+    $this->AlergiaUsuario_model->matricula = $this->input->post('matricula');
+    $this->AlergiaUsuario_model->zerar_alergiausuario();
+
     foreach ($dados["alergia"] as $alergia):
-      $this->AlergiaUsuario_model->matricula = $this->input->post('matricula');
-      $this->AlergiaUsuario_model->codalergia = $this->input->post('codalergia'.$alergia->codalergia);
-      if ($this->AlergiaUsuario_model->codalergia == true) {
-        $this->AlergiaUsuario_model->atualizar();
+      $codalergia = $this->input->post('codalergia'.$alergia->codalergia);
+      $this->AlergiaUsuario_model->codalergia = $codalergia;
+      
+      if ($codalergia != NULL) {
+        if ($codalergia == true) {
+          $this->AlergiaUsuario_model->atualizar_cadastro();
+        } 
+        if ($codalergia == 0) {
+          $this->AlergiaUsuario_model->atualizar_cadastro_zero();
+        }
       } 
+
     endforeach;
 
     redirect('usuario/cadastro/editar');
 }
 
   function excluir(){
-    //$alergia = $this->input->post('alergia');
     $codalergia = $this->input->post('codalergia');
     $this->load->model('Usuario_model');
     $this->Alergia_model->excluir($codalergia);

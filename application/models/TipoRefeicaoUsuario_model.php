@@ -25,18 +25,25 @@ class TipoRefeicaoUsuario_model extends CI_Model {
             'matricula' => $this->matricula,
             'codtiporefeicao' => $this->codtiporefeicao
         );
-
         return $this->db->insert('TipoRefeicaoUsuario', $dados);
     }
 
-    public function atualizar() {
-        
+    public function zerar_tiporefeicao() {
+        $this->db->where(['matricula'=> $this->matricula]);
+        $this->db->delete('TipoRefeicaoUsuario');
+    }
+
+    public function atualizar_cadastro() {
         $dados = array(
             'codtiporefeicao' => $this->codtiporefeicao,
             'matricula' => $this->matricula
         );
+        return $this->db->insert('TipoRefeicaoUsuario', $dados);
+    }
 
-        return $this->db->replace('TipoRefeicaoUsuario', $dados);
+    public function atualizar_cadastro_zero() {
+        $dados = array('codtiporefeicao' => 0,'matricula' => $this->matricula);
+        return $this->db->insert('TipoRefeicaoUsuario', $dados);
     }
 
 }
