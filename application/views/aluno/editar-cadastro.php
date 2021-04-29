@@ -189,7 +189,7 @@
                 <div class="mb-2 col-lg-6 col-12">
                   <input type="checkbox" class="form-check-input" id="outra-alergia" name="outra-alergia">
                   <label class="form-check-label" for="ale-outra">Outra:</label>
-                  <input type="text" class="outra-linha" id="outraalergia" name="outraalergia">
+                  <input type="text" class="outra-linha" id="outraalergia" name="outraalergia" value='<?= $usuario->outraalergia;?>'>
                 </div>
 
             </div>
