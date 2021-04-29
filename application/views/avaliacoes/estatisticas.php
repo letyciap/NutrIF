@@ -62,7 +62,7 @@
 
 <div class = "container">
   <div class="p-3 mx-auto text-center text-danger"><h2 class="fw-bold">Estatísticas</h2></div>
-  <div class="col-lg-9 col-12 mx-auto justify-content-center">
+  <!-- <div class="col-lg-9 col-12 mx-auto justify-content-center">
     <div class="">
       <label class="form-label h5 fw-bold text-secondary">Por favor, selecione o Campi IFRN de interesse:</label>
       <select class="form-select form-control"  required>
@@ -72,7 +72,7 @@
         <?php endforeach;?>
       </select>
     </div>
-  </div>
+  </div> -->
 </div>
     
 <!--ALERGIAS-->
@@ -81,63 +81,32 @@
   <div class="col-lg-9 col-12 py-5 mx-auto">   
     <div class="card card-cover text-secondary border-2" style="border-radius:1rem">        
       <div class="col mx-auto p-1 pb-1 px-5">
-        <h3 class="pt-0 mt-3 mb-0  fw-bold text-center ">Alergias</h3>
-        <p class="mt-3 text-center">Número de alunos por alergia no <b>Campus Natal Zona Norte</b></p>
+        <h3 class="pt-0 mt-3 mb-0  fw-bold text-center ">Doenças e Alergias</h3>
+        <p class="mt-3 text-center">Número de alunos por <b>doenças</b> e <b>alergias</b></p>
       </div>
 
       <div class="col-10 mb-4 mx-auto row row-cols-lg-5 row-cols-2 justify-content-center">
 
         <div class="col text-center text-success">
-          <h4 class=" display-5 fw-bold mb-0 text-center" style="color:#498221";>57</h4>
+          <h4 class=" display-5 fw-bold mb-0 text-center" style="color:#498221";><?= $this->db->from("Usuario")->count_all_results();?></h4>
           <p style="color:#498221";>Alunos cadastrados</p>
         </div>
 
-        <div class="col text-center">
-          <h4 class=" display-5 fw-bold mb-0">8</h4>
-          <p>Ovo</p>
-        </div>
+        <?php foreach($alergias as $alergia): ?>
 
-        <div class="col text-center">
-          <h4 class=" display-5 fw-bold mb-0">12</h4>
-          <p>Látex</p>
-        </div>
+          <div class="col text-center">
+            <h4 class=" display-5 fw-bold mb-0"><?= $this->db->where(['codalergia'=>$alergia->codalergia])->from("AlergiaUsuario")->count_all_results();?></h4>
+            <p><?= $alergia->alergia?></p>
+          </div>
 
-        <div class="col text-center">
-          <h4 class=" display-5 fw-bold mb-0">18</h4>
-          <p>Trigo</p>
-        </div>
-
-        <div class="col text-center ">
-          <h4 class="display-5 fw-bold mb-0">20</h4>
-          <p>Proteínas do leite de vaca</p>
-        </div>
-
-        <div class="col text-center">
-          <h4 class="display-5 fw-bold mb-0">2</h4>
-          <p>Castanhas</p>
-        </div>
-
-        <div class="col text-center ">
-          <h4 class="display-5 fw-bold mb-0">4</h4>
-          <p class="">Amendoim</p>
-        </div>
-
-        <div class="col text-center ">
-          <h4 class="display-5 fw-bold mb-0">32</h4>
-          <p>Corantes e outros aditivos</p>
-        </div>
-
-        <div class="col text-center ">
-          <h4 class=" display-5 fw-bold mb-0">8</h4>
-          <p>Não-alérgicos</p>
-        </div>   
+        <?php endforeach; ?>
 
       </div>
     </div>
   </div>
 </div>   
 
-<!--OUTRAS DOENÇAS-->
+<!-- OUTRAS DOENÇAS
 
 <div class="container">
   <div class="col-lg-9 col-12 py-5 mx-auto">   
@@ -186,7 +155,7 @@
       </div>
     </div>
   </div>
-</div>   
+</div>    -->
 
 <!--DIETAS-->
 
@@ -195,30 +164,24 @@
     <div class="card card-cover text-secondary border-2" style="border-radius:1rem">
       <div class=" d-flex flex-column  p-1 pb-1 px-5 ">
         <h3 class="pt-0 mt-3 mb-0 fw-bold text-center ">Dietas</h3>
-        <p class="mt-3 text-center">Número de alunos por dietas no <b>Campus Natal Zona Norte</b></p>
+        <p class="mt-3 text-center">Número de alunos por <b>dieta</b></p>
       </div>
 
       <div class="col-10 mb-4 mx-auto row row-cols-lg-5 row-cols-2 justify-content-center">
 
         <div class="col text-center text-success">
-          <h4 class="display-5 fw-bold mb-0" style="color:#498221";>57</h4>
+          <h4 class=" display-5 fw-bold mb-0 text-center" style="color:#498221";><?= $this->db->from("Usuario")->count_all_results();?></h4>
           <p style="color:#498221";>Alunos cadastrados</p>
         </div>
 
-        <div class="col text-center">
-          <h4 class=" display-5 fw-bold mb-0">20</h4>
-          <p>Tradicional</p>
-        </div>
+        <?php foreach($dietas as $dieta): ?>
 
-        <div class="col text-center">
-          <h4 class=" display-5 fw-bold mb-0">12</h4>
-          <p>Vegano</p>
-        </div>
+          <div class="col text-center">
+            <h4 class=" display-5 fw-bold mb-0"><?= $this->db->where(['coddieta'=>$dieta->coddieta])->from("Usuario")->count_all_results();?></h4>
+            <p><?= $dieta->dieta?></p>
+          </div>
 
-        <div class="col text-center">
-          <h4 class=" display-5 fw-bold mb-0">8</h4>
-          <p>Vegetariano</p>
-        </div>
+        <?php endforeach; ?>
 
       </div>
     </div>
@@ -227,7 +190,7 @@
 
 <!--GRÁFICO BARRA-->
          
-<div class="container">
+<!-- <div class="container">
   <div class="col-lg-9 col-12 py-5 mx-auto">   
     <div class="card card-cover border-0">
       <div class="row row-cols-1 row-cols-lg-2 justify-content-center">
@@ -281,7 +244,7 @@
       </div>
     </div>
   </div>
-</div>  
+</div>   -->
 
 <!--grafico de barra lanche-->
 

@@ -14,5 +14,34 @@ class Campus_model extends CI_Model {
         return $this->db->query($sql)->result();
     }
 
+    public function inserir() {
+        $dados = array(
+            'codcampus' => $this->codcampus,
+            'campus' => $this->campus
+        );
+
+        return $this->db->insert('Campus', $dados);
+    }
+
+    public function atualizar() {
+
+        $dados = array(
+            'codcampus' => $this->codcampus,
+            'campus' => $this->campus
+        );
+
+        return $this->db->replace('Campus', $dados);
+
+        // $sql = "UPDATE Campus SET campus = '".$campus."' WHERE codcampus = ".$codcampus;
+        // $dados = array($sql, $dados);
+        // return $this->db->query($sql, $dados);
+    }
+
+    public function excluir($codcampus) {
+        $sql = "DELETE FROM Campus WHERE codcampus = ".$codcampus;
+        $dados = array($sql, $dados);
+        return $this->db->query($sql, $dados);
+    }
+
 
 }

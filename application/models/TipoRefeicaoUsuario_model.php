@@ -36,10 +36,7 @@ class TipoRefeicaoUsuario_model extends CI_Model {
             'matricula' => $this->matricula
         );
 
-        $this->db->where($dados);
-        $this->db->delete('TiporefeicaoUsuario');
-        
-
-        return $this->db->insert('TipoRefeicaoUsuario', $dados);
+        return $this->db->replace('TipoRefeicaoUsuario', $dados);
     }
+
 }

@@ -38,6 +38,13 @@ $route ['admin/avaliacoes/salvar'] = 'Avaliacao/salvar';
 $route ['admin/avaliacoes/editar'] = 'Avaliacao/editar';
 $route ['admin/avaliacoes/excluir'] = 'Avaliacao/excluir';
 
+// admin/campus
+$route ['admin/campus/listar'] = 'Campus/listar';
+$route ['admin/campus/salvar'] = 'Campus/salvar';
+$route ['admin/campus/editar'] = 'Campus/editar';
+$route ['admin/campus/excluir'] = 'Campus/excluir';
+
+
 //admin/estatisticas
 $route ['admin/estatisticas'] = 'Admin/estatisticas';
 

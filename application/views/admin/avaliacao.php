@@ -15,13 +15,12 @@
         <table class="table table-hover mt-2 table-responsive table-borderless">
             <thead class='border-bottom'>
                 <tr>
-                <th scope="col">Avaliação</th>
-                <th scope="col">Matricula</th>
+                <th scope="col">Nome do Usuário</th>
                 <th scope="col">Tipo de refeição</th>
                 <th scope="col">Data da refeição</th>
-                <th scope="col">Alimento</th>
-                <th scope="col">Bebida</th>
-                <th scope="col">Atendimento</th>
+                <th scope="col">Nota para Alimento</th>
+                <th scope="col">Nota para Bebida</th>
+                <th scope="col">Nota para Atendimento</th>
                 <th scope="col">Comentários</th>
                 </tr>
             </thead>
@@ -29,14 +28,30 @@
             <tbody>
                 <?php foreach ($avaliacao as $avaliacao): ?>
                 <tr>
-                    <th scope="row"><?= $avaliacao->codavaliacao;?></th>
-                    <td><?= $avaliacao->matricula;?></td>
-                    <td><?= $avaliacao->codtiporefeicao;?></td>
+                    <td>
+                        <?php 
+                            foreach ($usuarios as $usuario) { 
+                                if ( $avaliacao->matricula == $usuario->matricula) {
+                                    echo $usuario->usuario;
+                                }    
+                            }
+                        ?>
+                    </td>
+                    <td>
+                        <?php 
+                            foreach ($tiporefeicoes as $tiporefeicao) { 
+                                if ( $avaliacao->codtiporefeicao == $tiporefeicao->codtiporefeicao) {
+                                    echo $tiporefeicao->tiporefeicao;
+                                }    
+                            }
+                        ?>
+                    </td>
+                    
                     <td><?= $avaliacao->datarefeicao;?></td>
                     <td><?= $avaliacao->alimento;?></td>
                     <td><?= $avaliacao->bebida;?></td>
                     <td><?= $avaliacao->atendimento;?></td>
-                    <td><?= $avaliacao->comentario;?></td>
+                    <td class='col-2'><?= $avaliacao->comentario;?></td>
 
                 </tr>
                 <?php endforeach; ?>

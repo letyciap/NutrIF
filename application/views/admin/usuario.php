@@ -48,7 +48,7 @@
                                     <div class="row">
                                         <div class="col-lg-3 col-12 ">
                                         <label class="form-label"><b>Matrícula</b></label>
-                                        <input type="number" readonly value="<?php echo $usuario->matricula; ?>" class="form-control-plaintext" id="matricula" name="matricula">
+                                        <input type="text" readonly value="<?php echo $usuario->matricula; ?>" class="form-control-plaintext" id="matricula" name="matricula">
                                         </div>
 
                                         <div class="col-lg-3 mb-3 col-12 ">

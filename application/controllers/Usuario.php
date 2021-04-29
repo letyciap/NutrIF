@@ -255,9 +255,10 @@ class Usuario extends CI_Controller {
     foreach ($dados["tiporefeicao"] as $tiporefeicao):
       $this->TipoRefeicaoUsuario_model->matricula = $this->input->post('matricula');
       $this->TipoRefeicaoUsuario_model->codtiporefeicao = $this->input->post('codtiporefeicao'.$tiporefeicao->codtiporefeicao);
+      //$this->TipoRefeicaoUsuario_model->atualizar();
       if ($this->TipoRefeicaoUsuario_model->codtiporefeicao == true) {
         $this->TipoRefeicaoUsuario_model->atualizar();
-      }
+      } 
     endforeach;
 
     foreach ($dados["alergia"] as $alergia):
@@ -265,7 +266,7 @@ class Usuario extends CI_Controller {
       $this->AlergiaUsuario_model->codalergia = $this->input->post('codalergia'.$alergia->codalergia);
       if ($this->AlergiaUsuario_model->codalergia == true) {
         $this->AlergiaUsuario_model->atualizar();
-      }
+      } 
     endforeach;
 
     redirect('usuario/cadastro/editar');

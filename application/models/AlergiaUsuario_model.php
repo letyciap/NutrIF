@@ -30,7 +30,7 @@ class AlergiaUsuario_model extends CI_Model {
     }
 
     public function atualizar() {
-        // $this->db->query("DELETE FROM AlergiaUsuario WHERE matricula = '".$this->matricula."'");
+        //$this->db->query("DELETE FROM AlergiaUsuario WHERE matricula = '".$this->matricula."'");
 
         $dados = array(
             'codalergia' => $this->codalergia,

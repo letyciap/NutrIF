@@ -34,14 +34,20 @@ class Avaliacao extends CI_Controller {
 		//$segunda = $this->nomeDoModel->media($dia);
 		//$dados['segunda'] = json_encode(number_format($segunda, 1));
 
-		$terca = $this->Avaliacao_model->media($dia);
-		$dados['terca'] = json_encode(number_format($terca, 1));
+		// $terca = $this->Avaliacao_model->media($dia);
+		// $dados['terca'] = json_encode(number_format($terca, 1));
 
 		//[...]
 
     
     $this->load->model('Campus_model');
     $dados["campus"] = $this->Campus_model->recuperarTodos();
+
+    $this->load->model('Alergia_model');
+    $dados["alergias"] = $this->Alergia_model->recuperarTodos();
+
+    $this->load->model('Dieta_model');
+    $dados["dietas"] = $this->Dieta_model->recuperarTodos();
 
     $this->load->model('TipoRefeicao_model');
     $dados["tiporefeicao"] = $this->TipoRefeicao_model->recuperarTodosMenosND();
@@ -72,6 +78,13 @@ class Avaliacao extends CI_Controller {
 
     $this->load->model('Avaliacao_model');        
     $dados["avaliacao"] = $this->Avaliacao_model->recuperarTodos();
+
+    $this->load->model('Usuario_model');
+    $dados["usuarios"] = $this->Usuario_model->recuperarTodos();
+
+    $this->load->model('TipoRefeicao_model');
+    $dados["tiporefeicoes"] = $this->TipoRefeicao_model->recuperarTodos();
+    
     $this->load->view('admin/avaliacao', $dados);
 
     $this->load->view('admin/footer');
